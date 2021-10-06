@@ -492,7 +492,7 @@ to {
 }.Skill-Area {
   z-index: 1;
   float: left;
-  //position: absolute;
+  /* position: absolute; */
   margin-top: 15px;
   margin-left: 15px;
   text-shadow: none;
