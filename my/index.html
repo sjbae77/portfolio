@@ -5,13 +5,15 @@
     <title>SUJEONG_PORTFOLIO</title>
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
     
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    
     
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -175,9 +177,9 @@
                                 <a class="cta outline fade" href="http://doya61.dothome.co.kr/responsive/baskin/index.html" target="_blank"><span>View more</span></a>
                             </div>
                         </div>
-                        <div class="site site4">
+                        <div class="site">
                             <div class="site_img">
-                                <img src="img/site444.png" alt="Rincoln-Korea">
+                                <img src="img/site4.png" alt="Rincoln-Korea">
                             </div>
                             <div class="site_box">
                                 <div class="site_title">
@@ -192,6 +194,45 @@
                                     <p>slick slider.js, font-awesome</p>
                                 </div>
                                 <a class="cta outline fade" href="http://doya61.dothome.co.kr/web/lincoln/index.html" target="_blank"><span>View more</span></a>
+                            </div>
+                        </div>
+                        <div class="site">
+                            <div class="site_img">
+                                <img src="img/site5.png" alt="Hansol-Homedeco">
+                            </div>
+                            <div class="site_box">
+                                <div class="site_title">
+                                    <span>Hansol Homedeco</span>
+                                </div>
+                                <div class="site_txt1">
+                                    <p class="review">#review</p>
+                                    <p>준비중입니다.</p>
+                                </div>
+                                <div class="site_txt2">
+                                    <p class="site_skill">#skill</p>
+                                    <p>SCSS, Image Sprite 기법</p>
+                                </div>
+                                <a class="cta outline fade" href="http://doya61.dothome.co.kr/web/hansol/index.html" target="_blank"><span>View more</span></a>
+                            </div>
+                        </div>
+                        <div class="site app">
+                            <div class="site_img">
+                                <img src="img/site6.png" alt="Todo-App">
+                            </div>
+                            <div class="site_box">
+                                <div class="site_title">
+                                    <span>Todo-App</span>
+                                </div>
+                                <div class="site_txt1">
+                                    <p class="review">#review</p>
+                                    <p>Vue.js를 공부하기 위해 제작한 할일관리 앱 입니다.</p>
+                                    <p>할일 추가, 조회, 삭제기능이 구현되어 있습니다.</p>
+                                </div>
+                                <div class="site_txt2">
+                                    <p class="site_skill">#skill</p>
+                                    <p>vue.js, webpack, font-awesome</p>
+                                </div>
+                                <a class="cta outline fade" href="http://doya61.dothome.co.kr/todo/dist/index.html" target="_blank"><span>View more</span></a>
                             </div>
                         </div>
                       </div>
@@ -477,7 +518,9 @@
                 // });    
             }())
 
-        $('.slide').slick();
+        $('.slide').slick({
+            dots: true
+        });
 
     </script>
 </body>

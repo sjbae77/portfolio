@@ -208,7 +208,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     -webkit-box-orient: vertical;
     -webkit-line-clamp:2;
     padding-left: 8px;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     max-height: 40px; /* ie */
 }
 .notice2 li:before {

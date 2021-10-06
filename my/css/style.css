@@ -581,6 +581,10 @@ to {
 .site_img img {
   width: 100%;
 }
+.app img {
+  width: 60%;
+  margin: 0 auto;
+}
 
 /* view more */
 .cta {
