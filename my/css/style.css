@@ -4,19 +4,22 @@
 #wrap {
   position: relative;
 }
-.header {
-  /* z-index: 999; position: fixed; width: 100%; background: #f1faee; line-height: 2; padding: 10px; */
-  position: fixed;
-  top: 0px;
-  z-index: 999;
+.row {
+  max-width: 1400px;
   width: 100%;
-  background: none;
-  overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  margin: 0 auto;
+}
+
+.header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
   opacity: 0;
   top: -100px;
-  line-height: 2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
 }
 .sticky {
   background: #f1faee;
