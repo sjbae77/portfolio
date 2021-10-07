@@ -163,6 +163,7 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 5rem;
 }
 
@@ -739,28 +740,29 @@ a.cta.outline {
 .sec4-title h2 {
   color: #fff;
   font-size: 5rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 .sec4-cont {
   margin-top: 100px;
 }
-.sec4-cont ul {
+.sec4-cont .icon-cont-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
-.sec4-cont ul li {
-  border: 2px solid #fff;
+.sec4-cont .icon-cont-wrap .list {
+  position: relative;
+  top: 0;
   padding: 20px;
+  border: 2px solid #fff;
   border-radius: 100%;
   width: 50px;
   height: 50px;
-  position: relative;
   transition: all 0.6s ease;
-  top: 0;
+  cursor: pointer;
 }
-.sec4-cont ul li a svg {
+.sec4-cont .icon-cont-wrap .list a svg {
   color: #fff;
   font-size: 3em;
   position: absolute;
@@ -769,14 +771,14 @@ a.cta.outline {
   transform: translate(-50%, -50%);
 }
 .cont-text {
-  color: #fff;
   position: absolute;
   bottom: -90px;
   left: -67px;
   width: 200px;
-  font-size: 2em;
   padding: 20px;
-  font-weight: 600;
+  color: #fff;
+  font-size: 1.5em;
+  
 }
 .text1 {
   display: none;
@@ -791,10 +793,10 @@ a.cta.outline {
   left: -90px;
 }
 
-.sec4-cont ul li:hover .cont-text {
+.sec4-cont .icon-cont-wrap .list:hover .cont-text {
   display: block;
 }
 
-.sec4-cont ul li:hover {
+.sec4-cont .icon-cont-wrap .list:hover {
   top: -30px;
 }
