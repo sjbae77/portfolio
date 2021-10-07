@@ -586,10 +586,11 @@ nav {
   max-width: 600px;
 }
 .slide .site-wrap .site-box {
+  padding: 30px;
   width: 50%;
   border-radius: 20px;
   background-color: rgb(24, 44, 73);
-  padding: 30px;
+  min-height: 550px;
 }
 
 .site-box .site-title {
@@ -795,4 +796,8 @@ ul.slick-dots {
   top: auto;
   right: 0;
   bottom: -43px;
+}
+
+.underline {
+  text-decoration: underline;
 }
