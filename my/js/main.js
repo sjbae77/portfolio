@@ -36,13 +36,6 @@ $(window).scroll(function () {
   }
 });
 
-// $('.gnbWrap li a').click(function() {
-//     if ($('.header').hasClass('open-nav')) {
-//         $('.navigation').removeClass('open-nav');
-//         $('.header').removeClass('open-nav');
-//     }
-// });
-
 
 // Smooth Scrolling
 jQuery(document).ready(function ($) {

@@ -28,36 +28,26 @@
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
 
-    <!-- 웹 폰트 -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
-      rel="stylesheet"
-    />
-  </head>
   <body>
     <div id="wrap">
       <header class="header">
-        <div class="row">
-          <div class="logo">
-            <span>배수정 포트폴리오</span>
-          </div>
+        <div class="l-center">
+          <h1 class="logo">
+            <a class="link" href="#sec1">배수정 포트폴리오</a>
+          </h1>
           <nav>
-            <ul class="gnbWrap">
-              <li>
-                <a class="smoothscroll" href="#sec1"><span>HOME</span></a>
+            <ul class="gnb-wrap">
+              <li class="gnb-list">
+                <a class="link smoothscroll" href="#sec1">HOME</a>
               </li>
-              <li>
-                <a class="smoothscroll" href="#sec2"><span>ABOUT</span></a>
+              <li class="gnb-list">
+                <a class="link smoothscroll" href="#sec2">ABOUT</a>
               </li>
-              <li>
-                <a class="smoothscroll" href="#sec3"><span>PROJECT</span></a>
+              <li class="gnb-list">
+                <a class="link smoothscroll" href="#sec3">PROJECT</a>
               </li>
-              <li>
-                <a class="smoothscroll" href="#sec4"><span>CONTACT</span></a>
+              <li class="gnb-list">
+                <a class="link smoothscroll" href="#sec4">CONTACT</a>
               </li>
             </ul>
           </nav>
@@ -65,17 +55,13 @@
       </header>
       <div id="contents">
         <section id="sec1">
-          <div class="row">
-            <div class="sec1_txt">
-              <span>배수정 포트폴리오</span>
-              <ul>
-                <div class="console-container">
-                  <span id="text"></span>
-                  <div class="console-underscore" id="console">&#95;</div>
-                </div>
-                <!-- <li><a href="#">#열정적인</a></li> -->
-                <!-- <li><a href="#">#퍼블리셔</a></li> -->
-              </ul>
+          <div class="l-center">
+            <div class="sec1-txt-wrap">
+              <span class="ttl">배수정 포트폴리오</span>
+              <div class="console-container">
+                <span id="text"></span>
+                <div class="console-underscore" id="console">&#95;</div>
+              </div>
             </div>
             <div class="scroll-down">
               <a class="smoothscroll" href="#sec2"><span></span>Scroll</a>
@@ -84,13 +70,13 @@
         </section>
 
         <section id="sec2">
-          <div class="row">
-            <div class="imgWrap">
+          <div class="l-center">
+            <div class="img-wrap">
               <img src="img/img1.jpg" alt="" />
             </div>
-            <div class="text_box">
+            <div class="text-box">
               <div class="about">
-                <div class="sec2_title">
+                <div class="sec2-title">
                   <h2>#ABOUT ME</h2>
                 </div>
                 <p class="text">
@@ -101,7 +87,7 @@
                 </p>
               </div>
               <div class="skill">
-                <div class="sec2_title">
+                <div class="sec2-title">
                   <h2>#SKILL</h2>
                 </div>
                 <div id="SkillBox">
@@ -139,20 +125,20 @@
         </section>
 
         <section id="sec3">
-          <div class="row sec3">
-            <div class="sec3_title">
+          <div class="l-center sec3">
+            <div class="sec3-title">
               <h2>#PROJECT</h2>
             </div>
             <div class="slide">
               <div class="site">
-                <div class="site_img">
+                <div class="site-img">
                   <img src="img/site1.png" alt="Web-Responsive" />
                 </div>
-                <div class="site_box">
-                  <div class="site_title">
+                <div class="site-box">
+                  <div class="site-title">
                     <span>Web Responsive</span>
                   </div>
-                  <div class="site_txt1">
+                  <div class="site-txt1">
                     <p class="review">#review</p>
                     <p>웹표준을 준수하며 대체 텍스트로 웹접근성을 고려하며,</p>
                     <p>
@@ -160,8 +146,8 @@
                       사이트입니다.
                     </p>
                   </div>
-                  <div class="site_txt2">
-                    <p class="site_skill">#skill</p>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
                     <p>slick slider.js, box-shadow,</p>
                     <p>mouse effect, lightgallery 플러그인</p>
                   </div>
@@ -174,20 +160,20 @@
                 </div>
               </div>
               <div class="site">
-                <div class="site_img">
+                <div class="site-img">
                   <img src="img/site2.png" alt="Megabox-Site" />
                 </div>
-                <div class="site_box">
-                  <div class="site_title">
+                <div class="site-box">
+                  <div class="site-title">
                     <span>Megabox Site</span>
                   </div>
-                  <div class="site_txt1">
+                  <div class="site-txt1">
                     <p class="review">#review</p>
                     <p>이미지 슬라이더, 탭메뉴, 모달 등 다양한 스크립트를</p>
                     <p>활용하여 제작한 반응형 웹사이트입니다.</p>
                   </div>
-                  <div class="site_txt2">
-                    <p class="site_skill">#skill</p>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
                     <p>Swiper 플러그인을 사용한 배너</p>
                   </div>
                   <a
@@ -199,21 +185,21 @@
                 </div>
               </div>
               <div class="site">
-                <div class="site_img">
+                <div class="site-img">
                   <img src="img/site3.png" alt="Baskin-Robbins" />
                 </div>
-                <div class="site_box">
-                  <div class="site_title">
+                <div class="site-box">
+                  <div class="site-title">
                     <span>Baskin Robbins</span>
                   </div>
-                  <div class="site_txt1">
+                  <div class="site-txt1">
                     <p class="review">#review</p>
                     <p>
                       브라우저별 css 호환성을 적용시킨 반응형 웹사이트입니다.
                     </p>
                   </div>
-                  <div class="site_txt2">
-                    <p class="site_skill">#skill</p>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
                     <p>메뉴.js, 이벤트 팝업</p>
                   </div>
                   <a
@@ -225,19 +211,19 @@
                 </div>
               </div>
               <div class="site">
-                <div class="site_img">
+                <div class="site-img">
                   <img src="img/site4.png" alt="Rincoln-Korea" />
                 </div>
-                <div class="site_box">
-                  <div class="site_title">
+                <div class="site-box">
+                  <div class="site-title">
                     <span>Rincoln Korea</span>
                   </div>
-                  <div class="site_txt1">
+                  <div class="site-txt1">
                     <p class="review">#review</p>
                     <p>웹표준을 준수하여 제작한 웹사이트입니다.</p>
                   </div>
-                  <div class="site_txt2">
-                    <p class="site_skill">#skill</p>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
                     <p>slick slider.js, font-awesome</p>
                   </div>
                   <a
@@ -249,19 +235,19 @@
                 </div>
               </div>
               <div class="site">
-                <div class="site_img">
+                <div class="site-img">
                   <img src="img/site5.png" alt="Hansol-Homedeco" />
                 </div>
-                <div class="site_box">
-                  <div class="site_title">
+                <div class="site-box">
+                  <div class="site-title">
                     <span>Hansol Homedeco</span>
                   </div>
-                  <div class="site_txt1">
+                  <div class="site-txt1">
                     <p class="review">#review</p>
                     <p>준비중입니다.</p>
                   </div>
-                  <div class="site_txt2">
-                    <p class="site_skill">#skill</p>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
                     <p>SCSS, Image Sprite 기법</p>
                   </div>
                   <a
@@ -273,20 +259,20 @@
                 </div>
               </div>
               <div class="site app">
-                <div class="site_img">
+                <div class="site-img">
                   <img src="img/site6.png" alt="Todo-App" />
                 </div>
-                <div class="site_box">
-                  <div class="site_title">
+                <div class="site-box">
+                  <div class="site-title">
                     <span>Todo-App</span>
                   </div>
-                  <div class="site_txt1">
+                  <div class="site-txt1">
                     <p class="review">#review</p>
                     <p>Vue.js를 공부하기 위해 제작한 할일관리 앱 입니다.</p>
                     <p>할일 추가, 조회, 삭제기능이 구현되어 있습니다.</p>
                   </div>
-                  <div class="site_txt2">
-                    <p class="site_skill">#skill</p>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
                     <p>vue.js, webpack, font-awesome</p>
                   </div>
                   <a
@@ -301,12 +287,12 @@
           </div>
         </section>
         <section id="sec4">
-          <div class="row">
-            <div class="sec4_container">
-              <div class="sec4_title">
+          <div class="l-center">
+            <div class="sec4-container">
+              <div class="sec4-title">
                 <h2>저와 컨택 해주시겠습니까?</h2>
               </div>
-              <div class="sec4_cont">
+              <div class="sec4-cont">
                 <ul>
                   <li>
                     <a href="#">
@@ -323,7 +309,7 @@
                         />
                       </svg>
                     </a>
-                    <div class="cont_text text1">
+                    <div class="cont-text text1">
                       <p>010-7933-1330</p>
                     </div>
                   </li>
@@ -342,7 +328,7 @@
                         />
                       </svg>
                     </a>
-                    <div class="cont_text text2">
+                    <div class="cont-text text2">
                       <p>tnwjd_@naver.com</p>
                     </div>
                   </li>
@@ -361,7 +347,7 @@
                         />
                       </svg>
                     </a>
-                    <div class="cont_text text3">
+                    <div class="cont-text text3">
                       <p>경기도 안산시 상록구</p>
                     </div>
                   </li>
