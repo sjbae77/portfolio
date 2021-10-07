@@ -581,21 +581,24 @@ nav {
 
 .slide .site-wrap .site-img {
   width: 40%;
+  text-align: center;
 }
 .slide .site-wrap .site-img img {
   max-width: 600px;
 }
 .slide .site-wrap .site-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 30px;
   width: 50%;
   border-radius: 20px;
   background-color: rgb(24, 44, 73);
-  min-height: 550px;
+  height: 550px;
 }
 
 .site-box .site-title {
   font-size: 3em;
-  margin-bottom: 180px;
 }
 .site-box .site-txt1 {
   font-size: 1.2em;
@@ -653,8 +656,8 @@ nav {
 a.cta.outline {
   z-index: 10;
   position: absolute;
-  bottom: 2vh;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   background: transparent;
   border: 2px solid #222;
   overflow: hidden;
@@ -676,9 +679,9 @@ a.cta.outline {
   transform: scaleX(0);
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
-  transition: 0.6s transform cubic-bezier(1, 0.61, 0.165, 1);
-  -webkit-transition: 0.6s transform cubic-bezier(1, 0.61, 0.165, 1);
-  -moz-transition: 0.6s transform cubic-bezier(1, 0.61, 0.165, 1);
+  transition: 0.4s transform cubic-bezier(1, 0.61, 0.165, 1);
+  -webkit-transition: 0.4s transform cubic-bezier(1, 0.61, 0.165, 1);
+  -moz-transition: 0.4s transform cubic-bezier(1, 0.61, 0.165, 1);
   transform-origin: right;
   -webkit-transform-origin: right;
 }
@@ -693,9 +696,9 @@ a.cta.outline {
   background-position: 100% 0;
   background-size: 200% 100%;
   color: transparent;
-  transition: 0.6s all cubic-bezier(1, 0.61, 0.165, 1) 0.2s;
-  -webkit-transition: 0.6s all cubic-bezier(1, 0.61, 0.165, 1) 0.2s;
-  -moz-transition: 0.6s all cubic-bezier(1, 0.61, 0.165, 1) 0.2s;
+  transition: 0.4s all cubic-bezier(1, 0.61, 0.165, 1) 0.2s;
+  -webkit-transition: 0.4s all cubic-bezier(1, 0.61, 0.165, 1) 0.2s;
+  -moz-transition: 0.4s all cubic-bezier(1, 0.61, 0.165, 1) 0.2s;
 }
 
 .cta.outline:hover:before {
