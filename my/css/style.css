@@ -568,8 +568,7 @@ nav {
 .sec3-title h2 {
   font-size: 2rem;
   font-weight: 600;
-  /* padding: 120px 0 50px; */
-  padding: 50px 0;
+  padding: 70px 0 50px;
   color: #fff;
 }
 .slide .site-wrap {
@@ -590,7 +589,7 @@ nav {
   width: 50%;
   border-radius: 20px;
   background-color: rgb(24, 44, 73);
-  padding: 20px;
+  padding: 30px;
 }
 
 .site-box .site-title {
@@ -780,3 +779,20 @@ a.cta.outline {
   opacity: 1;
 }
 
+/* 슬라이드 커스텀 */
+button.slick-prev, button.slick-next {
+  top: -30px;
+}
+button.slick-prev {
+  left: auto;
+  right: 52px;
+}
+button.slick-next {
+  right: 13px;
+}
+
+ul.slick-dots {
+  top: auto;
+  right: 0;
+  bottom: -43px;
+}
