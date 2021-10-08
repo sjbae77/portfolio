@@ -119,7 +119,7 @@ nav {
   position: relative;
   display: block;
   color: rgb(119, 118, 118);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
 }
 .gnb-wrap .gnb-list .link:hover {
@@ -716,6 +716,7 @@ a.cta.outline {
   margin-top: 20px;
   text-align: center;
   color: #fff;
+  font-size: 18px;
 }
 
 .sec4-cont .icon-cont-wrap .list:hover {
