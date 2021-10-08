@@ -205,11 +205,11 @@ nav {
   border-bottom: 1px solid #222;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  -webkit-animation: sdb05 1.5s infinite;
-  animation: sdb05 1.5s infinite;
+  -webkit-animation: scroll-down 1.5s infinite;
+  animation: scroll-down 1.5s infinite;
   box-sizing: border-box;
 }
-@-webkit-keyframes sdb05 {
+@-webkit-keyframes scroll-down {
   0% {
     -webkit-transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
@@ -222,7 +222,7 @@ nav {
     opacity: 0;
   }
 }
-@keyframes sdb05 {
+@keyframes scroll-down {
   0% {
     transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
@@ -275,10 +275,6 @@ nav {
   width: 95%;
   height: auto;
   background-color: #fff;
-  -o-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -moz-border-radius: 20px;
 }
 #SkillBox img {
   width: 20%;
@@ -296,10 +292,6 @@ nav {
 }
 #Skill-HTML {
   width: 95%;
-  /* animation: Animate-HTML 4s;
-  -webkit-animation: Animate-HTML 4s;
-  -moz-animation: Animate-HTML 4s;
-  -o-animation: Animate-HTML 4s; */
   height: 43px;
   position: absolute;
   background-color: #55a69f;
@@ -307,44 +299,7 @@ nav {
   line-height: 1;
 }
 
-@keyframes Animate-HTML {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 95%;
-  }
-}
-@-webkit-keyframes Animate-HTML {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 95%;
-  }
-}
-@-moz-keyframes Animate-HTML {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 95%;
-  }
-}
-@-o-keyframes Animate-HTML {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 #Skill-CSS {
-  /* animation: Animate-CSS 5s;
-  -webkit-animation: Animate-CSS 5s;
-  -moz-animation: Animate-CSS 5s;
-  -o-animation: Animate-CSS 5s; */
   width: 90%;
   height: 43px;
   position: absolute;
@@ -352,43 +307,8 @@ nav {
   border-radius: 15px;
   line-height: 1;
 }
-@keyframes Animate-CSS {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%;
-  }
-}
-@-webkit-keyframes Animate-CSS {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%;
-  }
-}
-@-moz-keyframes Animate-CSS {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%;
-  }
-}
-@-o-keyframes Animate-CSS {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%;
-  }
-}
+
 #Skill-js {
-  /* animation: Animate-js 5s;
-  -webkit-animation: Animate-js 5s;
-  -moz-animation: Animate-js 5s;
-  -o-animation: Animate-js 5s; */
   width: 80%;
   height: 43px;
   position: absolute;
@@ -396,43 +316,8 @@ nav {
   border-radius: 15px;
   line-height: 1;
 }
-@keyframes Animate-js {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%;
-  }
-}
-@-webkit-keyframes Animate-js {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%;
-  }
-}
-@-moz-keyframes Animate-js {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%;
-  }
-}
-@-o-keyframes Animate-js {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%;
-  }
-}
+
 #Skill-photoshop {
-  /* animation: Animate-photoshop 4s;
-  -webkit-animation: Animate-photoshop 4s;
-  -moz-animation: Animate-photoshop 4s;
-  -o-animation: Animate-photoshop 4s; */
   width: 85%;
   height: 43px;
   position: absolute;
@@ -440,38 +325,7 @@ nav {
   border-radius: 15px;
   line-height: 1;
 }
-@keyframes Animate-photoshop {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 85%;
-  }
-}
-@-webkit-keyframes Animate-photoshop {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 85%;
-  }
-}
-@-moz-keyframes Animate-photoshop {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 85%;
-  }
-}
-@-o-keyframes Animate-photoshop {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 85%;
-  }
-}
+
 .Skill-Area {
   z-index: 1;
   float: left;
@@ -726,7 +580,7 @@ a.cta.outline {
   opacity: 1;
 }
 
-/* 슬라이드 커스텀 */
+/* slide custom */
 button.slick-prev, button.slick-next {
   top: -30px;
 }
@@ -746,4 +600,137 @@ ul.slick-dots {
 
 .underline {
   text-decoration: underline;
+}
+
+/* keyframes Animation - skill */
+@keyframes Animate-HTML {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 95%;
+  }
+}
+@-webkit-keyframes Animate-HTML {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 95%;
+  }
+}
+@-moz-keyframes Animate-HTML {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 95%;
+  }
+}
+@-o-keyframes Animate-HTML {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes Animate-CSS {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-webkit-keyframes Animate-CSS {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-moz-keyframes Animate-CSS {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-o-keyframes Animate-CSS {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes Animate-js {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 80%;
+  }
+}
+@-webkit-keyframes Animate-js {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 80%;
+  }
+}
+@-moz-keyframes Animate-js {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 80%;
+  }
+}
+@-o-keyframes Animate-js {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes Animate-photoshop {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 85%;
+  }
+}
+@-webkit-keyframes Animate-photoshop {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 85%;
+  }
+}
+@-moz-keyframes Animate-photoshop {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 85%;
+  }
+}
+@-o-keyframes Animate-photoshop {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 85%;
+  }
 }
