@@ -115,6 +115,9 @@ nav {
   display: inline-block;
   margin-right: 14px;
 }
+.gnb-wrap .gnb-list:last-child {
+  margin-right: 0;
+}
 .gnb-wrap .gnb-list .link {
   position: relative;
   display: block;

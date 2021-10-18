@@ -175,6 +175,6 @@ function consoleText(words, id, colors) {
 // slick slide
 $(".slide").slick({
   dots: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 2000,
 });
