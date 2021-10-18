@@ -13,6 +13,10 @@ html, body {
   width: 100%;
   margin: 0 auto;
 }
+section {
+  position: relative;
+  height: 100vh;
+}
 
 .header {
   z-index: 999;
@@ -37,28 +41,21 @@ html, body {
 }
 #sec1 {
   background: #a8dadc;
-  position: relative;
-  height: 100vh;
 }
 #sec2 {
-  position: relative;
   background: #ffff;
-  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #sec3 {
-  position: relative;
   background: #1d3557ff;
   color: #fff;
-  height: 100vh;
 }
 #sec4 {
   background: #222222;
-  height: 100vh;
   transition: all 0.4s linear;
-  position: relative;
+  height: calc(100vh - 60px);
 }
 
 /* body {
