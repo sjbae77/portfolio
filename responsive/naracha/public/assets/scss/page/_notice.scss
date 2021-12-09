@@ -1,0 +1,23 @@
+/* ==================== notice ==================== */
+.sec-notice {
+  padding: 37px 0 80px;
+
+  .content-wrap {
+    width: 100%;
+    padding-top: 24px;
+
+    @include media-dv(mb) {
+      padding-top: 0;
+    }
+
+    .tit {
+      font-size: rem(28);
+      margin-bottom: 37px;
+
+      @include media-dv(mb) {
+        font-size: rem(24);
+      }
+    }
+  }
+}
+/* ==================== End of notice ==================== */

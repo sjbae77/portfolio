@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="482" height="234" viewBox="0 0 482 234">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_73" data-name="사각형 73" width="482" height="234" transform="translate(1045 2481)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <circle id="타원_11" data-name="타원 11" cx="205.014" cy="205.014" r="205.014" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_5" data-name="마스크 그룹 5" transform="translate(-1045 -2481)" clip-path="url(#clip-path)">
+    <g id="그룹_77" data-name="그룹 77" transform="translate(1337.477 2047.617)" opacity="0.06">
+      <g id="그룹_13" data-name="그룹 13" transform="translate(-256.477 432.96)" clip-path="url(#clip-path-2)">
+        <g id="그룹_11" data-name="그룹 11" transform="translate(-170.834 -27.976)">
+          <rect id="사각형_30" data-name="사각형 30" width="648.603" height="5.326" transform="translate(3.766 146.44) rotate(45)" fill="#161151"/>
+          <rect id="사각형_31" data-name="사각형 31" width="648.603" height="5.326" transform="translate(15.969 134.236) rotate(45)" fill="#161151"/>
+          <rect id="사각형_32" data-name="사각형 32" width="648.603" height="5.326" transform="translate(28.173 122.033) rotate(45)" fill="#161151"/>
+          <rect id="사각형_33" data-name="사각형 33" width="648.603" height="5.326" transform="translate(40.376 109.83) rotate(45)" fill="#161151"/>
+          <rect id="사각형_34" data-name="사각형 34" width="648.603" height="5.326" transform="translate(52.579 97.626) rotate(45)" fill="#161151"/>
+          <rect id="사각형_35" data-name="사각형 35" width="648.603" height="5.326" transform="translate(64.783 85.423) rotate(45)" fill="#161151"/>
+          <rect id="사각형_36" data-name="사각형 36" width="648.603" height="5.326" transform="translate(76.986 73.22) rotate(45)" fill="#161151"/>
+          <rect id="사각형_37" data-name="사각형 37" width="648.603" height="5.326" transform="translate(89.189 61.017) rotate(45)" fill="#161151"/>
+          <rect id="사각형_38" data-name="사각형 38" width="648.603" height="5.326" transform="translate(101.393 48.813) rotate(45)" fill="#161151"/>
+          <rect id="사각형_39" data-name="사각형 39" width="648.603" height="5.326" transform="translate(113.596 36.61) rotate(45)" fill="#161151"/>
+          <rect id="사각형_40" data-name="사각형 40" width="648.603" height="5.326" transform="translate(125.799 24.407) rotate(45)" fill="#161151"/>
+          <rect id="사각형_41" data-name="사각형 41" width="648.603" height="5.326" transform="translate(138.002 12.203) rotate(45)" fill="#161151"/>
+          <rect id="사각형_42" data-name="사각형 42" width="648.603" height="5.326" transform="translate(150.206 0) rotate(45)" fill="#161151"/>
+        </g>
+        <g id="그룹_12" data-name="그룹 12" transform="translate(-15.965 -187.593)">
+          <rect id="사각형_43" data-name="사각형 43" width="648.603" height="5.326" transform="translate(3.766 146.44) rotate(45)" fill="#161151"/>
+          <rect id="사각형_44" data-name="사각형 44" width="648.603" height="5.326" transform="translate(15.969 134.236) rotate(45)" fill="#161151"/>
+          <rect id="사각형_45" data-name="사각형 45" width="648.603" height="5.326" transform="translate(28.173 122.033) rotate(45)" fill="#161151"/>
+          <rect id="사각형_46" data-name="사각형 46" width="648.603" height="5.326" transform="translate(40.376 109.83) rotate(45)" fill="#161151"/>
+          <rect id="사각형_47" data-name="사각형 47" width="648.603" height="5.326" transform="translate(52.579 97.626) rotate(45)" fill="#161151"/>
+          <rect id="사각형_48" data-name="사각형 48" width="648.603" height="5.326" transform="translate(64.783 85.423) rotate(45)" fill="#161151"/>
+          <rect id="사각형_49" data-name="사각형 49" width="648.603" height="5.326" transform="translate(76.986 73.22) rotate(45)" fill="#161151"/>
+          <rect id="사각형_50" data-name="사각형 50" width="648.603" height="5.326" transform="translate(89.189 61.017) rotate(45)" fill="#161151"/>
+          <rect id="사각형_51" data-name="사각형 51" width="648.603" height="5.326" transform="translate(101.393 48.813) rotate(45)" fill="#161151"/>
+          <rect id="사각형_52" data-name="사각형 52" width="648.603" height="5.326" transform="translate(113.596 36.61) rotate(45)" fill="#161151"/>
+          <rect id="사각형_53" data-name="사각형 53" width="648.603" height="5.326" transform="translate(125.799 24.407) rotate(45)" fill="#161151"/>
+          <rect id="사각형_54" data-name="사각형 54" width="648.603" height="5.326" transform="translate(138.002 12.203) rotate(45)" fill="#161151"/>
+          <rect id="사각형_55" data-name="사각형 55" width="648.603" height="5.326" transform="translate(150.206 0) rotate(45)" fill="#161151"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>나라차 태권도</title>
+  <meta name="title" content="나라차태권도" />
+  <meta name="author" content="나라차태권도" />
+  <meta name="description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta name="keywords" content="나라차도장, 전통태권도, 태권도, 태권도 도장, 도장," />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="나라차태권도" />
+  <meta property="og:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta property="og:image" content="../assets/images/favicon/opengraph.png" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="http://www.naracha.co.kr/" />
+  <meta property="twitter:title" content="나라차태권도" />
+  <meta property="twitter:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="../assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="../assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="../assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="../assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#111151" />
+  <meta name="theme-color" content="#111151" />
+  <!-- 
+        https://realfavicongenerator.net/
+        favicon package 다운로드, 루트 수정
+        assets체크해서 뽑기
+    -->
+  <!-- END favicon -->
+
+  <!-- css link -->
+  <link rel="stylesheet" href="../assets/css/vendor/normalize.css" />
+  <link rel="stylesheet" href="../assets/css/vendor/swiper.min.css" />
+  <link rel="stylesheet" href="../assets/css/vendor/aos.css" />
+  <link rel="stylesheet" href="../assets/css/custom/ui.css" />
+
+  <!-- javascript link -->
+  <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/custom/ui.js"></script>
+  <script src="../assets/js/vendor/vue.min.js"></script>
+  <script src="../assets/js/vendor/swiper.min.js"></script>
+  <script src="../assets/js/vendor/axios.min.js"></script>
+  <script src="../assets/js/vendor/aos.js"></script>
+  <script src="../components/layout-footer.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <header class="header mo-header no-shadow">
+        <div class="l-center">
+          <h1 class="logo is-mo-hide">
+            <a href="../index.html">
+              <img src="../assets/images/logo/logo.svg" alt="나라차태권도" class="is-mo-hide" />
+              <span class="mo-page-tit is-mo-show">수련&#47;용품</span>
+            </a>
+          </h1>
+          <h1 class="logo is-mo-show">
+            <a href="#">
+              <img src="../assets/images/logo/logo.svg" alt="나라차태권도" class="is-mo-hide" />
+              <span class="mo-page-tit is-mo-show">수련&#47;용품</span>
+            </a>
+          </h1>
+          <div class="login-menu" v-if="!user">
+            <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list">
+                <a href="./login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+              </li>
+              <!-- <li class="login-menu-list">
+                <a href="./sign-up.html" class="login-menu-link">SIGN UP</a>
+              </li> -->
+              <li class="login-menu-list">
+
+                <a href="../index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <div class="login-menu" v-else>
+            <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list" v-if="user.user_provider === 'local'">
+                <a @click="logout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list" v-else>
+                <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list">
+                <a href="./mypage.html" class="login-menu-link">MY PAGE</a>
+              </li>
+              <li class="login-menu-list">
+
+                <a href="../index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 모바일 메뉴 버튼 -->
+          <a href="../index.html" class="mo-menu-back-btn is-mo-show">
+            <img src="../assets/images/btn/mo/btn-home.svg" alt="메인으로가기" class="mo-menu-back-img">
+          </a>
+          <button class="mo-menu-btn is-mo-show">
+            <img src="../assets/images/btn/mo/btn-menu.svg" alt="모바일 메뉴" class="mo-menu-btn-img">
+          </button>
+        </div>
+      </header>
+      <nav class="gnb-wrap sub-nav is-mo-hide">
+        <ul class="gnb-group">
+          <li class="gnb-list">
+            <a href="gnb-about.html" class="gnb-link">about</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-family-group.html" class="gnb-link">가족도장</a>
+          </li>
+          <li class="gnb-list active">
+            <a href="gnb-practice-intro.html" class="gnb-link">수련&#47;용품</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-news.html" class="gnb-link">News</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-notice.html" class="gnb-link">Notice</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-qna.html" class="gnb-link">Q&A</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 모바일 메뉴 -->
+      <div class="mo-menu-wrap is-mo-show">
+
+        <div class="menu-header">
+
+          <span class="menu-tit">MENU</span>
+          <button class="menu-clse-btn">
+            <img src="../assets/images/btn/mo/btn-menu-close.svg" alt="메뉴닫기">
+          </button>
+        </div>
+
+        <ul class="mo-menu-group">
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-about.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">About</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="about">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-family-group.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">가족도장</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="가족도장">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-practice-intro.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">수련&#47;용품</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="수련/용품">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-news.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">News</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="News">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-notice.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Notice</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Notice">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-qna.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Q&A</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Q&A">
+            </a>
+          </li>
+        </ul>
+        <div class="login-menu" v-if="!user">
+          <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list">
+              <a href="./login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+            </li>
+            <!-- <li class="login-menu-list">
+              <a href="./sign-up.html" class="login-menu-link">SIGN UP</a>
+            </li> -->
+            <li class="login-menu-list">
+
+              <a href="../index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+        <div class="login-menu" v-else>
+          <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list" v-if="user.user_provider === 'local'">
+              <a @click="logout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list" v-else>
+              <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list">
+              <a href="./mypage.html" class="login-menu-link">MY PAGE</a>
+            </li>
+            <li class="login-menu-list">
+
+              <a href="../index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cover"></div>
+
+
+      <div class="sec-family sec-practice">
+        <div class="l-center">
+          <aside class="aside-menu-wrap mo-aside-wrap">
+            <h2 class="tit is-mo-hide">수련&#47;용품</h2>
+            <ul class="family-menu-group">
+              <li class="family-menu-list">
+                <a href="./gnb-practice-intro.html" class="link active">나라차 수련 안내</a>
+              </li>
+              <li class="family-menu-list">
+                <a href="./gnb-practice-item.html" class="link">나라차 수련 용품</a>
+              </li>
+            </ul>
+          </aside>
+          <div class="content-wrap">
+            <h2 class="tit">NARACHA 수련 안내</h2>
+
+            <div class="pratice-wrap">
+              <div class="practice">
+                <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">전체 커리큘럼</h3>
+                <div class="curric-box-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum01.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      침착함을<br />
+                      위한 명상
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum02.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      성장체조<br />
+                      / 스트레칭
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum03.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      인바디,<br />
+                      체력측정
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum04.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      줄넘기 측정
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum05.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      체력향상<br />
+                      프로그램
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum06.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      집중력 향상
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum07.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      음악 줄넘기
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum08.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      태권도<br />
+                      인성교육
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum09.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      출결관리<br />
+                      시스템
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum10.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      도장<br />
+                      어플리케이션
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum11.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      상벌(패치)<br />
+                      시스템
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum12.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      띠 밴드<br />
+                      프로그램
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum13.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      학부모 소통<br />
+                      시스템
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum14.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      유단자<br />
+                      프로그램
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum15.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      기본동작
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum16.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      격파
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum17.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      호신술
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum18.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      발차기
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum19.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      품새
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum20.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      Power Chart
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum21.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      심사
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum22.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      시범단<br />
+                      프로그램
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum23.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      유품자<br />
+                      실전겨루기
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum24.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      학교 체육
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum25.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      레크레이션
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum26.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      캠프
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum27.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      -
+                    </span>
+                  </div>
+                  <div class="curric-box">
+                    <img src="../assets/images/icon/icon-curriculum28.svg" alt="커리큘럼 이미지">
+                    <span class="curric-txt">
+                      체험학습
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="practice">
+                <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">NARACHA의 수련</h3>
+                <p class="practice-dec" data-aos="fade-up" data-aos-duration="1600">나라차의 소신있는 교육은<br
+                    class="is-mo-show" /> 이 사회에서 꼭 필요한 사람으로 성장하게 도와주며<br>
+                  바른생각, 넓은마음, 건강한신체를 만들어 줄 것입니다.</p>
+                <div class="practice-img-wrap">
+                  <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200">
+                    <img src="../assets/images/img/practice02-1.png" alt="수련" class="practice-img">
+                    <span class="practice-txt">
+                      연령별 수련을 하는<br>
+                      도장, 띠별 교과과정이<br>
+                      있는 도장.
+                    </span>
+                  </div>
+                  <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    <img src="../assets/images/img/practice02-2.png" alt="수련" class="practice-img">
+                    <span class="practice-txt">
+                      연령별 수련을 하는<br>
+                      도장, 띠별 교과과정이<br>
+                      있는 도장.
+                    </span>
+                  </div>
+                  <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                    <img src="../assets/images/img/practice02-3.png" alt="수련" class="practice-img">
+                    <span class="practice-txt">
+                      수련생 서로간, 칭찬과<br>
+                      격려를 아끼지 않는<br>
+                      배려가 넘치는<br>
+                      수련 분위기.
+                    </span>
+                  </div>
+                  <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                    <img src="../assets/images/img/practice02-4.png" alt="수련" class="practice-img">
+                    <span class="practice-txt">
+                      신체활동을 기반으로<br>
+                      체력을 향상시키며,<br>
+                      인간됨됨이를 배우는<br>
+                      인성교육의 장.
+                    </span>
+                  </div>
+                  <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+                    <img src="../assets/images/img/practice02-5.png" alt="수련" class="practice-img">
+                    <span class="practice-txt">
+                      최고의 태권도학과<br>
+                      시범단 출신 전문<br>
+                      지도진, 차량실장님과<br>
+                      보조선생님.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="practice">
+                <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">NARACHA TYPE 시스템</h3>
+                <div class="tape-wrap">
+                  <div class="tape-img-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    <img src="../assets/images/img/tape.svg" alt="TAPE IMAGE" class="tape-img">
+                  </div>
+                  <div class="tape-box-wrap">
+                    <div class="tape-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                      <span class="tape-tit">TAPE란?</span>
+                      <span class="tape-dec">TAPE는 다음단계로 승급할 수 있는 도구</span>
+                      <p class="tape-txt">
+                        자신의 띠에 맞는 교과과정을 모두 습득하고 각 색깔의<br class="is-mo-show" /> TAPE를 다 모을 경우<br class="is-mo-hide" />
+                        두 달에 한 번 실시하는 승급 심사<br class="is-mo-show" />에 응심 할 자격이 주어진다.
+                      </p>
+                    </div>
+                    <div class="tape-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                      <span class="tape-tit">TAPE 받는 방법</span>
+                      <p class="tape-txt">
+                        매 수련시간에 배운 교과과정을 토대로 TAPE를 받게 됨.<br>
+                        단 검정TAPE는 부모님께서 작성해주신 생활태도평가표를 통해서만 받을 수 있다.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="practice">
+                <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">NARACHA 분리수업</h3>
+                <div class="class-wrap">
+                  <div class="class" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    <img src="../assets/images/img/class01.png" alt="분리수업" class="class-img">
+                    <div class="class-txt-wrap">
+                      <span class="class-tit">
+                        <strong class="class-num">01.</strong>
+                        분리수업의 방법
+                      </span>
+                      <p class="class-dec">
+                        수련생들의 시선이 분산되지 않도록<br>
+                        대형을 선다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="class" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                    <img src="../assets/images/img/class02.png" alt="분리수업" class="class-img">
+                    <div class="class-txt-wrap">
+                      <span class="class-tit">
+                        <strong class="class-num">02.</strong>
+                        분리수업의 구성
+                      </span>
+                      <p class="class-dec">
+                        50분 수련을 모두 분리수업을 하게 되면<br>
+                        체력적인 부담과 업무에 지장이 있으므로<br>
+                        태권도수련 20분만 분리수업을 한다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="class" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                    <img src="../assets/images/img/class03.png" alt="분리수업" class="class-img">
+                    <div class="class-txt-wrap">
+                      <span class="class-tit">
+                        <strong class="class-num">03.</strong>
+                        분리수업의 내용
+                      </span>
+                      <p class="class-dec">
+                        분리수업전에 암묵적인 약속이 되어있다.<br>
+                        기본동작 - 품새 - 발차기 순서로<br>
+                        분리수업을 한다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="practice">
+                <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">NARACHA 50분의 수업 구성</h3>
+                <ul class="practice-con-group is-mo-hide" data-aos="fade-up" data-aos-duration="1600">
+                  <li class="practice-con-list">
+                    <span class="circle"></span>
+                    주 3회, 2회, 5회 선택 수련
+                  </li>
+                  <li class="practice-con-list">
+                    <span class="circle"></span>
+                    수련시간 : 50분
+                  </li>
+                  <li class="practice-con-list">
+                    <span class="circle"></span>
+                    연령별 수련
+                  </li>
+                  <li class="practice-con-list">
+                    <span class="circle"></span>
+                    그룹별 소그룹 분리수련
+                  </li>
+                </ul>
+
+
+                <div class="prac-con-box-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                  <div class="prac-con-box">
+                    <span class="prac-con-tit">인사 및 명상</span>
+                    <span class="prac-con-time">3분</span>
+                  </div>
+                  <div class="dot-wrap">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="prac-con-box con-type-2">
+                    <span class="prac-con-tit">준비,체력운동</span>
+                    <span class="prac-con-time">25분</span>
+                  </div>
+                  <div class="dot-wrap">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="prac-con-box con-type-3">
+                    <span class="prac-con-tit">분리수련<em class="prac-con-sub">(태권도 교과과정 지도)</em></span>
+                    <span class="prac-con-time">25분</span>
+                  </div>
+                  <div class="dot-wrap">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="prac-con-box">
+                    <span class="prac-con-tit">정리</span>
+                    <span class="prac-con-time">25분</span>
+                  </div>
+                </div>
+              </div>
+              <div class="practice prac-bottom">
+                <img src="../assets/images/img/bg-practice.png" alt="배경이미지" class="prac-bg-img is-mo-hide"
+                  data-aos="fade-left" data-aos-duration="1400">
+                <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">NARACHA 성장체조</h3>
+                <p class="practice-dec" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                  체력요소 가운데 가장 중요한 유연성을 향상시키는 목적.<br />
+                  성장에 도움이 되며, 바른 자세를 유지 할 수 있게 됩니다.
+                </p>
+                <div class="prac-slide-wrap swiper1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="../assets/images/img/gymnastics01.png" alt="성장체조" class="img gym-img">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../assets/images/img/gymnastics02.png" alt="성장체조" class="img gym-img">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../assets/images/img/gymnastics03.png" alt="성장체조" class="img gym-img">
+                      </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                  </div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-wrap">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="practice prac-bottom prac-medit">
+                <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">NARACHA 명상교육</h3>
+                <p class="practice-dec" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                  수련시작 전 명상을 통해 흐트러진 마음을 바르게 하며<br />
+                  침착한 마음가짐과 무도태권도를 수련하기에<br />
+                  적합한 마음가짐을 갖도록 노력합니다.
+                </p>
+                <div class="prac-slide-wrap swiper2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="../assets/images/img/meditation01.png" alt="성장체조" class="img gym-img">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../assets/images/img/meditation02.png" alt="성장체조" class="img gym-img">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../assets/images/img/meditation03.png" alt="성장체조" class="img gym-img">
+                      </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                  </div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-wrap">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <layout-footer></layout-footer>
+
+    </div>
+  </div>
+
+  <script>
+    var app1 = new Vue({
+      el: "#app",
+      data: function () {
+        return {
+          user: null,
+        };
+      },
+      created: function () {
+        if (localStorage.getItem('narachaToken')) {
+          axios.get("http://api.naracha.co.kr/api/v1/user/auth/profile", {
+            headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+          })
+            .then(function (res) {
+              app1.user = res.data.query
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+        }
+      },
+      methods: {
+        async logout() {
+          localStorage.removeItem('narachaToken')
+          window.location.href = '/'
+        },
+        async kakaoLogout() {
+          axios
+            .get("http://api.naracha.co.kr/api/v1/user/auth/logout/kakao", {
+              headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+            })
+            .then(function (res) {
+              if (res.data.redirect) {
+                localStorage.removeItem('narachaToken')
+                window.location.href = res.data.redirect
+              }
+            })
+        }
+      },
+    });
+
+    // swiper1
+    new Swiper('.swiper1 .swiper-container', {
+      pagination: { // 페이징 설정
+        el: '.swiper1 .swiper-pagination',
+        clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+      },
+      navigation: { // 네비게이션 설정
+        nextEl: '.swiper1 .swiper-button-next', // 다음 버튼 클래스명
+        prevEl: '.swiper1 .swiper-button-prev', // 이번 버튼 클래스명
+      },
+    });
+
+    // swiper2
+    new Swiper('.swiper2 .swiper-container', {
+      pagination: { // 페이징 설정
+        el: '.swiper2 .swiper-pagination',
+        clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+      },
+      navigation: { // 네비게이션 설정
+        nextEl: '.swiper2 .swiper-button-next', // 다음 버튼 클래스명
+        prevEl: '.swiper2 .swiper-button-prev', // 이번 버튼 클래스명
+      },
+    });
+
+    AOS.init({
+      disable: 'mobile',
+      once: true
+    });
+
+  </script>
+</body>
+
+</html>

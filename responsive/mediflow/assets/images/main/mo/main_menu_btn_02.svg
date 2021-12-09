@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="55" viewBox="0 0 260 55">
+  <g id="main_menu_btn_02" transform="translate(3178 2028)">
+    <text id="인사관리_이용하기" data-name="인사관리 이용하기" transform="translate(-3123 -1993)" fill="#1e1e1e" font-size="18" font-family="SpoqaHanSansNeo-Regular, Spoqa Han Sans Neo" letter-spacing="-0.05em"><tspan x="0" y="0">인사관리 이용하기</tspan></text>
+    <g id="그룹_1708" data-name="그룹 1708" transform="translate(-3161 -2015)">
+      <g id="그룹_1636" data-name="그룹 1636" transform="translate(0 1.36)">
+        <path id="패스_145" data-name="패스 145" d="M724.2,699.628a5.207,5.207,0,0,1-6.465-7.411,8.018,8.018,0,0,0-1.493-.144H705.386a7.98,7.98,0,0,0-7.98,7.98v10.853a7.98,7.98,0,0,0,7.98,7.98h10.853a7.98,7.98,0,0,0,7.98-7.98V700.053C724.219,699.91,724.205,699.77,724.2,699.628Z" transform="translate(-697.406 -692.073)" fill="#2b5bdf"/>
+      </g>
+      <g id="그룹_1638" data-name="그룹 1638" transform="translate(7.077 7.179)">
+        <g id="그룹_1637" data-name="그룹 1637">
+          <ellipse id="타원_43" data-name="타원 43" cx="3.604" cy="3.611" rx="3.604" ry="3.611" transform="translate(2.726)" fill="#fff"/>
+          <path id="패스_146" data-name="패스 146" d="M721.193,721.016h-12.66V718.29a4.394,4.394,0,0,1,4.381-4.381h3.9a4.394,4.394,0,0,1,4.381,4.381Z" transform="translate(-708.533 -705.841)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="그룹_1639" data-name="그룹 1639" transform="translate(21.429 0)">
+        <path id="패스_147" data-name="패스 147" d="M737.8,694.536h0a.74.74,0,0,1-.391-.652v-.034a.79.79,0,0,1,.417-.693.8.8,0,0,0,.308-1.1l-.139-.24a.888.888,0,0,0-1.209-.315.7.7,0,0,1-.687.011l-.089-.052a.725.725,0,0,1-.364-.63v-.03a.868.868,0,0,0-.868-.868h-.223a.869.869,0,0,0-.869.868v.03a.726.726,0,0,1-.364.63l-.088.052a.7.7,0,0,1-.7-.018.878.878,0,0,0-1.2.322l-.127.22a.817.817,0,0,0,.322,1.132h0a.745.745,0,0,1,.392.655v.058a.741.741,0,0,1-.392.653.814.814,0,0,0-.324,1.13l.148.256a.841.841,0,0,0,1.147.307.8.8,0,0,1,1.073.261.743.743,0,0,1,.113.419.868.868,0,0,0,.868.863h.218a.868.868,0,0,0,.868-.863.749.749,0,0,1,.113-.419.8.8,0,0,1,1.073-.261.841.841,0,0,0,1.147-.307l.148-.256A.814.814,0,0,0,737.8,694.536Zm-3.135.492a1.176,1.176,0,1,1,1.175-1.175A1.176,1.176,0,0,1,734.669,695.029Z" transform="translate(-731.1 -689.935)" fill="#2b5bdf" opacity="0.55"/>
+      </g>
+    </g>
+    <g id="그룹_1714" data-name="그룹 1714" transform="translate(591.362 51)">
+      <path id="패스_155" data-name="패스 155" d="M-3574.326-2043.659l4.638,4.638" transform="translate(33.326 -12.341)" fill="none" stroke="#1e1e1e" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="패스_156" data-name="패스 156" d="M0,0,4.638,4.638" transform="translate(-3536.362 -2051.362) rotate(90)" fill="none" stroke="#1e1e1e" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+    <rect id="사각형_946" data-name="사각형 946" width="260" height="55" transform="translate(-3178 -2028)" fill="none"/>
+  </g>
+</svg>

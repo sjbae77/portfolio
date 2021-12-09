@@ -1,0 +1,40 @@
+/* =================== form =================== */
+.input-wrap {
+  width: 100%;
+}
+
+.input {
+  @include input-reset;
+  @include input-style;
+}
+
+.input-tarea {
+  @include input-reset;
+  @include input-style;
+  @include wh(100%, 500px);
+
+  padding: 20px;
+  resize: none;
+}
+
+.input-round {
+  @include input-style($bd-rd: 25px);
+}
+
+.input-underbar {
+  @include input-style($bd-st: none, $bd-rd: 0) {
+    border-bottom: 1px solid;
+  }
+}
+
+// star score
+@for $i from 1 through 5 {
+  .rate#{$i} {
+    &:before {
+      content: "#{$i}"+".0";
+    }
+    &:after {
+      content: url("../../images/icon/icon_star" + "#{$i}" + ".svg");
+    }
+  }
+}

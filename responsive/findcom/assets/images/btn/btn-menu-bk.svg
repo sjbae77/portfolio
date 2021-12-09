@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="btn-menu-bk" transform="translate(-40 -23)">
+    <rect id="사각형_6" data-name="사각형 6" width="24" height="24" transform="translate(40 23)" fill="#fff" opacity="0"/>
+    <rect id="사각형_3" data-name="사각형 3" width="24" height="2" transform="translate(40 26)" fill="#303038"/>
+    <rect id="사각형_4" data-name="사각형 4" width="24" height="2" transform="translate(40 34)" fill="#303038"/>
+    <rect id="사각형_5" data-name="사각형 5" width="24" height="2" transform="translate(40 42)" fill="#303038"/>
+  </g>
+</svg>

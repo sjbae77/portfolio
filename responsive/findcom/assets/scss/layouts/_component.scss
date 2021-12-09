@@ -1,0 +1,881 @@
+
+// input 공통요소
+.inp {
+  padding: rem(13) rem(10);
+  height: 46px;
+  border: 1px solid #C3C3CE;
+  border-radius: 5px;
+  color: #303038;
+  outline: none;
+  font-size: rem(15);
+
+  &::placeholder {
+    color: #C3C3CE;
+  }
+}
+
+// select 공통요소
+.slt {
+  @include bg-url(icon, 'icon-slt-arrow.svg');
+  @include bg-op($s:12px 8px, $p:right 10px center);
+
+  padding: 13px 10px;
+  padding-right: 35px;
+  border-radius: 5px;
+  border: 1px solid color(grayc3);
+  width: 280px;
+  height: 46px;
+  // color: #C3C3CE;
+  font-size: rem(15);
+  outline: none;
+
+  // 기존 화살표 제거
+  -webkit-appearance: none;
+  /* for chrome */
+  -moz-appearance: none;
+  /*for firefox*/
+  appearance: none;
+
+  select::-ms-expand {
+    display: none;
+    /*for IE10,11*/
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+// 버튼 공통요소
+.btn-wrap {
+  @include flex-center;
+
+  margin-top: rem(40);
+
+  @include mobile {
+    margin-top: rem(28);
+  }
+}
+
+.btn {
+  width: 100%;
+  max-width: 500px;
+  padding: rem(14) 0;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba($color: #C3C3CE, $alpha: 0.5);
+  cursor: pointer;
+  font-size: rem(18);
+  font-weight: 500;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.btn-primary {
+  background-color: color(main);
+  color: #fff;
+  transition: all 0.2s;
+
+  &:focus,
+  &:hover {
+    background-color: #39D277;
+  }
+}
+
+.btn-gray {
+  background-color: color(grayc3);
+  color: #ECECF1;
+  transition: all 0.2s;
+  cursor: default;
+  pointer-events: none;
+
+  // &:focus,
+  // &:hover {
+  //   background-color: color(main);
+  //   color: #fff;
+  // }
+
+  &.is-active {
+    background-color: color(main);
+    color: #fff;
+    cursor: pointer;
+    pointer-events: all;
+  }
+}
+
+// 더보기버튼 (모바일)
+.view-more {
+  display: none;
+  margin: 34px auto 0;
+  border-bottom: 1px solid color(text);
+  font-size: rem(15);
+  font-weight: 600;
+  line-height: 1.2;
+  color: color(Text);
+
+  @include mobile {
+    display: block;
+  }
+}
+
+// 공통 제목
+.com-ttl {
+  font-size: rem(22);
+  font-weight: 500;
+}
+
+// 카카오 상담하기, 위로가기
+.float-btn-wrap {
+  @include fixed($b: 20px, $r: 20px);
+  z-index: 5;
+}
+
+.float-btn {
+  @include flex-center;
+  @include circle(70px);
+
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  cursor: pointer;
+
+  @include mobile {
+    width: 50px;
+    height: 50px;
+  }
+
+  &.kakao-chat {
+    background-color: #FFDD00;
+  
+    @include mobile {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &.go-top {
+    display: none;
+    margin-top: 8px;
+    background-color: color(main);
+
+    @include mobile {
+      display: flex;
+    }
+  }
+}
+
+// card layout
+.card-wrap {
+  @include flex {
+    justify-content: flex-start;
+    gap: 6px 6px;
+    flex-wrap: wrap;
+
+    @include mobile {
+      gap: 0;
+    }
+  }
+
+  .card {
+    @include wh(100%, 100%);
+
+    display: block;
+    border: 1px solid color(grayec);
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      border-color: color(main);
+      background-color: color(wh-gr);
+    }
+  }
+}
+
+// 큰 사이즈 기업 카드
+.com-card {
+  gap: 10px 0;
+
+  @include mobile {
+    gap: 0;
+  }
+
+  .card-list {
+    flex: 1 1 100%;
+    @include ie-style {
+      margin: 10px 0;
+    }
+  }
+
+  .card {
+    @include bg-op($p: calc(100% - 30px) center, $s: auto);
+    @include bg-url(icon, "icon-view-gr.svg");
+
+    padding: 35px 30px;
+
+    @include mobile {
+      padding: 30px 20px 31px;
+      border-radius: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+      background-position: calc(100% - 20px) 38px;
+
+      &:last-child {
+        border-top: 0;
+        border-bottom: 1px solid #ECECF1;
+      }
+
+      &:hover {
+        background-color: #F8FFFB;
+      }
+    }
+
+    .name {
+      font-size: rem(20);
+      font-weight: 500;
+
+      @include mobile {
+        font-size: rem(18);
+      }
+
+      small {
+        padding-left: 4px;
+        font-size: rem(14);
+        color: color(main);
+
+        @include mobile {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .tel {
+      @include bg-op($p: 0 70%, $s: auto);
+      @include bg-url(icon, "icon-phone-gn.svg");
+
+      display: inline-block;
+      margin: 8px 0 8px;
+      padding-left: 20px;
+      font-size: rem(15);
+      color: color(gray64);
+      vertical-align: middle;
+    }
+
+    .info-wrap {
+      @include flex;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    .info {
+      width: 280px;
+      margin-top: 10px;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .info-ttl {
+        display: inline-block;
+        min-width: 4em;
+        font-size: rem(15);
+        color: color(gray8f);
+
+        @include make-before($c: '· ', $d: inline);
+
+        @include mobile {
+          width: 106px;
+        }
+      }
+
+      .info-dec {
+        margin-left: 8px;
+        font-size: rem(15);
+
+        @include mobile {
+          margin-left: 10px;
+        }
+      }
+
+      &:first-child {
+        .info-ttl {
+          min-width: 7em;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      @include bg-url(icon, "icon-view-gn.svg");
+    }
+  }
+}
+
+// 작은 사이즈 기업 카드
+.mini-com-card {
+  
+  @include mobile {
+    padding-left: 20px;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    // 스크롤바 숨기기
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+    }
+  }
+
+  &.swiper-slide {
+    width: calc(20% - 6px);
+  }
+
+  .card-list {
+    flex: 0 0 100%;
+
+    /* IE10+ */
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin: 0 6px 6px 0;
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
+
+    @include mobile {
+      flex: 1 1 19%;
+      margin-right: 6px;
+
+      &:last-child {
+        margin-right: 0;
+      }      
+    }
+  }
+
+  .card {
+    padding: 25px 20px;
+    border: 0;
+    box-shadow: 0 0 0 1px #ECECF1 inset;
+
+    @include mobile {
+      width: 215px;
+    }
+
+    .ttl {
+      font-size: rem(18);
+    }
+
+    .dec {
+      display: block;
+      margin-top: 6px;
+      font-size: rem(15);
+      font-weight: 300;
+      color: color(gray8f);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 2px #26BE63 inset;
+
+      .dec {
+        color: color(main);
+      }
+    }
+  }
+}
+
+// 채용 카드
+.employ-card {
+  gap: 10px 0;
+
+  .card-list {
+    flex: 1 1 100%;
+    @include ie-style {
+      margin: 10px 0;
+    }
+  }
+
+  .card {
+    @include bg-op($p: calc(100% - 30px) 54px, $s: auto);
+    @include bg-url(icon, "icon-view-gr.svg");
+
+    padding: 35px 30px;
+
+    @include mobile {
+      @include bg-op($p: calc(100% - 20px) 28px, $s: auto);
+      padding: 22px 20px 14px;
+    }
+
+    .ttl {
+      position: relative;
+      margin-bottom: 18px;
+
+      @include mobile {
+        margin-bottom: 12px;
+        padding-top: 31px;
+      }
+    }
+
+    .title {
+      font-size: rem(26);
+      font-weight: 500;
+
+      @include mobile {
+        font-size: rem(18);
+      }
+    }
+
+    .badge {
+      position: relative;
+      top: -3px;
+      margin-left: 6px;
+      padding: 3px 10px;
+      border-radius: 50px;
+      background-color: color(main);
+      font-size: rem(14);
+      font-weight: 500;
+      color: white;
+
+      @include mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 0;
+        padding: 4px 8px;
+        font-size: rem(12);
+      }
+
+      &.is-dark {
+        background-color: #303038;
+      }
+    }
+
+    .spec {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 13px;
+      font-weight: 300;
+      color: color(gray64);
+
+      @include mobile {
+        margin-top: 5px;
+        font-size: rem(13);
+      }
+
+      @include make-before {
+        @include absolute($t: 10px, $l: 0);
+        @include circle(5px);
+
+        background-color: color(border);
+
+        @include mobile {
+          top: 8px;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      @include bg-url(icon, "icon-view-gn.svg");
+    }
+  }
+}
+
+// 전문가 카드
+.pro-card {
+  align-items: stretch;
+
+  @include ie-style {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+  }
+
+  .card-list {
+    position: relative;
+    flex: 0 1 calc(33% - 1px);
+    width: 33%;
+    height: 120px;
+
+    @include ie-style {
+      display: inline-flex;
+      max-width: calc(33.333% - 12px);
+      margin: 5px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+
+  .card {
+    @include flex {
+      @include flex-op(center, flex-start);
+    }
+
+    position: relative;
+    padding: 25px;
+    cursor: pointer;
+  }
+
+  .pro-card-main {
+    opacity: 0;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border: 0 none;
+    box-shadow: 0 3px 8px rgba(#C3C3CE, 0.5);
+    transition: all 0.2s;
+    z-index: 1;
+    pointer-events: none;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+      border: 0 none;
+      background-color: white;
+      transition: none;
+    }
+  }
+
+  .img-wrap {
+    @include circle(70px);
+
+    overflow: hidden;
+
+    .img {
+      @include full;
+
+      object-fit: cover;
+    }
+  }
+
+  .txt-wrap {
+    padding-left: 15px;
+
+    .name {
+      font-size: rem(20);
+      font-weight: 500;
+    }
+
+    .position {
+      color: color(gray8f);
+    }
+  }
+
+  .pro-card-close {
+    @include absolute($t: 25px, $r: 25px);
+
+    cursor: pointer;
+  }
+
+  .pro-history {
+    flex: 0 0 100%;
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid color(grayec);
+
+    .history-list {
+      position: relative;
+      margin-top: 13px;
+      padding-left: 12px;
+      font-size: rem(15);
+      line-height: 1.3;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include make-before {
+        @include absolute($t: 7px, $l: 0);
+        @include circle(5px);
+
+        background-color: color(main);
+      }
+    }
+  }
+
+  .card-list.is-active {
+    height: auto;
+
+    .card {
+      flex-wrap: wrap;
+    }
+
+    .pro-card-main {
+      opacity: 1;
+      pointer-events: visible;
+    }
+  }
+}
+
+// list layout
+.group-info-wrap {
+  padding: 42px 50px;
+  
+  @include media(1340px) {
+    padding: 25px 25px;
+  }
+
+  @include mobile {
+    padding: 40px 20px;
+  }
+
+  .title-wrap {
+    @include flex {
+      @include flex-op(flex-start, space-between);
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .txt-wrap {
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    .group-name {
+      margin-bottom: 5px;
+      font-size: rem(28);
+      font-weight: 500;
+
+      @include mobile {
+        margin-bottom: 5px;
+      }
+    }
+
+    .group-sort {
+      font-size: rem(17);
+      color:color(main);
+    }
+
+    .num {
+      position: relative;
+      padding-left: 9px;
+      margin-left: 8px;
+      font-size: rem(17);
+      color: color(gray8f);
+
+      @include make-before {
+        @include absolute($t: 50%, $l: 0);
+        @include wh(1px, 14px);
+
+        background-color: color(grayc3);
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .list-wrap-ttl {
+    padding: 37px 0 14px;
+    font-size: rem(22);
+    font-weight: 500;
+
+    @include mobile {
+      padding: 30px 0 15px;
+    }
+  }
+
+  .caution {
+    padding: 15px 0 12px;
+    border-radius: 5px;
+    background-color: color(grayf5);
+    font-size: rem(14);
+    font-weight: 300;
+    color: color(gray8f);
+    text-align: center;
+
+    @include mobile {
+      padding: 11px 10px;
+      font-size: rem(13);
+    }
+  }
+}
+
+.btn-check {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: color(text);
+  font-size: rem(15);
+  color: white;
+  box-shadow: 0 4px 4px rgba(195,195,206,0.5);
+
+  @include mobile {
+    margin-left: 5px;
+    padding: 9px 14px;
+    font-size: rem(13);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  cursor: pointer;
+}
+
+.group-info-list-wrap {
+  border-top: 2px solid color(main);
+  padding-bottom: 10px;
+
+  .group-info-list {
+    @include flex;
+    
+    border-bottom: 1px solid color(grayec);
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid color(grayc3);
+    }
+  }
+
+  .group-info-inner {
+    @include flex;
+
+    flex: 1 1 50%;
+    padding: 20px 0;
+    padding-right: 15px;
+
+    @include mobile {
+      flex: 1 1 100%;
+      padding: 16px 0;
+
+      &:first-child {
+        border-bottom: 1px solid #ECECF1;
+      }
+    }
+  }
+
+  .group-list-ttl {
+    flex: 0 0 150px;
+    display: inline-block;
+    font-size: rem(15);
+    color: color(gray8f);
+    word-break: break-word;
+
+    @include mobile {
+      flex: 0 0 110px;
+      font-size: rem(13);
+    }
+  }
+
+  .group-list-dec {
+    font-size: rem(15);
+    word-break: break-word;
+  }
+}
+
+.half-list-wrap {
+  @include flex {
+    justify-content: space-between;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .list-wrap {
+    width: calc(50% - 20px);
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .comp-status {
+    .group-list-ttl {
+      display: none;
+    }
+    .group-list-dec {
+      width: 100%;
+      color: #5E5EFF;
+      text-align: center;
+    }
+
+    &.close {
+      .group-list-ttl {
+        display: block;
+      }
+      .group-list-dec {
+        width: auto;
+        color: #FF4646;
+        text-align: left;
+      }
+    }
+  }
+}
+
+// pagination
+.pagination {
+  @include flex-center;
+
+  .arrow-page {
+    @include input-reset;
+    @include wh(40px, 40px);
+
+    margin: 0 10px;
+    border: 1px solid #C3C3CE;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+
+    @include mobile {
+      margin: 0;
+    }
+
+    @include media(320px) {
+      @include wh(35px, 35px);
+    }
+  }
+
+  .prev-page {
+    margin-left: 0;
+  }
+
+  .next-page {
+    margin-right: 0;
+  }
+
+  .pager {
+    @include flex-item-center;
+    @include wh(40px, 40px);
+
+    display: inline-flex;
+    font-size: rem(15);
+    color: color(gray8f);
+    cursor: pointer;
+
+    @include media(320px) {
+      @include wh(35px, 35px);
+    }
+
+    &:hover,
+    &:focus {
+      font-weight: 600;
+      color: color(text);
+    }
+
+    &.on {
+      text-decoration: underline;
+      font-weight: 600;
+      color: color(text);
+    }
+  }
+}

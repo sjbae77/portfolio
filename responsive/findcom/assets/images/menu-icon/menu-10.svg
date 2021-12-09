@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="menu-10" transform="translate(21326 14736)">
+    <rect id="사각형_84" data-name="사각형 84" width="25" height="25" transform="translate(-21326 -14736)" fill="red" opacity="0"/>
+    <g id="그룹_237" data-name="그룹 237" transform="translate(-21322 -14731)">
+      <circle id="타원_55" data-name="타원 55" cx="2.397" cy="2.397" r="2.397" transform="translate(0 3.981)" fill="#fff" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <path id="패스_413" data-name="패스 413" d="M-47.619,340.369l-8.809,4.189V331.8l8.809,4.189Z" transform="translate(58.825 -331.803)" fill="#fff" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <path id="사각형_71" data-name="사각형 71" d="M0,0H3.416A2.188,2.188,0,0,1,5.6,2.188v0A2.188,2.188,0,0,1,3.416,4.377H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(11.205 4.189)" fill="#6bd998" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <path id="사각형_72" data-name="사각형 72" d="M0,0H2.479a0,0,0,0,1,0,0V5.126A1.239,1.239,0,0,1,1.239,6.365h0A1.239,1.239,0,0,1,0,5.126V0A0,0,0,0,1,0,0Z" transform="translate(11.205 8.566)" fill="#fff" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

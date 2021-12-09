@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>naracha Taekwondo</title>
+
+  <meta name="title" content="narachaTaekwondo" />
+  <meta name="author" content="narachaTaekwondo" />
+  <meta name="description" content="Naracha, which teaches Korea's proud traditional Taekwondo!" />
+  <meta name="keywords" content="naracha Taekwondo, Taekwondo, naracha," />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://naracha.co.kr" />
+  <meta property="og:title" content="narachaTaekwondo" />
+  <meta property="og:description" content="Naracha, which teaches Korea's proud traditional Taekwondo!" />
+  <meta property="og:image" content="./assets/images/favicon/favicon.png" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="http://www.naracha.co.kr/" />
+  <meta property="twitter:title" content="narachaTaekwondo" />
+  <meta property="twitter:description" content="Naracha, which teaches Korea's proud traditional Taekwondo!" />
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="./assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="./assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="./assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="./assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#111151" />
+  <meta name="theme-color" content="#111151" />
+
+  <!-- css link -->
+  <link rel="stylesheet" href="./assets/css/vendor/normalize.css" />
+  <link rel="stylesheet" href="./assets/css/vendor/swiper.min.css" />
+  <link rel="stylesheet" href="./assets/css/vendor/aos.css" />
+  <link rel="stylesheet" href="./assets/css/custom/ui.css" />
+
+  <!-- javascript link -->
+  <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/vendor/vue.min.js"></script>
+  <script src="./assets/js/vendor/swiper.min.js"></script>
+  <script src="./assets/js/custom/ui.js"></script>
+  <script src="./assets/js/vendor/axios.min.js"></script>
+  <script src="./assets/js/vendor/moment.min.js"></script>
+  <script src="./assets/js/vendor/aos.js"></script>
+  <script src="./components/index-footer.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap en-page-wrap">
+      <header class="header">
+        <div class="l-center">
+          <h1 class="logo">
+            <a href="./index-en.html">
+              <img src="./assets/images/logo/logo.svg" alt="narachaTaekwondo" class="is-mo-hide" />
+              <img src="./assets/images/logo/mo/m-logo-header.svg" alt="narachaTaekwondo" class="is-mo-show" />
+            </a>
+          </h1>
+          <div class="login-menu" v-if="!user">
+            <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list">
+                <a href="pages/login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+              </li>
+              <!-- <li class="login-menu-list">
+                <a href="pages/sign-up.html" class="login-menu-link">SIGN UP</a>
+              </li> -->
+              <li class="login-menu-list">
+                <a href="./index.html" class="login-menu-link">KO</a>
+              </li>
+            </ul>
+          </div>
+          <div class="login-menu" v-else>
+            <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list" v-if="user.user_provider === 'local'">
+                <a @click="logout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list" v-else>
+                <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list">
+                <a href="pages/mypage.html" class="login-menu-link">MY PAGE</a>
+              </li>
+              <li class="login-menu-list">
+                <a href="./index.html" class="login-menu-link">KO</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 모바일 메뉴 버튼 -->
+          <button class="mo-menu-btn is-mo-show">
+            <img src="./assets/images/btn/mo/btn-menu.svg" alt="모바일 메뉴" class="mo-menu-btn-img">
+          </button>
+        </div>
+      </header>
+      <nav class="gnb-wrap is-mo-hide">
+        <ul class="gnb-group">
+          <!-- active : 헤당 메뉴 클릭시 border-bottom 생김 -->
+          <li class="gnb-list">
+            <a href="pages/gnb-news.html" class="gnb-link">News</a>
+          </li>
+          <li class="gnb-list">
+            <a href="pages/gnb-notice.html" class="gnb-link">Notice</a>
+          </li>
+          <li class="gnb-list">
+            <a href="pages/gnb-qna.html" class="gnb-link">Q&A</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 모바일 메뉴 -->
+      <div class="mo-menu-wrap is-mo-show">
+
+        <div class="menu-header">
+
+          <span class="menu-tit">MENU</span>
+          <button class="menu-clse-btn">
+            <img src="./assets/images/btn/mo/btn-menu-close.svg" alt="메뉴닫기">
+          </button>
+        </div>
+
+        <ul class="mo-menu-group">
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-news.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">News</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="News">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-notice.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Notice</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="Notice">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-qna.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Q&A</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="Q&A">
+            </a>
+          </li>
+        </ul>
+
+        <div class="login-menu" v-if="!user">
+          <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list">
+              <a href="pages/login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+            </li>
+            <!-- <li class="login-menu-list">
+              <a href="pages/sign-up.html" class="login-menu-link">SIGN UP</a>
+            </li> -->
+            <li class="login-menu-list">
+              <a href="./index.html" class="login-menu-link">KO</a>
+            </li>
+          </ul>
+        </div>
+        <div class="login-menu" v-else>
+          <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list" v-if="user.user_provider === 'local'">
+              <a @click="logout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list" v-else>
+              <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list">
+              <a href="pages/mypage.html" class="login-menu-link">MY PAGE</a>
+            </li>
+            <li class="login-menu-list">
+              <a href="./index.html" class="login-menu-link">KO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cover"></div>
+
+      <main class="main">
+
+        <section class="sec-introduce">
+          <div class="bg-wrap">
+            <img :src="`http://api.naracha.co.kr/storage/layout_main/${main_layout.intro_ceo_img}`" alt="나라차태권도 관장 임미화"
+              class="bg-sec-introduce-img is-mo-hide" />
+            <img src="./assets/images/img/bg-symbol.svg" alt="나라차 로고" class="bg-symbol-img" />
+          </div>
+          <div class="l-center">
+            <div class="img-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="300"
+              data-aos-offset="300">
+              <img :src="`http://api.naracha.co.kr/storage/layout_main/${main_layout.main_ceo_img}`" alt="나라차태권도 관장님 사진"
+                class="sec-introduce-pic-img" />
+            </div>
+            <div class="txt-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500"
+              data-aos-offset="300">
+              <h2 class="tit bold-txt">
+                <!-- TODO: {{main_layout.intro_title}} -->
+                Naracha is a Taekwondo studio where "Taekwondo" is the answer.
+              </h2>
+              <h3 class="sub-tit">
+                <!-- TODO: {{main_layout.main_greetings}} -->
+                Naracha will be a Taekwondo studio that researches and presents answers.
+              </h3>
+              <p class="dec">
+                <!-- TODO: {{main_layout.intro_text}} -->
+                We are contemplating how to teach Taekwondo, the national sport of Korea, to all ages and genders, and
+                are searching for answers. Many people participated in that sincere step. We invite you to Nara Cha
+                Taekwondo where masters teach with thinking mind about the essence of Taekwondo.
+              </p>
+              <a href="https://forms.gle/ZX8BmrdPDb4Ctm4BA" target="_blank" class="btn-inquiry">Inquiry about family</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec-family sec-practice">
+          <div class="l-center">
+            <div class="content-wrap">
+              <div class="pratice-wrap">
+                <div class="practice">
+                  <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">Curriculum</h3>
+                  <div class="curric-box-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum01.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Meditation
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum02.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Stretching
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum03.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Physical <br />
+                        Fitness
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum04.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Jump rope <br />
+                        measurement
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum05.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Fitness <br />
+                        improvement
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum06.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Concentration
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum07.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Rope skipping <br />
+                        activity
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum08.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Education of <br />humanism
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum09.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Attendance <br />
+                        Management
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum10.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Application
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum11.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Button <br />
+                        system
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum12.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Band <br />
+                        system
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum13.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Parent <br />
+                        communication
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum14.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Black belt <br />
+                        program
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum15.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Basic action
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum16.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Smash
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum17.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Self-defense <br />
+                        martial art
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum18.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Kicks
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum19.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Poomsae
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum20.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Power Chart
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum21.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Taekwondo <br />
+                        belt test
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum22.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Demonstration <br />
+                        Team
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum23.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Taekwondo <br />
+                        competition
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum24.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        School physical <br />
+                        education
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum25.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Recreation
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum26.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Camp
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum27.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Nutrition
+                      </span>
+                    </div>
+                    <div class="curric-box">
+                      <img src="./assets/images/icon/icon-curriculum28.svg" alt="커리큘럼 이미지">
+                      <span class="curric-txt">
+                        Field trip
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="practice">
+                  <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">
+                    Naracha Education and Training
+                  </h3>
+                  <p class="practice-dec" data-aos="fade-up" data-aos-duration="1600">
+                    Naracha's confident education and training <br class="is-mo-show" />will help you grow <br
+                      class="is-mo-hide" />
+                    into a person that is <br class="is-mo-show" />essential in this society, <br />
+                    and will make you a right mind, <br class="is-mo-show" />a broad mind, and a healthy body.
+                  </p>
+                  <div class="practice-img-wrap">
+                    <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200">
+                      <div class="practice-img-inner">
+                        <img src="./assets/images/img/practice02-1.png" alt="training" class="practice-img">
+                      </div>
+                      <span class="practice-txt">
+                        Training by age <br />
+                        and curriculum <br />
+                        for each level.
+                      </span>
+                    </div>
+                    <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                      <div class="practice-img-inner">
+                        <img src="./assets/images/img/practice02-2.png" alt="training" class="practice-img">
+                      </div>
+                      <span class="practice-txt">
+                        Training by age <br />
+                        and curriculum <br />
+                        for each level.
+                      </span>
+                    </div>
+                    <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                      <div class="practice-img-inner">
+                        <img src="./assets/images/img/practice02-3.png" alt="training" class="practice-img">
+                      </div>
+                      <span class="practice-txt">
+                        Training atmosphere that is <br />
+                        full of consideration, <br />
+                        praises and encouragement <br />
+                        for each other.
+                      </span>
+                    </div>
+                    <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                      <div class="practice-img-inner">
+                        <img src="./assets/images/img/practice02-4.png" alt="training" class="practice-img">
+                      </div>
+                      <span class="practice-txt">
+                        Place that improves <br />
+                        physical strength based <br />
+                        on physical activities.
+                      </span>
+                    </div>
+                    <div class="practice-img-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+                      <div class="practice-img-inner">
+                        <img src="./assets/images/img/practice02-5.png" alt="training" class="practice-img">
+                      </div>
+                      <span class="practice-txt">
+                        Professional instructors <br />
+                        from the best Taekwondo <br />
+                        demonstration teams, <br />
+                        kind vehicle managers and <br />
+                        assistant teachers.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="practice">
+                  <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">NARACHA TYPE System</h3>
+                  <div class="tape-wrap">
+                    <div class="tape-img-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                      <img src="./assets/images/img/tape.svg" alt="TAPE IMAGE" class="tape-img">
+                    </div>
+                    <div class="tape-box-wrap">
+                      <div class="tape-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                        <span class="tape-tit">
+                          What is TAPE system?
+                        </span>
+                        <span class="tape-dec">
+                          TAPE system is a tool that checks how much a student trained.
+                        </span>
+                        <p class="tape-txt">
+                          If you learn all the curriculum that <br class="is-mo-xsm-show" />fits your belt <br
+                            class="is-mo-show is-mo-xsm-hide" />
+                          and collect all <br class="is-mo-xsm-show" />the TAPEs of each color,<br />
+                          you are eligible to participate in the <br class="is-mo-show" />
+                          level promotion test <br class="is-mo-xsm-show" />held once every two months.
+                        </p>
+                      </div>
+                      <div class="tape-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                        <span class="tape-tit">
+                          Way to get TAPEs
+                        </span>
+                        <p class="tape-txt">
+                          You will receive a TAPE based on the <br class="is-mo-show" />
+                          curriculum learned in each training session. <br class="is-mo-show" />
+                          However,
+                          <br class="is-mo-hide" />
+                          the Black TAPE can <br class="is-mo-xsm-show" />only be obtained <br
+                            class="is-mo-show is-mo-xsm-hide" />
+                          through the life attitude <br class="is-mo-xsm-show" />evaluation table <br
+                            class="is-mo-show is-mo-xsm-hide" />
+                          written by the parents.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="practice">
+                  <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">
+                    Divided Group Training
+                  </h3>
+                  <div class="class-wrap">
+                    <div class="class" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                      <img src="./assets/images/img/class01.png" alt="분리수업" class="class-img">
+                      <div class="class-txt-wrap">
+                        <span class="class-tit">
+                          <strong class="class-num">01.</strong>
+                          Method
+                        </span>
+                        <p class="class-dec">
+                          Form a formation line <br />
+                          so as not to distract the trainees.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="class" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                      <img src="./assets/images/img/class02.png" alt="분리수업" class="class-img">
+                      <div class="class-txt-wrap">
+                        <span class="class-tit">
+                          <strong class="class-num">02.</strong>
+                          Organization
+                        </span>
+                        <p class="class-dec">
+                          If all 50-minute training session <br />
+                          is conducted separately, <br />
+                          the physical burden and <br class="is-mo-show" />
+                          work will be hindered. <br />
+                          Therefore, only 20 minutes of <br />
+                          Taekwondo training should be <br />
+                          conducted separately.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="class" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                      <img src="./assets/images/img/class03.png" alt="분리수업" class="class-img">
+                      <div class="class-txt-wrap">
+                        <span class="class-tit">
+                          <strong class="class-num">03.</strong>
+                          Contents
+                        </span>
+                        <p class="class-dec">
+                          There is an implicit promise <br />
+                          before the divided training session.<br />
+                          Classes are given in the order <br />
+                          of “basic movements - <br class="is-mo-xsm-show" />Poomsae – kicks”.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="practice">
+                  <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">
+                    50 Minute Class Organization
+                  </h3>
+                  <ul class="practice-con-group is-mo-hide" data-aos="fade-up" data-aos-duration="1600">
+                    <li class="practice-con-list">
+                      <span class="circle"></span>
+                      Selective training 3 times a week, 2 times a week
+                    </li>
+                    <li class="practice-con-list">
+                      <span class="circle"></span>
+                      Training time : 50 minutes
+                    </li>
+                    <li class="practice-con-list">
+                      <span class="circle"></span>
+                      Training by age
+                    </li>
+                    <li class="practice-con-list">
+                      <span class="circle"></span>
+                      Training by Group
+                    </li>
+                  </ul>
+
+
+                  <div class="prac-con-box-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                    <div class="prac-con-box">
+                      <span class="prac-con-tit">
+                        Greetings and <br />Meditation
+                      </span>
+                      <span class="prac-con-time">3'</span>
+                    </div>
+                    <div class="dot-wrap">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="prac-con-box con-type-2">
+                      <span class="prac-con-tit">
+                        warm-up <br />exercise
+                      </span>
+                      <span class="prac-con-time">25'</span>
+                    </div>
+                    <div class="dot-wrap">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="prac-con-box con-type-3">
+                      <span class="prac-con-tit">
+                        Divided Group <br />Training
+                      </span>
+                      <span class="prac-con-time">25'</span>
+                    </div>
+                    <div class="dot-wrap">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="prac-con-box">
+                      <span class="prac-con-tit">
+                        Finishing <br />exercises
+                      </span>
+                      <span class="prac-con-time">25'</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="practice prac-bottom">
+                  <img src="./assets/images/img/bg-practice.png" alt="배경이미지" class="prac-bg-img is-mo-hide"
+                    data-aos="fade-left" data-aos-duration="1400">
+                  <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">
+                    Growth Gymnastics
+                  </h3>
+                  <p class="practice-dec" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    It is done to improve flexibility, <br />
+                    one of the most important <br class="is-mo-xsm-show" />components of fitness.<br />
+                    It helps in growth and allows <br class="is-mo-show" />you to maintain an upright posture.
+                  </p>
+                  <div class="prac-slide-wrap swiper1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="./assets/images/img/gymnastics01.png" alt="성장체조" class="img gym-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./assets/images/img/gymnastics02.png" alt="성장체조" class="img gym-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./assets/images/img/gymnastics03.png" alt="성장체조" class="img gym-img">
+                        </div>
+                      </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-wrap">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="practice prac-bottom prac-medit">
+                  <h3 class="practice-tit" data-aos="fade-up" data-aos-duration="1200">
+                    Meditation Training
+                  </h3>
+                  <p class="practice-dec" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    Through meditation before the start of training, <br />
+                    we try to calm our mind and <br class="is-mo-xsm-show" />to have an attitude suitable <br />
+                    for practicing martial arts Taekwondo.
+                  </p>
+                  <div class="prac-slide-wrap swiper2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="./assets/images/img/meditation01.png" alt="성장체조" class="img gym-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./assets/images/img/meditation02.png" alt="성장체조" class="img gym-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./assets/images/img/meditation03.png" alt="성장체조" class="img gym-img">
+                        </div>
+                      </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-wrap">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <index-footer></index-footer>
+    </div>
+  </div>
+  <script>
+    var app1 = new Vue({
+      el: "#app",
+      data: function () {
+        return {
+          user: null,
+          isRunning: false,
+          items: [],
+          items2: [],
+          selectedKind: 1,
+          main_layout: {
+            main_ceo_img: null,
+            intro_ceo_img: null,
+            intro_title: null,
+            main_greetings: null,
+            intro_text: null
+          }
+        };
+      },
+      created: function () {
+        if (localStorage.getItem('narachaToken')) {
+          axios.get("http://api.naracha.co.kr/api/v1/user/auth/profile", {
+            headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+          })
+            .then(function (res) {
+              app1.user = res.data.query
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+        }
+        this.fetchData();
+      },
+      methods: {
+        fetchData: function () {
+          if (this.isRunning) {
+            return;
+          }
+          this.isRunning = true;
+
+          var res1 = axios
+            .get("http://api.naracha.co.kr/api/v1/user/layout-main")
+            .then(function (res) {
+              app1.items = app1.items.concat(res.data.query);
+              console.log(app1.items);
+              Object.keys(app1.main_layout).forEach(key => {
+                app1.items.forEach(x => {
+                  if (key === x.lm_setting_key) app1.main_layout[key] = x.lm_setting_value
+                })
+              })
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+            .then(function () {
+              app1.isRunning = false;
+            });
+
+          var res2 = axios
+            .get("http://api.naracha.co.kr/api/v1/user/history")
+            .then(function (res) {
+              app1.items2 = app1.items2.concat(res.data.query);
+              Object.keys(app1.main_layout).forEach(key => {
+                app1.items2.forEach(x => {
+                  if (key === x.lm_setting_key) app1.main_layout[key] = x.lm_setting_value
+                })
+              })
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+            .then(function () {
+              app1.isRunning = false;
+            });
+        },
+        async logout() {
+          localStorage.removeItem('narachaToken')
+          window.location.href = '/'
+        },
+        async kakaoLogout() {
+          axios
+            .get("http://api.naracha.co.kr/api/v1/user/auth/logout/kakao", {
+              headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+            })
+            .then(function (res) {
+              if (res.data.redirect) {
+                localStorage.removeItem('narachaToken')
+                window.location.href = res.data.redirect
+              }
+            })
+        }
+      },
+    });
+
+    // 메인 이미지 슬라이드
+    new Swiper(".swiper-container", {
+
+      loop: true,
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    AOS.init({
+      disable: 'mobile',
+      once: true
+    });
+
+  </script>
+</body>
+
+</html>

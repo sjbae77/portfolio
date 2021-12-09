@@ -1,0 +1,27 @@
+/* =================== layout =================== */
+#app,
+.wrap {
+  min-height: 100%;
+  min-width: 1360px;
+
+  @include media(600px) {
+    min-width: 360px;
+  }
+
+  @include media(320px) {
+    min-width: 320px;
+  }
+}
+
+#page {
+  min-height: 100%;
+}
+
+/* 210720 CGS - pagination dot 관련 추가 css */
+
+.text-dot {
+  font-size: rem(16);
+  color: #9f9f9f;
+  padding: 0 3px;
+  vertical-align: super;
+}

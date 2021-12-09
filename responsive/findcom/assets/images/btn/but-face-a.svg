@@ -1,0 +1,7 @@
+<svg id="but-face-a" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <circle id="타원_52" data-name="타원 52" cx="14" cy="14" r="14" fill="#1877f2"/>
+  <g id="but-facebook" transform="translate(4.979 4.977)">
+    <rect id="사각형_20" data-name="사각형 20" width="17.92" height="17.915" transform="translate(0 0)" fill="rgba(255,255,255,0)"/>
+    <path id="btn-facebook" d="M390.531,372.7h1.814v-2.852h-2.719a3.686,3.686,0,0,0-2.8,1.374,3.889,3.889,0,0,0-.754,2.749h0v2.139h-2.687v3.028h2.687v7.823h3.1v-7.823h2.666l.372-3.028h-3.038v-2.139h0A1.244,1.244,0,0,1,390.531,372.7Z" transform="translate(-378.905 -369.846)" fill="#fff"/>
+  </g>
+</svg>

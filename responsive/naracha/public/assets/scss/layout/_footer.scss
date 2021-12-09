@@ -1,0 +1,67 @@
+/* =================== footer =================== */
+.com-ft {
+  padding: 80px 0;
+  background-color: #222;
+  color: white;
+}
+
+.ft-link-wrap {
+  .link {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.ft-logo-wrap {
+  padding-top: 30px;
+}
+
+.ft-info-wrap {
+  padding-top: 30px;
+}
+
+.ft-list {
+  .tit {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .dec {
+    position: relative;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+
+  &.dot {
+    .dec {
+      padding-left: 15px;
+
+      @include make-before {
+        @include absolute($t: 50%);
+        @include circle(5px);
+
+        background-color: white;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &.bar {
+    .dec {
+      @include make-before {
+        @include absolute($t: 50%);
+        @include wh(1px, 12px);
+
+        background-color: white;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &.inline {
+    display: inline-block;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

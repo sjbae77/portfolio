@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>FIND COMPANY</title>
+
+  <meta name="title" content="FIND COMPANY" />
+  <meta name="author" content="(주)비즈부스터" />
+  <meta name="description" content="글로벌 비즈니스 플랫폼을 만들어 갑니다" />
+  <meta name="keywords" content="기업검색, 기업정보, 휴폐업조회, 기업발굴" />
+
+  <!-- FIXME: 도메인 확인되면 기입 필요 -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="FIND COMPANY" />
+  <meta property="og:description" content="글로벌 비즈니스 플랫폼을 만들어 갑니다" />
+  <meta property="og:image" content="/assets/images/favicon/og.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:url" content="" />
+  <meta property="twitter:title" content="FIND COMPANY" />
+  <meta property="twitter:description" content="글로벌 비즈니스 플랫폼을 만들어 갑니다" />
+
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="../assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="../assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="../assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="../assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- END favicon -->
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- script -->
+  <script src="../assets/js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/js/custom/ui.js"></script>
+  <script src="../assets/js/custom/selectOption.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/ui.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <header class="header">
+        <div class="hd-inner">
+          <div class="hd-left-wrap">
+            <!-- TODO: js) 클릭시 메뉴 토글 -->
+            <div class="menu-btn">
+              <img src="../assets/images/btn/btn-menu-bk.svg" alt="햄버거 메뉴" class="off" />
+              <img src="../assets/images/btn/btn-menu-gn.svg" alt="햄버거 메뉴" class="on" />
+            </div>
+            <h1 class="logo">
+              <a href="../index.html">
+                <img src="../assets/images/logo/logo-header.svg" alt="FINDCOMPANY 로고" />
+              </a>
+            </h1>
+            <div class="hd-search-wrap">
+              <!-- TODO: js) 키보드 입력시 keyword-box 나타남 -->
+              <input type="text" id="main-search" class="search-inp" placeholder="기업명을 입력해주세요." />
+              <button type="button" class="search-btn"></button>
+              <div class="keyword-box">
+                <div class="keyword-cont">
+                  <div class="type">상장기업<span class="num">(3)</span></div>
+                  <ul class="keyword-group">
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>
+                    </li>
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>차
+                    </li>
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>중공업
+                    </li>
+                  </ul>
+                </div>
+                <div class="keyword-cont">
+                  <div class="type">외감기업<span class="num">(1)</span></div>
+                  <ul class="keyword-group">
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="keyword-cont">
+                  <div class="type">일반기업<span class="num">(1)</span></div>
+                  <ul class="keyword-group">
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="inquire.html" class="inquiry-btn">
+            <span>고객문의</span>
+            <img src="../assets/images/icon/icon-cs.svg" alt="문의하기 아이콘 /" />
+          </a>
+        </div>
+      </header>
+
+      <div class="page-wrap icon-gnb-page">
+        <div class="vertical-gnb-wrap">
+          <div class="main-gnb-wrap">
+            <div class="gnb-cont">
+              <span class="ttl">기업정보</span>
+              <ul class="gnb-wrap">
+                <li class="gnb-list">
+                  <a href="search-results.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-01.svg" alt="기업검색" />
+                    <span class="txt">기업검색</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="conditional-search.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-02.svg" alt="조건검색" />
+                    <span class="txt">조건검색</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="info.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-03.svg" alt="기업정보" />
+                    <span class="txt">기업정보</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="closed-business.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-04.svg" alt="휴폐업조회" />
+                    <span class="txt">휴폐업조회</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="gnb-cont">
+              <span class="ttl">프리미엄</span>
+              <ul class="gnb-wrap">
+                <li class="gnb-list is-active">
+                  <a href="discovery.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-05.svg" alt="기업발굴" />
+                    <span class="txt">기업발굴</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sub-gnb-wrap">
+            <div class="gnb-cont">
+              <ul class="gnb-wrap">
+                <li class="gnb-list">
+                  <a href="inquire.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-06.svg" alt="고객문의" />
+                    <span class="txt">고객문의</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-07.svg" alt="메일 리스트" />
+                    <span class="txt">메일 리스트</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-08.svg" alt="블로그" />
+                    <span class="txt">블로그</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-09.svg" alt="도움말" />
+                    <span class="txt">도움말</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-10.svg" alt="공지/이벤트" />
+                    <span class="txt">공지/이벤트</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- TODO: mobile: pc에서 푸터 일부 모바일 네비로 이동 -->
+          <div class="company-gnb-wrap mb-show">
+            <div class="gnb-cont">
+              <ul class="gnb-wrap">
+                <li class="gnb-list">
+                  <a href="../index.html" class="link">
+                    <span>메인으로</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="findcompany-info.html" class="link">
+                    <span>회사소개</span>
+                  </a>
+                </li>
+                <li class="sub-cont">
+                  <button type="button" class="gnb-btn">
+                    <span>제품</span>
+                    <img src="../assets/images/icon/icon_ft_select.svg" alt="삼각형모양 화살표" />
+                  </button>
+                  <ul class="sub-wrap">
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>Analytics</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>Data Inteligence</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>AI Index</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>On-Premises</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>Valuation</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sub-cont">
+                  <button type="button" class="gnb-btn">
+                    <span>홍보</span>
+                    <img src="../assets/images/icon/icon_ft_select.svg" alt="삼각형모양 화살표" />
+                  </button>
+                  <ul class="sub-wrap">
+                    <li class="sub-list">
+                      <a href="press-release.html" class="sub-link">
+                        <span>보도자료</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>블로그</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>공지/이벤트</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnb-list">
+                  <a href="findcompany-employ.html" class="link">
+                    <span>채용</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <span>파인드 컴퍼니 퀵가이드</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sns-area mb-show-flex">
+            <span class="ttl"> FINDCOMPANY SNS </span>
+            <div class="sns-link-wrap mb-show-flex">
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-blog-a.svg" alt="네이버 블로그 바로가기" />
+              </a>
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-face-a.svg" alt="페이스북 바로가기" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="page">
+          <!-- page 구성요소 1. 페이지 컨텐츠 영역 -->
+          <div class="page-container">
+            <!-- 서비스 준비중 -->
+            <div class="com-box bk comming-box">
+              <div class="comming-wrap">
+                <div class="loader mb-hide"></div>
+                <div class="txt-wrap">
+                  <div class="com-ttl">서비스 준비중입니다.</div>
+                  <div class="desc mb-hide">
+                    해당 서비스가 곧 오픈될 예정입니다.<br />
+                    많은 관심 부탁드립니다.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END 서비스 준비중 -->
+            <!-- 선택된 필터 -->
+            <!-- TODO: js추가필요) 서비스 준비중일때 is-inactive로 비활성화 처리 -->
+            <div class="com-box bk filter-com-box">
+              <div class="l-center">
+                <div class="slt-filt-wrap">
+                  <div class="ttl-wrap">
+                    <div class="com-ttl mb-hide">선택된 필터</div>
+                    <!-- TODO: mobile: 클릭시 팝업 나타남 -->
+                    <div class="com-ttl mb-show popup-btn popup-filter-btn">
+                      선택된 필터
+                    </div>
+                    <span class="num mb-show-flex">(99)</span>
+                    <img src="../assets/images/icon/icon-view-gr.svg" alt="오른쪽 화살표" class="img-arrow" />
+                    <div class="reset-wrap mb-hide">
+                      <img src="../assets/images/icon/icon-reset.svg" alt="초기화" />
+                      초기화
+                    </div>
+                  </div>
+                  <div class="filt-search-wrap">
+                    <!-- TODO: mobile: swiper 플러그인으로 가로스크롤 -->
+                    <div class="swiper scrollSwiper ie-scroll">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="slt-btn-wrap">
+                            <!-- TODO: js추가필요) 필터에서 필터할 내용을 선택할 때마다 slt-btn이 추가됨. -->
+                            <div class="slt-btn">
+                              <span>상장</span>
+                              <!-- TODO: js추가필요) close-btn을 누르면 해당 필터가 이 리스트에서 사라지고, 하단 필터에서 체크 해제됨 -->
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>서울전체</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>제조업</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>상장</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>서울전체</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>제조업</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>서울전체</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>제조업</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>상장</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>서울전체</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>제조업</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>서울전체</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>제조업</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>상장</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>서울전체</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                            <div class="slt-btn">
+                              <span>제조업</span>
+                              <div class="close-btn">
+                                <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-scrollbar"></div>
+                    </div>
+                    <!-- TODO: js추가필요) 선택된 필터가 없을경우 -->
+                    <div class="slt-empty-wrap" style="display: none">
+                      선택된 필터가 없습니다.
+                    </div>
+                    <!-- TODO: js추가필요) is-active 붙으면 활성화 -->
+                    <button type="button" class="btn btn-gray">검색</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END 선택된 필터 -->
+
+            <!-- 검색 필터 -->
+            <!-- TODO: 서비스 준비중일때 is-inactive로 비활성화 처리 -->
+            <div class="com-box filt-box">
+              <div class="l-center">
+                <div class="com-ttl">검색 필터</div>
+
+                <div class="toggle-cont-wrap">
+                  <!-- 기업 상세정보 -->
+                  <div class="toggle-cont">
+                    <input type="checkbox" name="compDetail" id="compDetail" class="toggle-input" />
+                    <label for="compDetail" class="toggle-label">
+                      기업 상세정보
+                    </label>
+                    <div class="toggle-desc">
+                      <div class="toggle-caution">
+                        ※ 조건 미선택시 전체선택으로 조회됩니다.
+                      </div>
+                      <div class="slt-wrap">
+                        <!-- chk1 -->
+                        <div class="slt-list">
+                          <span class="slt-type">기업형태</span>
+                          <div class="slt-content">
+                            <div class="chk-group">
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk1-type1" class="chk-inp" />
+                                <label for="chk1-type1">&nbsp;</label>
+                                <label for="chk1-type1" class="ttl">상장</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk1-type2" class="chk-inp" />
+                                <label for="chk1-type2">&nbsp;</label>
+                                <label for="chk1-type2" class="ttl">외감</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk1-type3" class="chk-inp" />
+                                <label for="chk1-type3">&nbsp;</label>
+                                <label for="chk1-type3" class="ttl">법인</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk1-type4" class="chk-inp" />
+                                <label for="chk1-type4">&nbsp;</label>
+                                <label for="chk1-type4" class="ttl">개인</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slt-list">
+                          <span class="slt-type">사업영역</span>
+                          <div class="slt-content">
+                            <!-- TODO: js) 사업영역 클릭시 사업영역 팝업 열림-->
+                            <button type="button" id="bsn-area-slt" class="slt popup-btn popup-code-btn">
+                              사업영역 선택
+                            </button>
+                          </div>
+                        </div>
+                        <div class="slt-list">
+                          <span class="slt-type">지역(본사)</span>
+                          <div class="slt-content">
+                            <div class="local-group">
+                              <!-- TODO: js) select option selectOtion.js에서 처리 -->
+                              <select name="sido1" id="sido1" class="slt local-slt">
+                                <option value="">시도</option>
+                              </select>
+                              <select name="gugun1" id="gugun1" class="slt"></select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slt-list">
+                          <span class="slt-type">설립일</span>
+                          <div class="slt-content date-content">
+                            <input type="date" id="start-dt" name="start-dt" class="inp" />
+                            <span class="ing">~</span>
+                            <input type="date" id="end-dt" name="end-dt" class="inp" />
+                          </div>
+                        </div>
+                        <!-- chk2 -->
+                        <div class="slt-list">
+                          <span class="slt-type">기업상태</span>
+                          <div class="slt-content">
+                            <div class="chk-group">
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk2-type1" class="chk-inp" />
+                                <label for="chk2-type1">&nbsp;</label>
+                                <label for="chk2-type1" class="ttl">정상</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk2-type2" class="chk-inp" />
+                                <label for="chk2-type2">&nbsp;</label>
+                                <label for="chk2-type2" class="ttl">휴업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk2-type3" class="chk-inp" />
+                                <label for="chk2-type3">&nbsp;</label>
+                                <label for="chk2-type3" class="ttl">폐업</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slt-list">
+                          <span class="slt-type">종업원 수</span>
+                          <div class="slt-content">
+                            <div class="range-group">
+                              <div class="range-list">
+                                <input type="tel" class="inp" placeholder="0" />
+                                <span>이상</span>
+                              </div>
+                              <span class="ing">~</span>
+                              <div class="range-list">
+                                <input type="tel" class="inp" placeholder="0" />
+                                <span>미만</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- chk3 -->
+                        <div class="slt-list">
+                          <span class="slt-type">기업규모</span>
+                          <div class="slt-content">
+                            <div class="chk-group">
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk3-type1" class="chk-inp" />
+                                <label for="chk3-type1">&nbsp;</label>
+                                <label for="chk3-type1" class="ttl">대기업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk3-type2" class="chk-inp" />
+                                <label for="chk3-type2">&nbsp;</label>
+                                <label for="chk3-type2" class="ttl">중기업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk3-type3" class="chk-inp" />
+                                <label for="chk3-type3">&nbsp;</label>
+                                <label for="chk3-type3" class="ttl">소기업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk3-type4" class="chk-inp" />
+                                <label for="chk3-type4">&nbsp;</label>
+                                <label for="chk3-type4" class="ttl">한시성중소기업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk3-type5" class="chk-inp" />
+                                <label for="chk3-type5">&nbsp;</label>
+                                <label for="chk3-type5" class="ttl">중견기업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk3-type6" class="chk-inp" />
+                                <label for="chk3-type6">&nbsp;</label>
+                                <label for="chk3-type6" class="ttl">소상공인</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk3-type7" class="chk-inp" />
+                                <label for="chk3-type7">&nbsp;</label>
+                                <label for="chk3-type7" class="ttl">보호대상중견기업</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- chk4 -->
+                        <div class="slt-list">
+                          <span class="slt-type">결산월</span>
+                          <div class="slt-content">
+                            <div class="chk-group">
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type1" class="chk-inp" />
+                                <label for="chk4-type1">&nbsp;</label>
+                                <label for="chk4-type1" class="ttl">1월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type2" class="chk-inp" />
+                                <label for="chk4-type2">&nbsp;</label>
+                                <label for="chk4-type2" class="ttl">2월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type3" class="chk-inp" />
+                                <label for="chk4-type3">&nbsp;</label>
+                                <label for="chk4-type3" class="ttl">3월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type4" class="chk-inp" />
+                                <label for="chk4-type4">&nbsp;</label>
+                                <label for="chk4-type4" class="ttl">4월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type5" class="chk-inp" />
+                                <label for="chk4-type5">&nbsp;</label>
+                                <label for="chk4-type5" class="ttl">5월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type6" class="chk-inp" />
+                                <label for="chk4-type6">&nbsp;</label>
+                                <label for="chk4-type6" class="ttl">6월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type7" class="chk-inp" />
+                                <label for="chk4-type7">&nbsp;</label>
+                                <label for="chk4-type7" class="ttl">7월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type8" class="chk-inp" />
+                                <label for="chk4-type8">&nbsp;</label>
+                                <label for="chk4-type8" class="ttl">8월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type9" class="chk-inp" />
+                                <label for="chk4-type9">&nbsp;</label>
+                                <label for="chk4-type9" class="ttl">9월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type10" class="chk-inp" />
+                                <label for="chk4-type10">&nbsp;</label>
+                                <label for="chk4-type10" class="ttl">10월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type11" class="chk-inp" />
+                                <label for="chk4-type11">&nbsp;</label>
+                                <label for="chk4-type11" class="ttl">11월</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk4-type12" class="chk-inp" />
+                                <label for="chk4-type12">&nbsp;</label>
+                                <label for="chk4-type12" class="ttl">12월</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- chk5 -->
+                        <div class="slt-list">
+                          <span class="slt-type">주채권기관</span>
+                          <div class="slt-content">
+                            <div class="chk-group">
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type1" class="chk-inp" />
+                                <label for="chk5-type1">&nbsp;</label>
+                                <label for="chk5-type1" class="ttl">국민은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type2" class="chk-inp" />
+                                <label for="chk5-type2">&nbsp;</label>
+                                <label for="chk5-type2" class="ttl">농협</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type3" class="chk-inp" />
+                                <label for="chk5-type3">&nbsp;</label>
+                                <label for="chk5-type3" class="ttl">우리은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type4" class="chk-inp" />
+                                <label for="chk5-type4">&nbsp;</label>
+                                <label for="chk5-type4" class="ttl">기업은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type5" class="chk-inp" />
+                                <label for="chk5-type5">&nbsp;</label>
+                                <label for="chk5-type5" class="ttl">신한은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type6" class="chk-inp" />
+                                <label for="chk5-type6">&nbsp;</label>
+                                <label for="chk5-type6" class="ttl">하나은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type7" class="chk-inp" />
+                                <label for="chk5-type7">&nbsp;</label>
+                                <label for="chk5-type7" class="ttl">산업은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type8" class="chk-inp" />
+                                <label for="chk5-type8">&nbsp;</label>
+                                <label for="chk5-type8" class="ttl">수출입은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type9" class="chk-inp" />
+                                <label for="chk5-type9">&nbsp;</label>
+                                <label for="chk5-type9" class="ttl">수협</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type10" class="chk-inp" />
+                                <label for="chk5-type10">&nbsp;</label>
+                                <label for="chk5-type10" class="ttl">외환은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type11" class="chk-inp" />
+                                <label for="chk5-type11">&nbsp;</label>
+                                <label for="chk5-type11" class="ttl">한국씨티은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type12" class="chk-inp" />
+                                <label for="chk5-type12">&nbsp;</label>
+                                <label for="chk5-type12" class="ttl">한국스탠다드차타드</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type13" class="chk-inp" />
+                                <label for="chk5-type13">&nbsp;</label>
+                                <label for="chk5-type13" class="ttl">대구은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type14" class="chk-inp" />
+                                <label for="chk5-type14">&nbsp;</label>
+                                <label for="chk5-type14" class="ttl">부산은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type15" class="chk-inp" />
+                                <label for="chk5-type15">&nbsp;</label>
+                                <label for="chk5-type15" class="ttl">경남은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type16" class="chk-inp" />
+                                <label for="chk5-type16">&nbsp;</label>
+                                <label for="chk5-type16" class="ttl">광주은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type17" class="chk-inp" />
+                                <label for="chk5-type17">&nbsp;</label>
+                                <label for="chk5-type17" class="ttl">전북은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type18" class="chk-inp" />
+                                <label for="chk5-type18">&nbsp;</label>
+                                <label for="chk5-type18" class="ttl">제주은행</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type19" class="chk-inp" />
+                                <label for="chk5-type19">&nbsp;</label>
+                                <label for="chk5-type19" class="ttl">새마을금고</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type20" class="chk-inp" />
+                                <label for="chk5-type20">&nbsp;</label>
+                                <label for="chk5-type20" class="ttl">서울보증보험</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type21" class="chk-inp" />
+                                <label for="chk5-type21">&nbsp;</label>
+                                <label for="chk5-type21" class="ttl">신용보증기금</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type22" class="chk-inp" />
+                                <label for="chk5-type22">&nbsp;</label>
+                                <label for="chk5-type22" class="ttl">기술신용보증</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk5-type23" class="chk-inp" />
+                                <label for="chk5-type23">&nbsp;</label>
+                                <label for="chk5-type23" class="ttl">중소기업진흥공단</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 기업 재무정보 -->
+                  <div class="toggle-cont is-active">
+                    <input type="checkbox" name="financial" id="financial" class="toggle-input" />
+                    <label for="financial" class="toggle-label">
+                      기업 재무정보
+                    </label>
+                    <div class="toggle-desc">
+                      <div class class="slt-wrap">
+                        <!-- TODO: js) select option selectOtion.js에서 처리 -->
+                        <div class="finance-wrap">
+                          <div class="slt-cont left">
+                            <div class="slt-list">
+                              <label class="slt-type">자산총계</label>
+                              <select name="finance" id="finance-slt1" class="slt finance_01"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">부채총계</label>
+                              <select name="finance" id="finance-slt2" class="slt finance_01"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">자본총계</label>
+                              <select name="finance" id="finance-slt3" class="slt finance_01"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">자본금</label>
+                              <select name="finance" id="finance-slt4" class="slt finance_01"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">매출액</label>
+                              <select name="finance" id="finance-slt5" class="slt finance_01"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">영업이익</label>
+                              <select name="finance" id="finance-slt6" class="slt finance_01"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">당기순이익</label>
+                              <select name="finance" id="finance-slt7" class="slt finance_01"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">자기자본비율</label>
+                              <select name="finance" id="finance-slt8" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">매출액증가율</label>
+                              <select name="finance" id="finance-slt9" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">부채비율</label>
+                              <select name="finance" id="finance-slt10" class="slt finance_02"></select>
+                            </div>
+                          </div>
+                          <div class="slt-cont right">
+                            <div class="slt-list">
+                              <label class="slt-type">영업이익증가율</label>
+                              <select name="finance" id="finance-slt11" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">순이익증가율</label>
+                              <select name="finance" id="finance-slt12" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">총자산증가율</label>
+                              <select name="finance" id="finance-slt13" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">총자산회전율</label>
+                              <select name="finance" id="finance-slt14" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">유동비율</label>
+                              <select name="finance" id="finance-slt15" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">차입금의존도</label>
+                              <select name="finance" id="finance-slt16" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">재고자산회전율</label>
+                              <select name="finance" id="finance-slt17" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">ROE</label>
+                              <select name="finance" id="finance-slt18" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">영업이익율</label>
+                              <select name="finance" id="finance-slt19" class="slt finance_02"></select>
+                            </div>
+                            <div class="slt-list">
+                              <label class="slt-type">이자보상배수</label>
+                              <select name="finance" id="finance-slt20" class="slt finance_02"></select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="grade-wrap">
+                          <!-- chk6 -->
+                          <div class="slt-list">
+                            <span class="slt-type">회사채등급</span>
+                            <div class="slt-content">
+                              <div class="chk-group grade-group mb-hide">
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type1" class="chk-inp" />
+                                    <label for="chk6-type1">&nbsp;</label>
+                                    <label for="chk6-type1" class="ttl">AAA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type2" class="chk-inp" />
+                                    <label for="chk6-type2">&nbsp;</label>
+                                    <label for="chk6-type2" class="ttl">AA+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type3" class="chk-inp" />
+                                    <label for="chk6-type3">&nbsp;</label>
+                                    <label for="chk6-type3" class="ttl">AA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type4" class="chk-inp" />
+                                    <label for="chk6-type4">&nbsp;</label>
+                                    <label for="chk6-type4" class="ttl">AA-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type5" class="chk-inp" />
+                                    <label for="chk6-type5">&nbsp;</label>
+                                    <label for="chk6-type5" class="ttl">A+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type6" class="chk-inp" />
+                                    <label for="chk6-type6">&nbsp;</label>
+                                    <label for="chk6-type6" class="ttl">A</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type7" class="chk-inp" />
+                                    <label for="chk6-type7">&nbsp;</label>
+                                    <label for="chk6-type7" class="ttl">A-</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type8" class="chk-inp" />
+                                    <label for="chk6-type8">&nbsp;</label>
+                                    <label for="chk6-type8" class="ttl">BBB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type9" class="chk-inp" />
+                                    <label for="chk6-type9">&nbsp;</label>
+                                    <label for="chk6-type9" class="ttl">BBB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type10" class="chk-inp" />
+                                    <label for="chk6-type10">&nbsp;</label>
+                                    <label for="chk6-type10" class="ttl">BBB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type11" class="chk-inp" />
+                                    <label for="chk6-type11">&nbsp;</label>
+                                    <label for="chk6-type11" class="ttl">BB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type12" class="chk-inp" />
+                                    <label for="chk6-type12">&nbsp;</label>
+                                    <label for="chk6-type12" class="ttl">BB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type13" class="chk-inp" />
+                                    <label for="chk6-type13">&nbsp;</label>
+                                    <label for="chk6-type13" class="ttl">BB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type14" class="chk-inp" />
+                                    <label for="chk6-type14">&nbsp;</label>
+                                    <label for="chk6-type14" class="ttl">B+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type15" class="chk-inp" />
+                                    <label for="chk6-type15">&nbsp;</label>
+                                    <label for="chk6-type15" class="ttl">B</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type16" class="chk-inp" />
+                                    <label for="chk6-type16">&nbsp;</label>
+                                    <label for="chk6-type16" class="ttl">B-</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type17" class="chk-inp" />
+                                    <label for="chk6-type17">&nbsp;</label>
+                                    <label for="chk6-type17" class="ttl">CCC+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type18" class="chk-inp" />
+                                    <label for="chk6-type18">&nbsp;</label>
+                                    <label for="chk6-type18" class="ttl">CCC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type19" class="chk-inp" />
+                                    <label for="chk6-type19">&nbsp;</label>
+                                    <label for="chk6-type19" class="ttl">CCC-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type20" class="chk-inp" />
+                                    <label for="chk6-type20">&nbsp;</label>
+                                    <label for="chk6-type20" class="ttl">CC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type21" class="chk-inp" />
+                                    <label for="chk6-type21">&nbsp;</label>
+                                    <label for="chk6-type21" class="ttl">C</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type22" class="chk-inp" />
+                                    <label for="chk6-type22">&nbsp;</label>
+                                    <label for="chk6-type22" class="ttl">D</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type23" class="chk-inp" />
+                                    <label for="chk6-type23">&nbsp;</label>
+                                    <label for="chk6-type23" class="ttl">NR</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- TODO: mobile: 모바일에서 정렬 달라짐 -->
+                              <div class="chk-group grade-group mb-show">
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type1" class="chk-inp" />
+                                    <label for="chk6-type1">&nbsp;</label>
+                                    <label for="chk6-type1" class="ttl">AAA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type2" class="chk-inp" />
+                                    <label for="chk6-type2">&nbsp;</label>
+                                    <label for="chk6-type2" class="ttl">AA+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type3" class="chk-inp" />
+                                    <label for="chk6-type3">&nbsp;</label>
+                                    <label for="chk6-type3" class="ttl">AA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type4" class="chk-inp" />
+                                    <label for="chk6-type4">&nbsp;</label>
+                                    <label for="chk6-type4" class="ttl">AA-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type5" class="chk-inp" />
+                                    <label for="chk6-type5">&nbsp;</label>
+                                    <label for="chk6-type5" class="ttl">A+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type6" class="chk-inp" />
+                                    <label for="chk6-type6">&nbsp;</label>
+                                    <label for="chk6-type6" class="ttl">A</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type7" class="chk-inp" />
+                                    <label for="chk6-type7">&nbsp;</label>
+                                    <label for="chk6-type7" class="ttl">A-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type8" class="chk-inp" />
+                                    <label for="chk6-type8">&nbsp;</label>
+                                    <label for="chk6-type8" class="ttl">BBB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type9" class="chk-inp" />
+                                    <label for="chk6-type9">&nbsp;</label>
+                                    <label for="chk6-type9" class="ttl">BBB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type10" class="chk-inp" />
+                                    <label for="chk6-type10">&nbsp;</label>
+                                    <label for="chk6-type10" class="ttl">BBB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type11" class="chk-inp" />
+                                    <label for="chk6-type11">&nbsp;</label>
+                                    <label for="chk6-type11" class="ttl">BB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type12" class="chk-inp" />
+                                    <label for="chk6-type12">&nbsp;</label>
+                                    <label for="chk6-type12" class="ttl">BB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type13" class="chk-inp" />
+                                    <label for="chk6-type13">&nbsp;</label>
+                                    <label for="chk6-type13" class="ttl">BB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type14" class="chk-inp" />
+                                    <label for="chk6-type14">&nbsp;</label>
+                                    <label for="chk6-type14" class="ttl">B+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type15" class="chk-inp" />
+                                    <label for="chk6-type15">&nbsp;</label>
+                                    <label for="chk6-type15" class="ttl">B</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type16" class="chk-inp" />
+                                    <label for="chk6-type16">&nbsp;</label>
+                                    <label for="chk6-type16" class="ttl">B-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type17" class="chk-inp" />
+                                    <label for="chk6-type17">&nbsp;</label>
+                                    <label for="chk6-type17" class="ttl">CCC+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type18" class="chk-inp" />
+                                    <label for="chk6-type18">&nbsp;</label>
+                                    <label for="chk6-type18" class="ttl">CCC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type19" class="chk-inp" />
+                                    <label for="chk6-type19">&nbsp;</label>
+                                    <label for="chk6-type19" class="ttl">CCC-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type20" class="chk-inp" />
+                                    <label for="chk6-type20">&nbsp;</label>
+                                    <label for="chk6-type20" class="ttl">CC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type21" class="chk-inp" />
+                                    <label for="chk6-type21">&nbsp;</label>
+                                    <label for="chk6-type21" class="ttl">C</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type22" class="chk-inp" />
+                                    <label for="chk6-type22">&nbsp;</label>
+                                    <label for="chk6-type22" class="ttl">D</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk6-type23" class="chk-inp" />
+                                    <label for="chk6-type23">&nbsp;</label>
+                                    <label for="chk6-type23" class="ttl">NR</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- chk7 -->
+                          <div class="slt-list">
+                            <span class="slt-type">기업어음등급</span>
+                            <div class="slt-content">
+                              <div class="chk-group grade-group mb-hide">
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type1" class="chk-inp" />
+                                    <label for="chk7-type1">&nbsp;</label>
+                                    <label for="chk7-type1" class="ttl">A1</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type2" class="chk-inp" />
+                                    <label for="chk7-type2">&nbsp;</label>
+                                    <label for="chk7-type2" class="ttl">A2+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type3" class="chk-inp" />
+                                    <label for="chk7-type3">&nbsp;</label>
+                                    <label for="chk7-type3" class="ttl">A2</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type4" class="chk-inp" />
+                                    <label for="chk7-type4">&nbsp;</label>
+                                    <label for="chk7-type4" class="ttl">A2-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type5" class="chk-inp" />
+                                    <label for="chk7-type5">&nbsp;</label>
+                                    <label for="chk7-type5" class="ttl">A3+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type6" class="chk-inp" />
+                                    <label for="chk7-type6">&nbsp;</label>
+                                    <label for="chk7-type6" class="ttl">A3</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type7" class="chk-inp" />
+                                    <label for="chk7-type7">&nbsp;</label>
+                                    <label for="chk7-type7" class="ttl">A3-</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type8" class="chk-inp" />
+                                    <label for="chk7-type8">&nbsp;</label>
+                                    <label for="chk7-type8" class="ttl">B</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type9" class="chk-inp" />
+                                    <label for="chk7-type9">&nbsp;</label>
+                                    <label for="chk7-type9" class="ttl">B-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type10" class="chk-inp" />
+                                    <label for="chk7-type10">&nbsp;</label>
+                                    <label for="chk7-type10" class="ttl">BB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type11" class="chk-inp" />
+                                    <label for="chk7-type11">&nbsp;</label>
+                                    <label for="chk7-type11" class="ttl">BB</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type22" class="chk-inp" />
+                                    <label for="chk7-type22">&nbsp;</label>
+                                    <label for="chk7-type22" class="ttl">D</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- TODO: mobile: 모바일에서 정렬 달라짐 -->
+                              <div class="chk-group grade-group mb-show">
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type1" class="chk-inp" />
+                                    <label for="chk7-type1">&nbsp;</label>
+                                    <label for="chk7-type1" class="ttl">A1</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type2" class="chk-inp" />
+                                    <label for="chk7-type2">&nbsp;</label>
+                                    <label for="chk7-type2" class="ttl">A2+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type3" class="chk-inp" />
+                                    <label for="chk7-type3">&nbsp;</label>
+                                    <label for="chk7-type3" class="ttl">A2</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type4" class="chk-inp" />
+                                    <label for="chk7-type4">&nbsp;</label>
+                                    <label for="chk7-type4" class="ttl">A2-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type5" class="chk-inp" />
+                                    <label for="chk7-type5">&nbsp;</label>
+                                    <label for="chk7-type5" class="ttl">A3+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type6" class="chk-inp" />
+                                    <label for="chk7-type6">&nbsp;</label>
+                                    <label for="chk7-type6" class="ttl">A3</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type7" class="chk-inp" />
+                                    <label for="chk7-type7">&nbsp;</label>
+                                    <label for="chk7-type7" class="ttl">A3-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type8" class="chk-inp" />
+                                    <label for="chk7-type8">&nbsp;</label>
+                                    <label for="chk7-type8" class="ttl">B</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type9" class="chk-inp" />
+                                    <label for="chk7-type9">&nbsp;</label>
+                                    <label for="chk7-type9" class="ttl">B-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type10" class="chk-inp" />
+                                    <label for="chk7-type10">&nbsp;</label>
+                                    <label for="chk7-type10" class="ttl">BB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type11" class="chk-inp" />
+                                    <label for="chk7-type11">&nbsp;</label>
+                                    <label for="chk7-type11" class="ttl">BB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk7-type22" class="chk-inp" />
+                                    <label for="chk7-type22">&nbsp;</label>
+                                    <label for="chk7-type22" class="ttl">D</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- chk8 -->
+                          <div class="slt-list">
+                            <span class="slt-type">기업등급</span>
+                            <div class="slt-content">
+                              <div class="chk-group grade-group mb-hide">
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type1" class="chk-inp" />
+                                    <label for="chk8-type1">&nbsp;</label>
+                                    <label for="chk8-type1" class="ttl">AAA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type2" class="chk-inp" />
+                                    <label for="chk8-type2">&nbsp;</label>
+                                    <label for="chk8-type2" class="ttl">AA+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type3" class="chk-inp" />
+                                    <label for="chk8-type3">&nbsp;</label>
+                                    <label for="chk8-type3" class="ttl">AA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type4" class="chk-inp" />
+                                    <label for="chk8-type4">&nbsp;</label>
+                                    <label for="chk8-type4" class="ttl">AA-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type5" class="chk-inp" />
+                                    <label for="chk8-type5">&nbsp;</label>
+                                    <label for="chk8-type5" class="ttl">A+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type6" class="chk-inp" />
+                                    <label for="chk8-type6">&nbsp;</label>
+                                    <label for="chk8-type6" class="ttl">A</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type7" class="chk-inp" />
+                                    <label for="chk8-type7">&nbsp;</label>
+                                    <label for="chk8-type7" class="ttl">A-</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type8" class="chk-inp" />
+                                    <label for="chk8-type8">&nbsp;</label>
+                                    <label for="chk8-type8" class="ttl">BBB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type9" class="chk-inp" />
+                                    <label for="chk8-type9">&nbsp;</label>
+                                    <label for="chk8-type9" class="ttl">BBB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type10" class="chk-inp" />
+                                    <label for="chk8-type10">&nbsp;</label>
+                                    <label for="chk8-type10" class="ttl">BBB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type11" class="chk-inp" />
+                                    <label for="chk8-type11">&nbsp;</label>
+                                    <label for="chk8-type11" class="ttl">BB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type12" class="chk-inp" />
+                                    <label for="chk8-type12">&nbsp;</label>
+                                    <label for="chk8-type12" class="ttl">BB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type13" class="chk-inp" />
+                                    <label for="chk8-type13">&nbsp;</label>
+                                    <label for="chk8-type13" class="ttl">BB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type14" class="chk-inp" />
+                                    <label for="chk8-type14">&nbsp;</label>
+                                    <label for="chk8-type14" class="ttl">B+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type15" class="chk-inp" />
+                                    <label for="chk8-type15">&nbsp;</label>
+                                    <label for="chk8-type15" class="ttl">B</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type16" class="chk-inp" />
+                                    <label for="chk8-type16">&nbsp;</label>
+                                    <label for="chk8-type16" class="ttl">B-</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type17" class="chk-inp" />
+                                    <label for="chk8-type17">&nbsp;</label>
+                                    <label for="chk8-type17" class="ttl">CCC+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type18" class="chk-inp" />
+                                    <label for="chk8-type18">&nbsp;</label>
+                                    <label for="chk8-type18" class="ttl">CCC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type19" class="chk-inp" />
+                                    <label for="chk8-type19">&nbsp;</label>
+                                    <label for="chk8-type19" class="ttl">CCC-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type20" class="chk-inp" />
+                                    <label for="chk8-type20">&nbsp;</label>
+                                    <label for="chk8-type20" class="ttl">CC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type21" class="chk-inp" />
+                                    <label for="chk8-type21">&nbsp;</label>
+                                    <label for="chk8-type21" class="ttl">C</label>
+                                  </div>
+                                </div>
+
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type22" class="chk-inp" />
+                                    <label for="chk8-type22">&nbsp;</label>
+                                    <label for="chk8-type22" class="ttl">D</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type23" class="chk-inp" />
+                                    <label for="chk8-type23">&nbsp;</label>
+                                    <label for="chk8-type23" class="ttl">NR</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- TODO: mobile: 모바일에서 정렬 달라짐 -->
+                              <div class="chk-group grade-group mb-show">
+                                <div class="grade-list">
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type1" class="chk-inp" />
+                                    <label for="chk8-type1">&nbsp;</label>
+                                    <label for="chk8-type1" class="ttl">AAA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type2" class="chk-inp" />
+                                    <label for="chk8-type2">&nbsp;</label>
+                                    <label for="chk8-type2" class="ttl">AA+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type3" class="chk-inp" />
+                                    <label for="chk8-type3">&nbsp;</label>
+                                    <label for="chk8-type3" class="ttl">AA</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type4" class="chk-inp" />
+                                    <label for="chk8-type4">&nbsp;</label>
+                                    <label for="chk8-type4" class="ttl">AA-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type5" class="chk-inp" />
+                                    <label for="chk8-type5">&nbsp;</label>
+                                    <label for="chk8-type5" class="ttl">A+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type6" class="chk-inp" />
+                                    <label for="chk8-type6">&nbsp;</label>
+                                    <label for="chk8-type6" class="ttl">A</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type7" class="chk-inp" />
+                                    <label for="chk8-type7">&nbsp;</label>
+                                    <label for="chk8-type7" class="ttl">A-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type8" class="chk-inp" />
+                                    <label for="chk8-type8">&nbsp;</label>
+                                    <label for="chk8-type8" class="ttl">BBB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type9" class="chk-inp" />
+                                    <label for="chk8-type9">&nbsp;</label>
+                                    <label for="chk8-type9" class="ttl">BBB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type10" class="chk-inp" />
+                                    <label for="chk8-type10">&nbsp;</label>
+                                    <label for="chk8-type10" class="ttl">BBB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type11" class="chk-inp" />
+                                    <label for="chk8-type11">&nbsp;</label>
+                                    <label for="chk8-type11" class="ttl">BB+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type12" class="chk-inp" />
+                                    <label for="chk8-type12">&nbsp;</label>
+                                    <label for="chk8-type12" class="ttl">BB</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type13" class="chk-inp" />
+                                    <label for="chk8-type13">&nbsp;</label>
+                                    <label for="chk8-type13" class="ttl">BB-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type14" class="chk-inp" />
+                                    <label for="chk8-type14">&nbsp;</label>
+                                    <label for="chk8-type14" class="ttl">B+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type15" class="chk-inp" />
+                                    <label for="chk8-type15">&nbsp;</label>
+                                    <label for="chk8-type15" class="ttl">B</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type16" class="chk-inp" />
+                                    <label for="chk8-type16">&nbsp;</label>
+                                    <label for="chk8-type16" class="ttl">B-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type17" class="chk-inp" />
+                                    <label for="chk8-type17">&nbsp;</label>
+                                    <label for="chk8-type17" class="ttl">CCC+</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type18" class="chk-inp" />
+                                    <label for="chk8-type18">&nbsp;</label>
+                                    <label for="chk8-type18" class="ttl">CCC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type19" class="chk-inp" />
+                                    <label for="chk8-type19">&nbsp;</label>
+                                    <label for="chk8-type19" class="ttl">CCC-</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type20" class="chk-inp" />
+                                    <label for="chk8-type20">&nbsp;</label>
+                                    <label for="chk8-type20" class="ttl">CC</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type21" class="chk-inp" />
+                                    <label for="chk8-type21">&nbsp;</label>
+                                    <label for="chk8-type21" class="ttl">C</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type22" class="chk-inp" />
+                                    <label for="chk8-type22">&nbsp;</label>
+                                    <label for="chk8-type22" class="ttl">D</label>
+                                  </div>
+                                  <div class="chk-list">
+                                    <input type="checkbox" name="type" id="chk8-type23" class="chk-inp" />
+                                    <label for="chk8-type23">&nbsp;</label>
+                                    <label for="chk8-type23" class="ttl">NR</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 기업 인증정보 -->
+                  <div class="toggle-cont is-active">
+                    <input type="checkbox" name="confirm" id="confirm" class="toggle-input" />
+                    <label for="confirm" class="toggle-label">
+                      기업 인증정보
+                    </label>
+                    <div class="toggle-desc">
+                      <div class="slt-wrap">
+                        <div class="slt-list">
+                          <span class="slt-type">기업인증</span>
+                          <div class="slt-content">
+                            <!-- chk9 -->
+                            <div class="chk-group">
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk9-type1" class="chk-inp" />
+                                <label for="chk9-type1">&nbsp;</label>
+                                <label for="chk9-type1" class="ttl">벤처기업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk9-type2" class="chk-inp" />
+                                <label for="chk9-type2">&nbsp;</label>
+                                <label for="chk9-type2" class="ttl">이노비즈기업</label>
+                              </div>
+                              <div class="chk-list">
+                                <input type="checkbox" name="type" id="chk9-type3" class="chk-inp" />
+                                <label for="chk9-type3">&nbsp;</label>
+                                <label for="chk9-type3" class="ttl">메인비즈기업</label>
+                              </div>
+                              <div class="chk-list long">
+                                <input type="checkbox" name="type" id="chk9-type5" class="chk-inp" />
+                                <label for="chk9-type5">&nbsp;</label>
+                                <label for="chk9-type5" class="ttl">소재부품전문기업</label>
+                              </div>
+                              <div class="chk-list long">
+                                <input type="checkbox" name="type" id="chk9-type6" class="chk-inp" />
+                                <label for="chk9-type6">&nbsp;</label>
+                                <label for="chk9-type6" class="ttl">기업부설연구소(전담부서)</label>
+                              </div>
+                              <div class="chk-list long">
+                                <input type="checkbox" name="type" id="chk9-type7" class="chk-inp" />
+                                <label for="chk9-type7">&nbsp;</label>
+                                <label for="chk9-type7" class="ttl">제조기준(GMP)적용업소</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END 검색 필터 -->
+
+            <!-- TODO: mobile: 모바일에서만 나타나는 라인 -->
+            <div class="mb-page-line"></div>
+
+            <!-- 신청자 정보입력 -->
+            <!-- TODO: js추가필요) 서비스 준비중일때 is-inactive로 비활성화 처리 -->
+            <div class="com-box inquire-box is-inactive">
+              <div class="l-center">
+                <div class="com-ttl">신청자 정보입력</div>
+                <div class="inquire-wrap">
+                  <div class="input-wrap">
+                    <input type="text" class="inp" placeholder="이름 입력" />
+                    <input type="tel" class="inp" placeholder="연락처 입력" />
+                    <input type="email" class="inp" placeholder="이메일 입력" />
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <!-- TODO: js추가필요) 내용 입력시 is-active 붙으며 활성화 -->
+                  <!-- TODO: js추가필요) is-active에서 누르면 이메일받기 팝업 열림 -->
+                  <button type="button" class="btn btn-gray popup-btn popup-inquire-btn">
+                    기업발굴 리스트 이메일 받기
+                  </button>
+                </div>
+              </div>
+              <div class="view-btn-wrap">
+                <div class="view-btn">
+                  개인정보 수집 및 이용에 대한 안내보기
+                </div>
+                <div class="desc-wrap">
+                  <p class="desc">
+                    1. 개인정보 수집 항목 : 사업자 번호, 대표명, 전화번호,
+                    비재무지표, 재무지표<br />
+                    2. 수집목적 : 고객식별, 광고성 정보 제공 및 참여기회제공,
+                    이용기록 분석 및 통계분석, 딥러닝을 위한 지표<br />
+                    3. 보유기간 : 상담이 완료되면 지체없이 모든 개인정보를
+                    파기합니다.<br />
+                    <br />
+                    단, 관계법령에서 일정 기간 정보의 보관을 규정한 경우에
+                    한해 분리 보관 후 파기합니다.<br />
+                    단, 별도의 동의서를 통해 해당 기업의 재무와 비재무 지표를
+                    AI 학습을 위해 사용할 수 있습니다.<br />
+                    <br />
+                    <b>* 제출 버튼을 클릭하시면 개인정보 수집 및 이용에 동의한
+                      것으로 간주됩니다.</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- END 신청자 정보입력 -->
+
+            <!-- TODO: mobile: 모바일에서만 나타나는 라인 -->
+            <div class="mb-page-line"></div>
+
+            <div class="bt-banner-wrap">
+              <a href="#" class="bt-banner">
+                <!-- TODO: banner: PC용 배너 -->
+                <img src="../assets/images/banner/banner-bottom.png" alt="배너" class="mb-hide" />
+                <!-- TODO: banner: 모바일용 배너 -->
+                <img src="../assets/images/banner/m-banner-1.png" alt="배너" class="mb-show" />
+              </a>
+            </div>
+          </div>
+
+          <!-- page 구성요소 2. 우측 배너영역 -->
+          <div class="fix-banner-wrap">
+            <a href="#" class="fix-banner">
+              <!-- TODO: banner: PC용 배너 -->
+              <img src="../assets/images/banner/banner-right.png" alt="배너" class="mb-hide" />
+              <!-- TODO: banner: 모바일용 배너 -->
+              <img src="../assets/images/banner/m-banner-2.png" alt="배너" class="mb-show" />
+            </a>
+          </div>
+
+          <!-- page 구성요소 3. 우측 하단 카카오챗 -->
+          <div class="float-btn-wrap">
+            <a href="#" class="float-btn kakao-chat">
+              <img src="../assets/images/icon/icon-kkoch.svg" alt="카카오 상담하기" />
+            </a>
+            <!-- TODO: mobile: top button -->
+            <a href="#app" class="float-btn go-top">
+              <img src="../assets/images/icon/btn-top.svg" alt="위로가기" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="com-ft">
+        <div class="l-center">
+          <div class="top-blank"></div>
+          <!-- link wrap -->
+          <div class="ft-link-wrap">
+            <!-- text link wrap -->
+            <ul class="text-link-wrap">
+              <li class="text-link-list mb-hide">
+                <a href="findcompany-info.html" class="link">
+                  <span>회사소개</span>
+                </a>
+              </li>
+              <li class="text-link-list mb-hide">
+                <!-- TODO: js) 클릭시 서브메뉴 나타남 -->
+                <button type="button" class="link sub-link-open">
+                  <span>제품</span>
+                </button>
+                <ul class="sub-link-wrap">
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>Analytics</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>Data Inteligence</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>AI Index</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>On-Premises</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>Valuation</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <button type="button" class="sub-link sub-link-close">
+                      <span>닫기</span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="text-link-list mb-hide">
+                <!-- TODO: js) 클릭시 서브메뉴 나타남 -->
+                <button type="button" class="link sub-link-open">
+                  <span>홍보</span>
+                </button>
+                <ul class="sub-link-wrap">
+                  <li class="sub-link-list">
+                    <a href="press-release.html" class="sub-link">
+                      <span>보도자료</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>블로그</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>공지/이벤트</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <button type="button" class="sub-link sub-link-close">
+                      <span>닫기</span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="text-link-list mb-hide">
+                <a href="findcompany-employ.html" class="link">
+                  <span>채용</span>
+                </a>
+              </li>
+              <li class="text-link-list mb-hide">
+                <a href="#" class="link">
+                  <span>파인드 컴퍼니 퀵가이드</span>
+                </a>
+              </li>
+              <li class="text-link-list">
+                <!-- TODO: js) 클릭시 팝업 -->
+                <button type="button" class="link popup-btn popup-terms-btn">
+                  <span>서비스 이용약관</span>
+                </button>
+              </li>
+              <li class="text-link-list">
+                <!-- TODO: js) 클릭시 팝업 -->
+                <button type="button" class="link popup-btn popup-prv-btn">
+                  <span>개인정보 보호정책</span>
+                </button>
+              </li>
+            </ul>
+            <!-- E text link wrap -->
+            <!-- sns link wrap -->
+            <div class="sns-link-wrap mb-hide">
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-blog-a.svg" alt="네이버 블로그 바로가기" />
+              </a>
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-face-a.svg" alt="페이스북 바로가기" />
+              </a>
+            </div>
+          </div>
+          <!-- E link wrap -->
+          <!-- adress wrap -->
+          <div class="ft-adress-wrap">
+            <!-- pc footer address -->
+            <p class="ft-adress mb-hide">
+              (주)비즈부스터 ㅣ 대표자 정원철 ㅣ 개인정보보호책임자 박광현 ㅣ
+              사업자등록번호 854-81-00992 ㅣ 통신판매업신고 2019-서울송파-1776
+            </p>
+            <p class="ft-adress mb-hide">
+              서울특별시 송파구 석촌호수로 278, 304 여흥레이크빌 ㅣ 대표전화
+              02-945-0904(132) ㅣ 문의메일 help@biztop.co.kr
+            </p>
+            <!-- TODO: mobile: footer address -->
+            <p class="ft-adress mb-show">
+              (주)비즈부스터 ㅣ 대표자 정원철 ㅣ 개인정보보호책임자 박광현
+            </p>
+            <p class="ft-adress mb-show">사업자등록번호 854-81-00992</p>
+            <p class="ft-adress mb-show">통신판매업신고 2019-서울송파-1776</p>
+            <p class="ft-adress mb-show">
+              서울특별시 송파구 석촌호수로 278, 304 여흥레이크빌
+            </p>
+            <p class="ft-adress mb-show">
+              대표전화 02-945-0904(132) ㅣ 문의메일 help@biztop.co.kr
+            </p>
+          </div>
+          <!-- E adress wrap -->
+          <p class="ft-copy mb-hide">
+            FINDCOMPANY의 모든 컨텐츠는 저작권법에 의거 보호받고 있습니다.
+          </p>
+        </div>
+      </footer>
+
+      <!-- popup -->
+      <div class="popup-bg"></div>
+      <!-- 서비스 이용약관 -->
+      <div class="popup terms mb-full">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">서비스 이용약관</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기" />
+              </button>
+            </div>
+          </div>
+          <div class="txt-cont-wrap">
+            <div class="txt-cont">
+              <p class="desc">
+                제1조 (목적)<br />
+                <br />
+                본 약관은 (주)비즈부스터(이하 ‘BIZTOP’라 합니다)가 운영하는
+                비즈탑(https://www.BIZTOP.co.kr), 이하 ‘서비스’라 합니다)의
+                이용과 관련하여 BIZTOP과 이용자 간의 권리, 의무, 책임사항 및
+                가입과 이용에 관한 제반 사항, 기타 필요한 사항을 구체적으로
+                규정함을 목적으로 합니다.<br />
+                <br />
+                제2조 (정의)<br />
+                <br />
+                이 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.<br />
+                1. ‘서비스’란 개인 및 일반기업, 세무회계사무소가 재무제표 등
+                기업정보를 활용하여 재무등급 및 재무목표, 코멘트,
+                매입/매출분석, 예상부가세액 및 세무/회계, 특허를 비롯한
+                전문적인 서비스 등 ‘BIZTOP’이 이용자에게 제공하는 모든 제반
+                서비스를 말합니다. ‘BIZTOP’이 공개한 API를 이용하여 제3자가
+                개발 또는 구축한 프로그램이나 서비스를 통하여 이용 고객 또는
+                회원에게 제공되는 경우를 포함합니다.<br />
+                2. ‘이용자’란 본 약관에 따라 ‘회사’와 이용계약을 체결하고
+                ‘BIZTOP’이 제공하는 ‘서비스’를 이용하는 고객을 말합니다.<br />
+                3. ‘전문가’ (이하 ‘파트너사’이라 합니다)란 본 ‘이용자’ 중
+                회계사, 세무사, 변리사, 변호사 등 전문자격을 가지고 있으며,
+                ‘회사’의 승인을 통해 활동자격을 얻은 고객을 말합니다.<br />
+                4. ‘금융기관 직원’ (이하 ‘금융파트너’이라 합니다)이란 은행 등
+                금융기관에 근무하는 자로 ‘회사’의 승인을 통해 활동자격을 얻은
+                고객을 말합니다.<br />
+                5. ‘이용계약’이란 서비스 이용과 관련하여 ‘BIZTOP’와
+                ‘이용자’간에 체결하는 모든 계약을 말합니다.<br />
+                6. ‘가입비’이라 함은 회원으로서 ‘BIZTOP’ 서비스를 이용하기
+                위하여 지불하는 금액을 의미합니다.<br />
+                7. ‘이용권’이라 함은 ‘BIZTOP’이 이용자에게 제공하는 재무분석,
+                코멘트 등 제반 서비스를 이용 시 소모되는 사용권을
+                의미합니다.<br />
+                8. ‘공지사항’이란 ‘BIZTOP’가 ‘이용자’에게 전산망을 통하여
+                고지하는 내용을 말합니다.<br />
+                <br />
+                이하 내용은 개발시에 적용
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END 서비스 이용약관 -->
+      <!-- 개인정보 보호정책 -->
+      <div class="popup prv mb-full">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">개인정보 보호정책</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기" />
+              </button>
+            </div>
+          </div>
+          <div class="txt-cont-wrap">
+            <div class="txt-cont">
+              <p class="desc">
+                제1조 (목적)<br />
+                <br />
+                본 약관은 (주)비즈부스터(이하 ‘BIZTOP’라 합니다)가 운영하는
+                비즈탑(https://www.BIZTOP.co.kr), 이하 ‘서비스’라 합니다)의
+                이용과 관련하여 BIZTOP과 이용자 간의 권리, 의무, 책임사항 및
+                가입과 이용에 관한 제반 사항, 기타 필요한 사항을 구체적으로
+                규정함을 목적으로 합니다.<br />
+                <br />
+                제2조 (정의)<br />
+                <br />
+                이 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.<br />
+                1. ‘서비스’란 개인 및 일반기업, 세무회계사무소가 재무제표 등
+                기업정보를 활용하여 재무등급 및 재무목표, 코멘트,
+                매입/매출분석, 예상부가세액 및 세무/회계, 특허를 비롯한
+                전문적인 서비스 등 ‘BIZTOP’이 이용자에게 제공하는 모든 제반
+                서비스를 말합니다. ‘BIZTOP’이 공개한 API를 이용하여 제3자가
+                개발 또는 구축한 프로그램이나 서비스를 통하여 이용 고객 또는
+                회원에게 제공되는 경우를 포함합니다.<br />
+                2. ‘이용자’란 본 약관에 따라 ‘회사’와 이용계약을 체결하고
+                ‘BIZTOP’이 제공하는 ‘서비스’를 이용하는 고객을 말합니다.<br />
+                3. ‘전문가’ (이하 ‘파트너사’이라 합니다)란 본 ‘이용자’ 중
+                회계사, 세무사, 변리사, 변호사 등 전문자격을 가지고 있으며,
+                ‘회사’의 승인을 통해 활동자격을 얻은 고객을 말합니다.<br />
+                4. ‘금융기관 직원’ (이하 ‘금융파트너’이라 합니다)이란 은행 등
+                금융기관에 근무하는 자로 ‘회사’의 승인을 통해 활동자격을 얻은
+                고객을 말합니다.<br />
+                5. ‘이용계약’이란 서비스 이용과 관련하여 ‘BIZTOP’와
+                ‘이용자’간에 체결하는 모든 계약을 말합니다.<br />
+                6. ‘가입비’이라 함은 회원으로서 ‘BIZTOP’ 서비스를 이용하기
+                위하여 지불하는 금액을 의미합니다.<br />
+                7. ‘이용권’이라 함은 ‘BIZTOP’이 이용자에게 제공하는 재무분석,
+                코멘트 등 제반 서비스를 이용 시 소모되는 사용권을
+                의미합니다.<br />
+                8. ‘공지사항’이란 ‘BIZTOP’가 ‘이용자’에게 전산망을 통하여
+                고지하는 내용을 말합니다.<br />
+                <br />
+                이하 내용은 개발시에 적용
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END 개인정보 보호정책 -->
+      <!-- 조건검색-사업영역팝업 -->
+      <div class="popup code">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">코드찾기</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기" />
+              </button>
+            </div>
+          </div>
+
+          <div class="search-wrap">
+            <div class="ttl">찾고자 하는 업종명을 입력하세요.</div>
+            <div class="search-inp-wrap">
+              <input type="text" class="search-inp" placeholder="업종명 입력" />
+              <button type="button" class="search-btn"></button>
+            </div>
+          </div>
+
+          <div class="results-wrap">
+            <div class="ttl">검색결과</div>
+            <div class="empty-content">
+              <img src="../assets/images/icon/icon-empty-sch.svg" alt="결과없음 아이콘" class="img" />
+              <p class="empty-dec">검색결과가 없습니다.</p>
+            </div>
+            <ul class="result-group">
+              <li class="result-list">육류 도축업(가금류제외)</li>
+              <li class="result-list">가금류 도축업</li>
+              <li class="result-list">가금류 가공 및 저장 처리업</li>
+              <li class="result-list">
+                육류 포장육 및 냉동육 가공법(가금류제외)
+              </li>
+              <li class="result-list">
+                육류 기타 가공 및 저장 처리업(가금류제외)
+              </li>
+            </ul>
+          </div>
+
+          <div class="pagination">
+            <button class="prev-page arrow-page">
+              <img src="../assets/images/btn/btn-prev-b.svg" alt="이전페이지" class="img" />
+            </button>
+            <div class="pager-wrap">
+              <button type="button" class="pager on">1</button>
+              <button type="button" class="pager">2</button>
+              <button type="button" class="pager">3</button>
+              <button type="button" class="pager">4</button>
+              <button type="button" class="pager">5</button>
+              <span class="pager skip-icon mb-hide">···</span>
+              <button type="button" class="pager end mb-hide">100</button>
+            </div>
+            <button class="next-page arrow-page">
+              <img src="../assets/images/btn/btn-nxt-b.svg" alt="다음페이지" class="img" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- END 조건검색-사업영역팝업 -->
+      <!-- 필터 팝업 -->
+      <div class="popup filter mb-full">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <div class="left-wrap">
+                <span class="ttl">선택된 필터</span>
+              </div>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기" />
+              </button>
+            </div>
+          </div>
+          <div class="txt-cont-wrap">
+            <div class="nothing">선택된 필터가 없습니다.</div>
+            <div class="slt-btn-wrap">
+              <div class="slt-btn">
+                <span>상장</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+              <div class="slt-btn">
+                <span>서울전체</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+              <div class="slt-btn">
+                <span>제조업</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+              <div class="slt-btn">
+                <span>소기업</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+              <div class="slt-btn">
+                <span>3월</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+              <div class="slt-btn">
+                <span>한국 스탠다드 차티드 은행</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+              <div class="slt-btn">
+                <span>AAA</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+              <div class="slt-btn">
+                <span>중소기업진흥공단</span>
+                <div class="close-btn">
+                  <img src="../assets/images/btn/btn-del-op.svg" alt="X" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fix-btn-wrap">
+            <button type="button" class="btn btn-primary">
+              <img src="../assets/images/icon/icon-reset-wh.svg" alt="되돌리기" class="img" />
+              <span>초기화</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- END 필터 팝업 -->
+      <!-- 이메일받기 팝업 -->
+      <div class="popup inquire">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">이메일받기</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기" />
+              </button>
+            </div>
+          </div>
+          <div class="cont-inner">
+            <p class="txt">
+              이메일이 정상적으로 접수되었습니다.<br />
+              담당자가 확인 후, 2일 이내에 연락드리겠습니다.
+            </p>
+            <button type="button" class="btn btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+      <!-- END 이메일받기 팝업 -->
+      <!-- 검색필터 팝업 -->
+      <div class="popup filter-empty">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">검색 필터</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기" />
+              </button>
+            </div>
+          </div>
+          <div class="cont-inner">
+            <p class="txt">검색 필터를 선택해주세요.</p>
+            <button type="button" class="btn btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+      <!-- END 검색필터 팝업 -->
+      <!-- TODO: js추가필요) 정보 로딩시 보이는 팝업 -->
+      <!-- 정보조회 팝업 -->
+      <div class="popup search">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">정보조회</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기">
+              </button>
+            </div>
+          </div>
+          <div class="cont-inner">
+            <div class="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p class="search-txt">
+              조회하신 기업의 정보를 조회하고 있습니다.<br />
+              잠시만 기다려주시면, 기업정보를 확인할 수 있습니다.
+            </p>
+            <div class="popup-banner-wrap">
+              <a href="#" class="popup-banner-link">
+                <img src="../assets/images/banner/banner-popup.png" alt="팝업 배너">
+              </a>
+            </div>
+            <div class="search-desc">
+              ※ 광고가 끝나는 즉시 조회한 기업의 정보를 확인할 수 있습니다.
+            </div>
+            <button type="button" class="btn btn-primary">
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- END 정보조회 팝업 -->
+    </div>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".scrollSwiper", {
+      direction: "horizontal",
+      slidesPerView: "auto",
+      freeMode: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      mousewheel: true,
+    });
+
+    // gnb default
+    if ($(window).width() > 1550) {
+      $('.vertical-gnb-wrap').addClass('is-active');
+      $('.icon-gnb-page').addClass('is-active');
+    }
+  </script>
+</body>
+
+</html>

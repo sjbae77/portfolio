@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63">
+  <g id="popup_02_icon_02_off" transform="translate(-696 -1091)">
+    <rect id="사각형_762" data-name="사각형 762" width="63" height="63" rx="20" transform="translate(696 1091)" fill="#eceef5"/>
+    <g id="그룹_1913" data-name="그룹 1913" transform="translate(714.819 1106.545)">
+      <g id="그룹_1910" data-name="그룹 1910" transform="translate(0 0)">
+        <g id="그룹_1909" data-name="그룹 1909">
+          <path id="패스_19650" data-name="패스 19650" d="M736.4,573.687H721.937a2.062,2.062,0,0,0-2.063,2.063v24.379a2.062,2.062,0,0,0,2.063,2.063h18.637a2.062,2.062,0,0,0,2.063-2.063V579.921Zm-5.294,19.144H725.27a1.023,1.023,0,1,1,0-2.045h5.839a1.023,1.023,0,1,1,0,2.045Zm6.132-5.631H725.27a1.023,1.023,0,1,1,0-2.045h11.972a1.023,1.023,0,1,1,0,2.045Z" transform="translate(-719.874 -573.687)" fill="#c2c6d6"/>
+        </g>
+        <path id="패스_19651" data-name="패스 19651" d="M740.077,577.857a2.063,2.063,0,0,0,2.063,2.063h4.17l-6.233-6.234Z" transform="translate(-723.547 -573.687)" fill="#cfd5e8"/>
+      </g>
+      <g id="그룹_1911" data-name="그룹 1911" transform="translate(18.374 15.556)">
+        <path id="패스_19652" data-name="패스 19652" d="M748.291,595.957l-5.96,9.674.391,2.816,2.694-.915,5.96-9.674Z" transform="translate(-742.331 -593.292)" fill="#cfd5e8"/>
+        <path id="패스_19653" data-name="패스 19653" d="M753.659,595.993l.484-.785a1.277,1.277,0,0,0-.417-1.757l-.91-.56a1.277,1.277,0,0,0-1.757.417l-.484.785Z" transform="translate(-743.83 -592.7)" fill="#cfd5e8"/>
+      </g>
+    </g>
+  </g>
+</svg>

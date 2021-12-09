@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="menu-02" transform="translate(21600 14736)">
+    <rect id="사각형_78" data-name="사각형 78" width="25" height="25" transform="translate(-21600 -14736)" fill="red" opacity="0"/>
+    <g id="그룹_231" data-name="그룹 231" transform="translate(-21595 -14730)">
+      <line id="선_20" data-name="선 20" x2="15.427" transform="translate(0 1.695)" fill="none" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <line id="선_21" data-name="선 21" x2="15.427" transform="translate(0 6.753)" fill="none" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <line id="선_22" data-name="선 22" x2="15.427" transform="translate(0.061 11.811)" fill="none" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <rect id="사각형_74" data-name="사각형 74" width="2.794" height="3.39" transform="translate(1.916)" fill="#6bd998" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <rect id="사각형_75" data-name="사각형 75" width="2.794" height="3.39" transform="translate(6.316 5.058)" fill="#6bd998" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <rect id="사각형_76" data-name="사각형 76" width="2.794" height="3.39" transform="translate(10.869 10.116)" fill="#6bd998" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

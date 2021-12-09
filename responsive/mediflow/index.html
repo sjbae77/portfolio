@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>mediflow</title>
+
+    <meta name="title" content="mediflow" />
+    <meta name="author" content="mediflow" />
+    <meta
+      name="description"
+      content="10년 이상 병원 컨설팅 1위의 경험, mediflow"
+    />
+    <meta
+      name="keywords"
+      content="mediflow, 메디플로우, 병원, 병원관리, 병원경영, 병원컨설팅, 병원경영컨설팅, 병원인사관리"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mediflow.kr/" />
+    <meta property="og:title" content="mediflow" />
+    <meta
+      property="og:description"
+      content="병원 컨설팅 1위의 경험, mediflow"
+    />
+    <meta property="og:image" content="./assets/images/favicon/favicon.png" />
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://www.mediflow.kr/" />
+    <meta property="twitter:title" content="mediflow" />
+    <meta
+      property="twitter:description"
+      content="병원 컨설팅 1위의 경험, mediflow"
+    />
+
+    <!-- END Open Graph -->
+
+    <!-- 웹마스터 가이드: 대표 url -->
+    <link rel="canonical" href="https://www.mediflow.kr/" />
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/images/favicon/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/images/favicon/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/images/favicon/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/images/favicon/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="36x36"
+      href="./assets/images/favicon/android-chrome-36x36.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="48x48"
+      href="./assets/images/favicon/android-chrome-48x48.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/images/favicon/android-chrome-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="96x96"
+      href="./assets/images/favicon/android-chrome-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/images/favicon/android-chrome-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="./assets/images/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="256x256"
+      href="./assets/images/favicon/android-chrome-256x256.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="./assets/images/favicon/android-chrome-512x512.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/images/favicon/safari-pinned-tab.svg"
+      color="#1D1D1D"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- 
+        https://realfavicongenerator.net/
+    -->
+    <!-- END favicon -->
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- END fonts -->
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/css/vendor/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/vendor/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/custom/base.css" />
+    <link rel="stylesheet" href="./assets/css/custom/common.css" />
+    <link rel="stylesheet" href="./assets/css/custom/ui.css" />
+    <link rel="stylesheet" href="./assets/css/custom/popup.css" />
+    <link rel="stylesheet" href="./assets/css/custom/animate.css" />
+
+    <!-- script -->
+    <script src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/vendor/jquery.validate.js"></script>
+  </head>
+
+  <body>
+    <header class="medi-hd">
+      <div class="l-center">
+        <div class="header">
+          <h1 class="logo">
+            <a href="index.html" class="link logo-link">
+              <img
+                src="./assets/images/logo/logo_color.svg"
+                alt="MediFlow"
+                class="logo-img on"
+              />
+              <img
+                src="./assets/images/logo/logo_w.svg"
+                alt="MediFlow"
+                class="logo-img off"
+              />
+            </a>
+          </h1>
+          <nav class="nav">
+            <!-- <div class="mo-nav is-mo-show">
+              <img
+                src="./assets/images/main/mo/main_btn_menu_basic.svg"
+                alt="menu"
+                class="nav-img on"
+              />
+              <img
+                src="./assets/images/main/mo/main_btn_menu_scroll.svg"
+                alt="menu"
+                class="nav-img off"
+              />
+            </div> -->
+            <ul class="nav-list-wrap">
+              <li class="nav-list mo-nav-list">
+                <a
+                  onclick="popupOpen(mngPop)"
+                  href="#"
+                  class="input-reset link"
+                  >경영관리 소개</a
+                >
+              </li>
+              <li class="nav-list mo-nav-list">
+                <a
+                  href="#"
+                  onclick="popupOpen(psnPop)"
+                  class="input-reset link"
+                  >인사관리 소개</a
+                >
+              </li>
+            </ul>
+            <ul class="nav-list-wrap mo-nav-list-wrap">
+              <li class="nav-list">
+                <a
+                  href="https://www.mediflow.kr/"
+                  target="_blank"
+                  class="input-reset link"
+                  >경영관리 이용하기</a
+                >
+              </li>
+              <li class="nav-list">
+                <a
+                  href="https://me.mediflow.kr/"
+                  target="_blank"
+                  class="input-reset link"
+                  >인사관리 이용하기</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- 모바일 메뉴 -->
+    <div class="cover"></div>
+    <div class="mo-menu is-mo-show">
+      <div class="close-btn">
+        <img
+          src="./assets/images/main/mo/main_menu_btn_close.svg"
+          alt="close"
+        />
+      </div>
+      <div class="menu-btn">
+        <a href="https://www.mediflow.kr/" target="_blank">
+          <img
+            src="./assets/images/main/mo/main_menu_btn_01.svg"
+            alt="경영관리 이용하기"
+            class="menu-mng"
+          />
+        </a>
+        <a href="https://me.mediflow.kr/" target="_blank">
+          <img
+            src="./assets/images/main/mo/main_menu_btn_02.svg"
+            alt="인사관리 이용하기"
+          />
+        </a>
+      </div>
+      <img
+        src="./assets/images/logo/logo_color.svg"
+        alt="MediFlow"
+        class="menu-logo"
+      />
+    </div>
+    <!-- //모바일 메뉴 -->
+    <div id="contants" class="mediflow">
+      <!-- visual section -->
+      <section id="visual-section" class="section visual-section">
+        <span class="visual-section-bg"></span>
+        <!-- 모바일 버전 -->
+        <div class="mo-contact is-mo-hide">
+          <a href="#contact-section" class="mo-contact-btn"
+            >무료 체험 및 상담 신청하기</a
+          >
+        </div>
+        <div class="btn-up is-mo-show">
+          <a href="#visual-section">
+            <img
+              src="./assets/images/main/mo/main_btn_up.svg"
+              alt="최상단으로 가기"
+              class="btn-up-img"
+            />
+          </a>
+        </div>
+        <!-- //모바일 버전 -->
+        <div class="l-center">
+          <div class="visual-tit-wrap">
+            <h2 class="visual-tit">
+              <span class="visual-tit-r">잘되는 병원들의 솔루션</span>
+              <strong class="visual-tit-b">메디플로우로 <br />업그레이드하세요</strong>
+            </h2>
+            <button
+              type="button"
+              class="input-reset info-btn hover-bg-blue is-mo-hide"
+              onclick="window.open('./assets/pdf/pdf_mediflow.pdf')"
+            >
+              <span class="is-mo-hide">메디플로우 소개서 보기</span>
+              <span class="is-mo-show">소개서 자세히 보기</span>
+            </button>
+          </div>
+          <div class="contact-wrap top-contact">
+            <div class="contact-tit-box">
+              <h2 class="contact-tit">5Seconds</h2>
+              <p class="dec">5초만에 무료체험 & 상담신청</p>
+            </div>
+            <form class="applyCounsell" action="#">
+              <fieldset class="contact-input-wrap">
+                <legend class="is-none">상담 신청하기</legend>
+                <div class="input-group">
+                  <label class="hos-label hos-label-hide">병원명</label>
+                  <input
+                    name="name"
+                    class="hos-input"
+                    type="text"
+                    placeholder="병원명을 입력해주세요."
+                  />
+                </div>
+                <div class="input-group">
+                  <label class="hos-label hos-label-hide">연락처</label>
+                  <input
+                    name="phone"
+                    class="hos-input"
+                    type="text"
+                    placeholder="연락처를 입력해주세요."
+                  />
+                </div>
+                <div class="input-group input-group3">
+                  <label class="hos-label hos-label-hide">이메일</label>
+                  <input
+                    name="mail"
+                    class="hos-input"
+                    type="email"
+                    placeholder="메일주소를 입력해주세요."
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="무료 체험 및 상담 신청하기"
+                  class="btn-counsel hover-bg-blue"
+                />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- E visual section -->
+      <!-- cons section -->
+      <section id="cons-section" class="section cons-section">
+        <div class="l-center">
+          <div class="cons-title-wrap">
+            <h2 class="cons-tit-box interaction-con">
+              <span class="cons-tit">
+                10년 이상
+                <em class="source"><b>병원 컨설팅 1위</b>의</em> 경험</span
+              >
+              <span class="cons-dec">원장님 병원의 힘든 점들</span>
+              <em class="cons-txt">잘 압니다!</em>
+            </h2>
+          </div>
+
+          <div class="cont-box-wrap is-mo-hide">
+            <div class="cont-box interaction-con">
+              <div class="cont">
+                <img
+                  src="./assets/images/main/main_icon_01.png"
+                  alt="3~7명"
+                  class="cont-icon cont-icon-1"
+                />
+                <p class="cont-dec cont-dec-1">원장이 <span class="bold-txt">혼자<br />다하는...</span></p>
+              </div>
+              <div class="dots">
+                <span class="dot dot100">1</span>
+                <span class="dot dot70">2</span>
+                <span class="dot dot40">3</span>
+                <span class="dot dot30">4</span>
+                <span class="dot dot10">5</span>
+              </div>
+              <div class="cont-sub">
+                <img
+                  src="./assets/images/main/main_icon_04.png"
+                  alt="시간감소"
+                  class="cont-sub-img"
+                />
+                <span class="cont-sub-dec">
+                  경영공부와<br />
+                  경영관리 <strong>시간 감소</strong>
+                </span>
+              </div>
+            </div>
+
+            <div class="cont-box interaction-con">
+              <div class="cont cont-bg2">
+                <img
+                  src="./assets/images/main/main_icon_02.png"
+                  alt="12~35명"
+                  class="cont-icon cont-icon-2"
+                />
+                <p class="cont-dec cont-dec-2">
+                  <span class="bold-txt">성장을 위해</span>&nbsp;시스템이<br />
+                  필요한 시점
+                </p>
+              </div>
+              <!-- dots -->
+              <div class="dots">
+                <span class="dot dot100">1</span>
+                <span class="dot dot70">2</span>
+                <span class="dot dot40">3</span>
+                <span class="dot dot30">4</span>
+                <span class="dot dot10">5</span>
+              </div>
+              <!-- //dots -->
+              <div class="cont-sub">
+                <img
+                  src="./assets/images/main/main_icon_05.png"
+                  alt="빠르고 체계적인"
+                />
+                <span class="cont-sub-dec">
+                  <strong>빠르고 체계적인</strong><br />
+                  경영시스템 구축
+                </span>
+              </div>
+            </div>
+
+            <div class="cont-box interaction-con">
+              <div class="cont cont-bg3">
+                <img
+                  src="./assets/images/main/main_icon_03.png"
+                  alt="70~120명"
+                  class="cont-icon cont-icon-3"
+                />
+                <p class="cont-dec cont-dec-3">관리 <span class="bold-txt">인건비가<br />높은</span> 단계</p>
+              </div>
+              <div class="dots">
+                <span class="dot dot100">1</span>
+                <span class="dot dot70">2</span>
+                <span class="dot dot40">3</span>
+                <span class="dot dot30">4</span>
+                <span class="dot dot10">5</span>
+              </div>
+              <div class="cont-sub">
+                <img
+                  src="./assets/images/main/main_icon_06.png"
+                  alt="경영괸리 효율성"
+                />
+                <span class="cont-sub-dec">
+                  고정비를 최소화하는<br />
+                  <strong>경영관리 효율성</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dots dots-b is-mo-hide hide-im">
+            <span class="dot dot100">1</span>
+            <span class="dot dot70">2</span>
+            <span class="dot dot40">3</span>
+            <span class="dot dot30">4</span>
+            <span class="dot dot10">5</span>
+          </div>
+
+          <!-- 모바일 버전 -->
+          <div class="cont-box-wrap is-mo-show">
+            <div class="cont-box">
+              <div class="cont">
+                <div class="cont-icon-wrap">
+                  <img
+                    src="./assets/images/main/mo/main_icon_01-1.png"
+                    alt="3~7명"
+                    class="cont-icon cont-icon-1 icon-l"
+                  />
+                  <img
+                    src="./assets/images/main/mo/main_icon_01-2.png"
+                    alt="3~7명"
+                    class="cont-icon cont-icon-1 icon-r"
+                  />
+                </div>
+                <p class="cont-dec cont-dec-1">원장이 혼자 다하는...</p>
+              </div>
+            </div>
+
+            <div class="cont-box">
+              <div class="cont cont-bg2">
+                <div class="cont-icon-wrap">
+                  <img
+                    src="./assets/images/main/mo/main_icon_02-1.png"
+                    alt="12~35명"
+                    class="cont-icon cont-icon-2 icon-l"
+                  />
+                  <img
+                    src="./assets/images/main/mo/main_icon_02-2.png"
+                    alt="12~35명"
+                    class="cont-icon cont-icon-2 icon-r"
+                  />
+                </div>
+                <p class="cont-dec cont-dec-2">
+                  성장을 위해 시스템이 필요한 시점
+                </p>
+              </div>
+            </div>
+
+            <div class="cont-box">
+              <div class="cont cont-bg3">
+                <div class="cont-icon-wrap">
+                  <img
+                    src="./assets/images/main/mo/main_icon_03-1.png"
+                    alt="70~120명"
+                    class="cont-icon cont-icon-3 icon-l"
+                  />
+                  <img
+                    src="./assets/images/main/mo/main_icon_03-2.png"
+                    alt="70~120명"
+                    class="cont-icon cont-icon-3 icon-r icon-m"
+                  />
+                </div>
+                <p class="cont-dec cont-dec-3">관리 인건비가 높은 단계</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dots dots-b is-mo-show">
+            <span class="dot dot100">1</span>
+            <span class="dot dot70">2</span>
+            <span class="dot dot40">3</span>
+          </div>
+
+          <div class="cont-sub is-mo-show">
+            <img
+              src="./assets/images/main/main_icon_04.png"
+              alt="시간감소"
+              class="cont-sub-img"
+            />
+            <span class="cont-sub-dec">
+              경영공부와<br />
+              경영관리 <strong>시간 감소</strong>
+            </span>
+          </div>
+          <div class="cont-sub is-mo-show">
+            <img
+              src="./assets/images/main/main_icon_05.png"
+              alt="빠르고 체계적인"
+            />
+            <span class="cont-sub-dec">
+              <strong>빠르고 체계적인</strong><br />
+              경영시스템 구축
+            </span>
+          </div>
+          <div class="cont-sub is-mo-show">
+            <img
+              src="./assets/images/main/main_icon_06.png"
+              alt="경영괸리 효율성"
+            />
+            <span class="cont-sub-dec">
+              고정비를 최소화하는<br />
+              <strong>경영관리 효율성</strong>
+            </span>
+          </div>
+
+          <div class="dots dots-b is-mo-show">
+            <span class="dot dot100">1</span>
+            <span class="dot dot70">2</span>
+            <span class="dot dot40">3</span>
+          </div>
+          <!-- //모바일 버전 -->
+
+          <div class="logo-b">
+            <img src="./assets/images/logo/logo_w.svg" alt="MediFlow" />
+          </div>
+          <div class="shortcut-wrap">
+            <div class="bg-obj"></div>
+            <div class="short-box-wrap interaction-con">
+              <div class="short-box short-bg1">
+                <div class="short-img-wrap">
+                  <div class="img-wrap">
+                    <img
+                      src="./assets/images/main/main_icon_07_new.svg"
+                      alt="경영관리"
+                      class="short-img"
+                    />
+                  </div>
+                  <span class="txt">경영관리 <span class="sol-txt">Solution</span></span>
+                </div>
+                <ul class="short-cont-group">
+                  <li class="short-cont-list"><span class="blue-txt">매뉴얼</span>&nbsp;자동생성</li>
+                  <li class="short-cont-list">교육영상&nbsp;<span class="blue-txt">무료제공</span></li>
+                  <li class="short-cont-list">To-Do&nbsp;<span class="blue-txt">List Up</span></li>
+                </ul>
+                <button
+                type="button"
+                class="input-reset short-btn mng-btn hover-bg-blue"
+                onclick="popupOpen(mngPop)"
+              >
+                <span class="popup-tit">
+                  경영관리 자세히보기&nbsp;&nbsp;
+                  <!-- <img
+                    src="./assets/images/main/main-arrow.png"
+                    alt="경영관리 자세히보기"
+                    class="arrow off"
+                  />
+                  <img
+                    src="./assets/images/main/main-arrow-on.png"
+                    alt="경영관리 자세히보기"
+                    class="arrow on"
+                  /> -->
+                </span>
+              </button>
+              </div>
+            </div>
+            <div class="short-box-wrap interaction-con">
+              <div class="short-box short-bg2">
+                <div class="short-img-wrap">
+                  <div class="img-wrap">
+                    <img
+                      src="./assets/images/main/main_icon_08_new.svg"
+                      alt="인사관리"
+                      class="short-img"
+                    />
+                  </div>
+                  <span class="txt">인사관리 <span class="sol-txt">Solution</span></span>
+                </div>
+                <ul class="short-cont-group">
+                  <li class="short-cont-list">모바일&nbsp;<span class="blue-txt">자동 출퇴근 관리</span></li>
+                  <li class="short-cont-list">사원&nbsp;<span class="blue-txt">근태관리</span></li>
+                  <li class="short-cont-list">인사관리&nbsp;<span class="blue-txt">서류저장</span></li>
+                </ul>
+                <button
+                type="button"
+                class="input-reset short-btn psn-btn hover-bg-blue"
+                onclick="popupOpen(psnPop)"
+              >
+                <span class="popup-tit blue">
+                  인사관리 자세히보기&nbsp;&nbsp;
+                  <!-- <img
+                    src="./assets/images/main/main-arrow.png"
+                    alt="인사관리 자세히보기"
+                    class="arrow off"
+                  />
+                  <img
+                    src="./assets/images/main/main-arrow-on.png"
+                    alt="인사관리 자세히보기"
+                    class="arrow on"
+                  /> -->
+                </span>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- E cons section -->
+      <!-- slide section -->
+      <section id="slide-section" class="section slide-section">
+        <div class="l-center">
+          <div class="txt-wrap interaction-con">
+            <p class="dec">
+              병원이 필요한 관리요소는 <br class="is-mo-show" />다 담았습니다
+            </p>
+            <h3 class="tit">
+              메디플로우로 <br class="is-mo-show" />많은 원장님들이<br />
+              <b class="medium-txt">앞서가고 있습니다</b>
+            </h3>
+            <a href="#contact-section" class="btn-counsel hover-bg-blue">상세 상담하기</a>
+          </div>
+          <div class="swiper-container review-slide-wrap">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="review-wrap">
+                  <img
+                    src="./assets/images/main/review_slides_01.png"
+                    alt="후한의원의 메디플로우 리뷰 사례"
+                    class="img"
+                  />
+                  <p class="review-tit">
+                    효율적인 시스템, 병원경영에 <br class="is-mo-show" />대한
+                    명확한 기준,<br class="is-mo-hide" />
+                    그리고 이러한 <br class="is-mo-show" />모든 것들이
+                    <strong class="blue-txt">한번에 정리 된 매뉴얼</strong>
+                  </p>
+                  <p class="review-dec">
+                    머릿속에는 맴돌고 있지만 정리 되지 못했던 것, 또 어떤
+                    방향으로<br class="is-mo-hide" />
+                    기준을 만들어 가야 할지 애매한 것들이
+                    <span class="block-txt"
+                      >메디플로우의 사례들을 통해<br class="is-mo-hide" />
+                      더 좋은 결과물</span
+                    >을 만들어 주는 것 같습니다. 매뉴얼을 세팅 하고 끝이<br
+                      class="is-mo-hide"
+                    />
+                    아니라, '직원교육용 영상이 업데이트 되었다', '어떤 사례가
+                    추가되었다'<br class="is-mo-hide" />
+                    등의 알림 문자를 받게 되니 병원운영에 대한 긴장감을 계속
+                    갖게 되어<br class="is-mo-hide" />
+                    <span class="block-txt">자극제로서의 역할</span>도 충분하게
+                    해 줍니다.
+                  </p>
+                  <div class="bottom-info-wrap">
+                    <span class="type">경영관리</span>
+                    <span class="size">(3~7인 규모)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review-wrap">
+                  <img
+                    src="./assets/images/main/review_slides_02.png"
+                    alt="바른윤곽치과병원의 메디플로우 리뷰 사례"
+                    class="img"
+                  />
+                  <p class="review-tit">
+                    메디플로우 인사관리를 사용하면서<br />
+                    <strong class="blue-txt">불필요한 문서</strong>가
+                    사라졌습니다.
+                  </p>
+                  <p class="review-dec">
+                    병원이 성장하면서 규모가 커졌지만
+                    <span class="block-txt"
+                      >행정 인력을 진료 스탭처럼 늘리는<br class="is-mo-hide" />
+                      것은 한계</span
+                    >가 있었습니다. 관리자가 인사 업무까지 맡아서 관리하고<br
+                      class="is-mo-hide"
+                    />
+                    있었지만 늘 아쉬움이 있었는데 메디플로우 인사관리를
+                    사용하면서<br class="is-mo-hide" />
+                    한결 간편해지고 체계적으로 관리할 수 있어서 매우
+                    만족합니다.<br class="is-mo-hide" />
+                    메디플로우 인사관리 통해서 교육 일정과 교육 대상자들을
+                    관리하면<br class="is-mo-hide" />
+                    역시나 과거에 진행했던 모든 정보들도 쉽게 확인할 수 있어서
+                    <span class="block-txt"
+                      >담당자가<br class="is-mo-hide" />
+                      바뀌어도 무리 없이 진행</span
+                    >할 수 있기 때문에 단발성에 그치지 않고<br
+                      class="is-mo-hide"
+                    />
+                    <span class="block-txt"
+                      >장기적으로 꾸준히 직원 교육을 관리</span
+                    >할 수 있겠습니다.
+                  </p>
+                  <div class="bottom-info-wrap">
+                    <span class="type">인사관리</span>
+                    <span class="size">(12~35인 규모)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review-wrap">
+                  <img
+                    src="./assets/images/main/review_slides_03.png"
+                    alt="척탑병원의 메디플로우 리뷰 사례"
+                    class="img"
+                  />
+                  <p class="review-tit">
+                    우리 병원의 운영수준을<br class="is-mo-show" />
+                    알 수가 있었고,<br class="is-mo-hide" />
+                    <strong class="blue-txt"
+                      >더 좋은 내용으로<br class="is-mo-show" />
+                      업그레이드</strong
+                    >
+                    할 수 있었습니다.
+                  </p>
+                  <p class="review-dec">
+                    세마 컨설팅과 인연이 벌써 10년이 넘는데요, 메디플로우
+                    경영매뉴얼은<br class="is-mo-hide" />
+                    척추관절병원의 실제 사용사례와 표준화된 레퍼런스가
+                    고스란히<br class="is-mo-hide" />
+                    저장되어 있어서 대표원장님께서도 큰 관심을 가지셨고,
+                    연구기획팀을<br class="is-mo-hide" />
+                    통해 전 부서 공유하여 사용하게 되었습니다.
+                    <span class="block-txt"
+                      >가장 좋았던 점은 병원 내<br class="is-mo-hide" />
+                      흩어져 있던 매뉴얼자료를 한 곳에서 저장관리</span
+                    >
+                    할 수 있다는 점이였고,<br class="is-mo-hide" />
+                    기본적인 매뉴얼과 상황 별 대처 매뉴얼이 부서단위로
+                    케이스별로<br class="is-mo-hide" />
+                    체계적으로 정리되어 있어서
+                    <span class="block-txt">직원교육용으로 맞춤자료</span>라는
+                    생각이<br class="is-mo-hide" />
+                    들었습니다.
+                  </p>
+                  <div class="bottom-info-wrap">
+                    <span class="type">경영관리</span>
+                    <span class="size">(70~120인 규모)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-util-wrap">
+              <div class="swiper-btn-wrap">
+                <div class="swiper-button-next review-button-next"></div>
+                <div class="swiper-button-prev review-button-prev"></div>
+              </div>
+              <div class="swiper-pagination review-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- E slide section -->
+      <!-- str section -->
+      <section id="str-section" class="section str-section">
+        <div class="l-center">
+          <h3 class="tit interaction-con">
+            <span class="regular-txt">타사대비</span><br />
+            <span class="bold-txt">메디플로우의<br class="is-mo-show" />
+              <span class="color-txt">강점 3가지</span>!</span>
+          </h3>
+          <ul class="str-list-group">
+            <li class="str-list interaction-con">
+              <div class="img-wrap">
+                <img src="./assets/images/main/main_img_05.png" alt="1등병원을 만든 경험" class="img" />
+              </div>
+              <div class="txt-wrap">
+                <p class="str-list-tit"><span class="color-num">01.</span> 1등병원을 만든 경험</p>
+                <p class="str-list-dec">
+                  20년간의 성공 경험을 토대로 원장님들이<br />
+                  실제 필요로 하는 소구점들을 명확하게<br />
+                  알고 있습니다.
+                </p>
+              </div>
+            </li>
+            <li class="str-list interaction-con">
+              <div class="img-wrap">
+                <img src="./assets/images/main/main_img_06.png" alt="병원운영지식 백과사전" class="img" />
+              </div>
+              <div class="txt-wrap">
+                <p class="str-list-tit"><span class="color-num">02.</span> 병원운영지식 백과사전</p>
+                <p class="str-list-dec">
+                  한 병원의 성장 과정에 맞춰 모든 운영<br />
+                  가이드를 제공해드립니다.
+                </p>
+              </div>
+            </li>
+            <li class="str-list interaction-con">
+              <div class="img-wrap">
+                <img src="./assets/images/main/main_img_07.png" alt="합리적 가격과 유연성" class="img" />
+              </div>
+              <div class="txt-wrap">
+                <p class="str-list-tit"><span class="color-num">03.</span> 합리적 가격과 유연성</p>
+                <p class="str-list-dec">
+                  월 정기 구독으로 큰 부담이 없이 필요한<br />
+                  서비스만 구독하여 사용이 가능합니다.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- E str section -->
+      <!-- contact section -->
+      <section id="contact-section" class="section contact-section">
+        <div class="l-center clear">
+          <div class="best-choice-wrap interaction-con">
+            <h2 class="tit">Best choice</h2>
+            <p class="dec">
+              경영 및 인사관리를 쉽게하는<br />
+              <b class="bold-txt">최고의 선택!</b>
+            </p>
+            <img
+              src="./assets/images/logo/logo_w.svg"
+              alt="메디플로우 로고"
+              class="img is-mo-hide"
+            />
+          </div>
+          <div class="contact-wrap">
+            <h2 class="tit bold-txt">CONTACT</h2>
+            <p class="dec">5초만에 무료체험 & 상담신청</p>
+            <form class="applyCounsell" action="#">
+              <fieldset>
+                <legend class="is-none">상담 신청하기</legend>
+                <div class="input-group">
+                  <label class="hos-label">병원명</label>
+                  <input
+                    name="name"
+                    class="hos-input"
+                    type="text"
+                    placeholder="병원명을 입력해주세요."
+                  />
+                </div>
+                <div class="input-group">
+                  <label class="hos-label">연락처</label>
+                  <input
+                    name="phone"
+                    class="hos-input"
+                    type="text"
+                    placeholder="연락처를 입력해주세요."
+                  />
+                </div>
+                <div class="input-group">
+                  <label class="hos-label">이메일</label>
+                  <input
+                    name="mail"
+                    class="hos-input"
+                    type="text"
+                    placeholder="메일주소를 입력해주세요."
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="무료 체험 및 상담 신청하기"
+                  class="btn-counsel hover-bg-blue"
+                />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- E contact section -->
+    </div>
+    <!-- END #contents -->
+    <footer class="medi-ft">
+      <div class="l-center">
+        <h2 class="ft-logo">MediFlow logo</h2>
+        <p class="company-name">(주)세마그룹</p>
+        <address class="address">
+          <p class="info-wrap">
+            <span class="add-tit">대표자명</span>
+            <span class="add-info">우 기 윤</span>
+            <br class="is-mo-show" />
+            <span class="add-tit">사업자등록번호</span>
+            <span class="add-info">504-81-75453</span>
+            <br class="is-mo-show" />
+            <span class="add-tit">통신판매업신고번호</span>
+            <span class="add-info .add-info-320">2018-대구남구-0084호</span>
+            <br />
+            <span class="add-tit">주소</span>
+            <span class="add-info"
+              >서울특별시 서대문구 경기대로 15 4F
+              <br class="is-mo-show" />
+              <span class="space-wrap"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+              >
+              / 대구시 남구 대명로 49길 73</span
+            >
+            <br />
+            <span class="add-tit">고객센터</span>
+            <a href="tel:1644-7379" class="tel">
+              <span class="add-info">1644-7379</span>
+            </a>
+            <br class="is-mo-show" />
+            <span class="add-tit">이메일</span>
+            <a href="mailto:sema@semagroup.co.kr" class="tel">
+              <span class="add-info">sema@semagroup.co.kr</span>
+            </a>
+          </p>
+        </address>
+        <p class="copyright">Copyright &copy; MediFlow All Right Reserved</p>
+      </div>
+    </footer>
+
+    <!-- 경영관리 팝업 -->
+    <div id="mPop" class="popup">
+      <div class="popup-bg" onclick="popupClose(mngPop)"></div>
+      <div class="popup-wrapper">
+        <div class="popup-btn-wrap">
+          <button
+            type="button"
+            class="popup-close input-reset"
+            onclick="popupClose(mngPop)"
+          >
+            Close
+          </button>
+        </div>
+        <div class="popup-inner">
+          <!-- popup contents -->
+          <div class="popup-contents">
+            <!-- popup conts hd -->
+            <div class="popconts popconts-hd">
+              <div class="pop-center">
+                <div class="flex-wrap">
+                  <h2 class="tit">
+                    <span class="txt"
+                      >메디플로우 <strong class="em">경영관리</strong></span
+                    >
+                  </h2>
+                  <img
+                    src="./assets/images/logo/logo_w.svg"
+                    alt="mediflow"
+                    class="img"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- popup conts video -->
+            <div class="popconts popconts-video">
+              <iframe
+                id="mPopVideo"
+                class="pop-video"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/EI22PbxAju8"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen=""
+              >
+              </iframe>
+            </div>
+            <!-- popup conts tab -->
+            <div class="popconts popconts-tab">
+              <!-- tab title -->
+              <div class="tab-title-wrapper">
+                <h2 class="conts-title">
+                  궁금한 경영관리! <br class="is-mo-show" />아래 버튼을
+                  <span>클릭</span>해서 확인해보세요
+                </h2>
+                <div class="pop-center">
+                  <ul class="tab-title-wrap flex-wrap">
+                    <li class="tab-title active">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_01_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_01_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>매뉴얼 자동 추천</strong>
+                          <span>
+                            경영 상태에 맞는<br />
+                            최적의 매뉴얼 추천
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li class="tab-title">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_02_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_02_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>사례 적용</strong>
+                          <span>
+                            원하는 사례를 선택해<br />
+                            우리 병원에 적용
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li class="tab-title">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_03_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_03_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>강의 영상</strong>
+                          <span>
+                            의사결정을 돕는<br />
+                            컨설턴트 강의 영상 제공
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li class="tab-title">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_04_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Manage/popup_02_icon_04_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>To-Do List</strong>
+                          <span>
+                            잊어버리는 일이 없도록<br />
+                            한눈에 쉽게 관리
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- E tab title -->
+              <!-- tab contents -->
+              <div class="tab-content-wrapper">
+                <div class="pop-center">
+                  <ul class="tab-content-wrap">
+                    <li class="tab-content active">
+                      <div class="img-wrap">
+                        <img
+                          src="./assets/images/popup/Manage/popup_02_img_01.png"
+                          alt="메뉴얼 추천 예시"
+                          class="img"
+                        />
+                        <span class="txt-blue">경영 상태에 맞는 최적의 매뉴얼 추천</span>
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="tit">
+                          <span>
+                            우리병원 경영상태에 맞는 <br class="is-tab-show" />
+                            <b class="blue">최적의 매뉴얼 자동 추천</b>
+                          </span>
+                        </div>
+                        <p class="txt">
+                          모든 매뉴얼에서 병원 규모별·진료과별·운영형태별 맞춤형
+                          사례가 제공되어 경영 상태에 맞는 최적의 매뉴얼을 만들
+                          수 있습니다.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="tab-content">
+                      <div class="img-wrap">
+                        <img
+                          src="./assets/images/popup/Manage/popup_02_img_02.png"
+                          alt="사례적용 예시"
+                          class="img"
+                        />
+                        <span class="txt-blue">원하는 사례를 선택해 우리 병원에 적용</span>
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="tit">
+                          <span>
+                            사례 선택 후 수정하면
+                            <b class="blue">쉽게 완성</b>
+                          </span>
+                        </div>
+                        <p class="txt">
+                          매뉴얼 내용, 고민하지 마세요! 원하는 사례를 선택해
+                          내용을 수정할 수 있고 우리 병원에 적용해볼 수
+                          있습니다.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="tab-content">
+                      <div class="img-wrap">
+                        <img
+                          src="./assets/images/popup/Manage/popup_02_img_03.png"
+                          alt="강의 영상 예시"
+                          class="img"
+                        />
+                        <span class="txt-blue">의사결정을 돕는 컨설턴트 강의 영상 제공</span>
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="tit">
+                          <span>
+                            10년 이상 경력의
+                            <b class="blue">컨설턴트 강의 영상</b>
+                          </span>
+                        </div>
+                        <p class="txt">
+                          모든 매뉴얼 작성 시 의사결정을 돕는 컨설턴트 강의
+                          영상이 제공되어 직원의 경영 교육을 도와드립니다.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="tab-content">
+                      <div class="img-wrap">
+                        <img
+                          src="./assets/images/popup/Manage/popup_02_img_04.png"
+                          alt="to-do list 예시"
+                          class="img"
+                        />
+                        <span class="txt-blue">잊어버리는 일이 없도록 한눈에 쉽게 관리</span>
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="tit">
+                          <span>
+                            강력한
+                            <b class="blue">할 일 기능</b>
+                          </span>
+                        </div>
+                        <p class="txt">
+                          매뉴얼이 아무리 좋아도 실행을 해야 성과가 납니다.<br />
+                          이제 잊어버려서 못하는 일이 없도록 시스템에서 챙겨
+                          주니 내 할 일 상태를 한눈에 확인하고 관리할 수
+                          있습니다.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- E tab contents -->
+            </div>
+            <!-- popup conts price -->
+            <div class="popconts popconts-price">
+              <div class="pop-center">
+                <div>
+                  <div class="txt-wrap">
+                    <span class="txt-tit">메디플로우 경영관리</span>
+                    <strong class="txt-sub">요금안내</strong>
+                  </div>
+                  <dl class="price-wrap">
+                    <dt class="price-tit">가격</dt>
+                    <dd class="price-dec">
+                      <strong class="price-black">월</strong>
+                      <strong class="price-blue num-blue">10</strong>만원<span
+                        class="auto"
+                        >(자동 정기결제)</span
+                      >
+                      <span class="price-gray"
+                        >(의료기관 대상, 인원 무제한)</span
+                      >
+                    </dd>
+                  </dl>
+                  <ul class="service-group">
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon01.svg"
+                        alt="service-icon1"
+                        class="service-icon"
+                      />
+                      진료상품에 맞는<br />
+                      추천 매뉴얼 제공
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon02.svg"
+                        alt="service-icon2"
+                        class="service-icon"
+                      />
+                      진료상품에 확대된<br />
+                      사례 제공
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon03.svg"
+                        alt="service-icon3"
+                        class="service-icon"
+                      />
+                      컨설턴트<br />
+                      교육 영상 제공
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon04.svg"
+                        alt="service-icon4"
+                        class="service-icon"
+                      />
+                      직원 공유용<br />
+                      모바일 웹 버전 제공
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon05.svg"
+                        alt="service-icon5"
+                        class="service-icon"
+                      />
+                      매뉴얼 할 일 제공
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon06.svg"
+                        alt="service-icon6"
+                        class="service-icon"
+                      />
+                      병원 경영<br />
+                      서식 파일 관리
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon07.svg"
+                        alt="service-icon7"
+                        class="service-icon"
+                      />
+                      병원 업무 문서<br />
+                      저장/관리/공유
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon08.svg"
+                        alt="service-icon8"
+                        class="service-icon"
+                      />
+                      반복 업무 설정
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon09.svg"
+                        alt="service-icon9"
+                        class="service-icon"
+                      />
+                      매뉴얼 버전<br />
+                      관리 기능
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon10.svg"
+                        alt="service-icon10"
+                        class="service-icon"
+                      />
+                      자체 교육 저장 기능
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon11.svg"
+                        alt="service-icon11"
+                        class="service-icon"
+                      />
+                      전담 컨설턴트<br />
+                      전화/화상 자문
+                    </li>
+                    <li class="service-list">
+                      <img
+                        src="./assets/images/popup/icon/icon12.svg"
+                        alt="service-icon12"
+                        class="service-icon"
+                      />
+                      인쇄 기능<br />
+                      <strong class="comming">(coming soon)</strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- popup conts contact -->
+            <div class="popconts popconts-contact">
+              <section class="section contact-section">
+                <div class="pop-center clear">
+                  <div class="best-choice-wrap">
+                    <h2 class="tit">Best choice</h2>
+                    <p class="dec">
+                      경영 및 인사관리를 쉽게하는<br />
+                      <b class="bold-txt">최고의 선택!</b>
+                    </p>
+                    <a
+                      href="https://www.mediflow.kr/"
+                      target="_blank"
+                      class="link"
+                      >경영관리 자세히보기&nbsp;&nbsp;&nbsp;&gt;</a
+                    >
+                    <img
+                      src="./assets/images/logo/logo_w.svg"
+                      alt="메디플로우 로고"
+                      class="img"
+                    />
+                  </div>
+                  <div class="contact-wrap">
+                    <h2 class="tit bold-txt">5Seconds</h2>
+                    <p class="dec">5초만에 무료체험 &amp; 상담신청</p>
+                    <form class="applyCounsell" action="#">
+                      <fieldset>
+                        <legend class="is-none">상담 신청하기</legend>
+                        <div class="input-group">
+                          <label class="hos-label">병원명</label>
+                          <input
+                            class="hos-input"
+                            name="name"
+                            type="text"
+                            placeholder="병원명을 입력해주세요."
+                          />
+                        </div>
+                        <div class="input-group">
+                          <label class="hos-label">연락처</label>
+                          <input
+                            class="hos-input"
+                            name="phone"
+                            type="text"
+                            placeholder="연락처를 입력해주세요."
+                          />
+                        </div>
+                        <div class="input-group">
+                          <label class="hos-label">이메일</label>
+                          <input
+                            class="hos-input"
+                            name="mail"
+                            type="text"
+                            placeholder="메일주소를 입력해주세요."
+                          />
+                        </div>
+                        <input
+                          type="submit"
+                          value="무료 체험 및 상담 신청하기"
+                          class="btn-counsel"
+                        />
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- E popup contents -->
+        </div>
+      </div>
+    </div>
+    <!-- E 경영관리 팝업  -->
+    <!-- 인사관리 팝업 -->
+    <div id="pPop" class="popup">
+      <div class="popup-bg" onclick="popupClose(psnPop)"></div>
+      <div class="popup-wrapper">
+        <div class="popup-btn-wrap">
+          <button
+            type="button"
+            class="popup-close input-reset"
+            onclick="popupClose(psnPop)"
+          >
+            Close
+          </button>
+        </div>
+        <div class="popup-inner">
+          <!-- popup contents -->
+          <div class="popup-contents">
+            <!-- popup conts hd -->
+            <div class="popconts popconts-hd">
+              <div class="pop-center">
+                <div class="flex-wrap">
+                  <h2 class="tit">
+                    <span class="txt"
+                      >메디플로우 <strong class="em">인사관리</strong></span
+                    >
+                  </h2>
+                  <img
+                    src="./assets/images/logo/logo_w.svg"
+                    alt="mediflow"
+                    class="img"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- popup conts video -->
+            <div class="popconts popconts-video">
+              <iframe
+                id="pPopVideo"
+                class="pop-video"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/QMqOkJxMJdQ"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen=""
+              >
+              </iframe>
+            </div>
+            <!-- popup conts tab -->
+            <div class="popconts popconts-tab">
+              <!-- tab title -->
+              <div class="tab-title-wrapper">
+                <h2 class="conts-title">
+                  궁금한 인사관리! <br class="is-mo-show" />아래 버튼을
+                  <span>클릭</span>해서 확인해보세요
+                </h2>
+                <div class="pop-center">
+                  <ul class="tab-title-wrap flex-wrap">
+                    <li class="tab-title active">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_01_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_01_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>인사정보</strong>
+                          <span>
+                            직원 정보를<br />
+                            한곳에 모아서 확인
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li class="tab-title">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_02_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_02_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>휴가 & 근태</strong>
+                          <span>
+                            쉽고 빠르게 작성하는<br />
+                            직원 휴가와 근태
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li class="tab-title">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_03_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_03_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>급여</strong>
+                          <span>
+                            복잡한 급여와<br />
+                            수당도 완벽하게
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li class="tab-title">
+                      <button type="button" class="input-reset title-btn">
+                        <span class="icon-wrap">
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_04_off.svg"
+                            alt="button icon"
+                            class="img off"
+                          />
+                          <img
+                            src="./assets/images/popup/Personnel/popup_01_icon_04_on.svg"
+                            alt="button icon"
+                            class="img on"
+                          />
+                        </span>
+                        <span class="txt-wrap">
+                          <strong>교육체계</strong>
+                          <span>
+                            법정의무교육 등<br />
+                            모든 교육을 쉽게 관리
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- E tab title -->
+              <!-- tab contents -->
+              <div class="tab-content-wrapper">
+                <div class="pop-center">
+                  <ul class="tab-content-wrap">
+                    <li class="tab-content active">
+                      <div class="img-wrap">
+                        <div class="swiper-container popup-slide">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_01-1.png"
+                                alt="인사정보 step1"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_01-1.png"
+                                alt="인사정보 step1"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">전직원의 인사정보를 한 곳에서 확인합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_01-2.png"
+                                alt="인사정보 step2"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_01-2.png"
+                                alt="인사정보 step2"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">인사관련 서류를 한 곳에 보관합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_01-3.png"
+                                alt="인사정보 step3"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_01-3.png"
+                                alt="인사정보 step3"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">승진, 부서 이동 인사발령을 관리합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_01-4.png"
+                                alt="인사정보 step4"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_01-4.png"
+                                alt="인사정보 step4"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">각종 증명서를 클릭 한 번으로 발행합니다.</span>
+                            </div>
+                          </div>
+                          <div class="swiper-btn-wrap">
+                            <div
+                              class="swiper-button-prev popup-button-prev"
+                            ></div>
+                            <div
+                              class="swiper-button-next popup-button-next"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="txt-wrap">
+                        <dl class="txt-list">
+                          <dt class="tit">사원인사정보</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                경력, 학력, 연락처, 입사일, 퇴사일 등
+                                <br class="is-mo-show" />전직원의 인사정보를 한
+                                곳에서
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">인사관련 서류 보관</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                근로계약서, 보안서약서, 경력증명서,
+                                <br class="is-mo-show" />면허증 사본 종이
+                                문서들을 한 곳에서
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">인사발령</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                승진, 부서 이동 히스토리 관리
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">각종 증명서 자동 발급</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                재직증명서, 경력증명서, 퇴직증명서를
+                                <br class="is-mo-show" />인쇄 버튼 클릭 한
+                                번으로
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                    <li class="tab-content">
+                      <div class="img-wrap">
+                        <div class="swiper-container popup-slide">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_02-1.png"
+                                alt="휴가&근태 step1"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_02-1.png"
+                                alt="휴가&근태 step1"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">출근, 휴일 등 근태 현황을 한 곳에서 확인합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_02-2.png"
+                                alt="휴가&근태 step2"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_02-2.png"
+                                alt="휴가&근태 step2"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">전체일정, 개인일정을 한 눈에 확인합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_02-3.png"
+                                alt="휴가&근태 step3"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_02-3.png"
+                                alt="휴가&근태 step3"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">전직원의 휴가 일정을 확인합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_02-4.png"
+                                alt="휴가&근태 step4"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_02-4.png"
+                                alt="휴가&근태 step4"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">전직원의 휴가 현황을 확인합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_02-5.png"
+                                alt="휴가&근태 step5"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_02-5.png"
+                                alt="휴가&근태 step5"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">손쉽게 휴가를 신청할 수 있습니다.</span>
+                            </div>
+                          </div>
+                          <div class="swiper-btn-wrap">
+                            <div
+                              class="swiper-button-prev popup-button-prev"
+                            ></div>
+                            <div
+                              class="swiper-button-next popup-button-next"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="txt-wrap">
+                        <dl class="txt-list">
+                          <dt class="tit">근태현황</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                출근, 결근, 출장, 지각, 조퇴, 시간 외 근무,
+                                <br class="is-mo-show" />휴일 근무 등을 관리
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">근무일정표</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                보기 쉬운 달력형태의 근무표 개인별,
+                                <br class="is-mo-show" />부서별, 전체 근무표를
+                                한눈에!
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">휴가일정</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                누가, 언제 쉬는지, 휴가 일정만 따로 확인
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">휴가현황</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                남아있는 연차가 몇 일인지, 포상휴가를
+                                <br class="is-mo-show" />몇 일 다녀왔는지 실시간
+                                확인
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                    <li class="tab-content">
+                      <div class="img-wrap">
+                        <div class="swiper-container popup-slide">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_03-1.png"
+                                alt="급여 step1"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_03-1.png"
+                                alt="급여 step1"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">계약된 연봉을 한 눈에 확인합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_03-2.png"
+                                alt="급여 step2"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_03-2.png"
+                                alt="급여 step2"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">자동 계산되는 월급을 직원별로 확인합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_03-3.png"
+                                alt="급여 step3"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_03-3.png"
+                                alt="급여 step3"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">각종 기타 수당이 월급에 바로 적용됩니다.</span>
+                            </div>
+                          </div>
+                          <div class="swiper-btn-wrap">
+                            <div
+                              class="swiper-button-prev popup-button-prev"
+                            ></div>
+                            <div
+                              class="swiper-button-next popup-button-next"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="txt-wrap">
+                        <dl class="txt-list">
+                          <dt class="tit">연봉</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list dotted">
+                                개인별 계약된 연봉을 한 눈에 확인
+                              </li>
+                              <li class="list dotted">
+                                연봉 입력 시 매 월 예상 실수령액 확인
+                              </li>
+                              <li class="list dotted">
+                                실수령액 입력 시 연봉으로 역산 가능
+                              </li>
+                              <li class="list dotted">
+                                퇴직금과 시급, 일급 자동 계산
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">월급</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list dotted">
+                                보기 쉬운 달력형태의 근무표 매월 지급되는 월급을
+                                개인별, 부서별, 전체로 한 눈에!
+                              </li>
+                              <li class="list dotted">
+                                수습기간에 90% 지급을 하더라도 급여비율 입력 시
+                                자동계산
+                              </li>
+                              <li class="list dotted">
+                                근무일수와 각종 수당에 따라 자동 계산되어 바로
+                                확인가능
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">기타수당</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list dotted">
+                                연차수당, 연장근무수당, 각종 수당 입력시 월급에
+                                바로 적용
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                    <li class="tab-content">
+                      <div class="img-wrap">
+                        <div class="swiper-container popup-slide">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_04-1.png"
+                                alt="교육체계 step1"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_04-1.png"
+                                alt="교육체계 step1"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">연간 다양한 교육을 쉽게 계획할 수 있습니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_04-2.png"
+                                alt="교육체계 step2"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_04-2.png"
+                                alt="교육체계 step2"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">전자결재를 통해 교육을 신청합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_04-3.png"
+                                alt="교육체계 step3"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_04-3.png"
+                                alt="교육체계 step3"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">교육 이력 및 이수 여부를 관리합니다.</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="./assets/images/popup/Personnel/popup_01_img_04-4.png"
+                                alt="교육체계 step4"
+                                class="img is-mo-hide"
+                              />
+                              <img
+                                src="./assets/images/popup/Personnel/mo/popup_01_img_04-4.png"
+                                alt="교육체계 step4"
+                                class="img is-mo-show"
+                              />
+                              <span class="txt-blue">교육 후 설문으로 결과를 확인합니다.</span>
+                            </div>
+                          </div>
+                          <div class="swiper-btn-wrap">
+                            <div
+                              class="swiper-button-prev popup-button-prev"
+                            ></div>
+                            <div
+                              class="swiper-button-next popup-button-next"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="txt-wrap">
+                        <dl class="txt-list">
+                          <dt class="tit">교육계획</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">
+                                교육 계획에 필요한 항목들을 쉽고 간단하게 입력
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">교육신청서</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list">전자결재를 통한 교육 신청</li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">교육현황</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list dotted">
+                                교육 실행과 교육 대상자의 참석여부를 관리
+                              </li>
+                              <li class="list dotted">개인별 교육 이력 관리</li>
+                            </ul>
+                          </dd>
+                        </dl>
+                        <dl class="txt-list">
+                          <dt class="tit">설문&평가</dt>
+                          <dd class="dec">
+                            <ul class="list-wrap">
+                              <li class="list dotted">
+                                교육 후 평가 설문을 통해 교육 결과 측정
+                              </li>
+                              <li class="list dotted">
+                                교육 요구도 조사로 직원의 의견 수렴 가능
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- E tab contents -->
+            </div>
+            <!-- popup conts price -->
+            <div class="popconts popconts-price">
+              <div class="pop-center">
+                <div>
+                  <div class="txt-wrap">
+                    <span class="txt-tit">메디플로우 인사관리</span>
+                    <strong class="txt-sub">요금안내</strong>
+                  </div>
+                  <ul class="price-table-group">
+                    <li class="price-table-tit">
+                      <span class="price-table-txt price-table-first"></span>
+                      <span class="price-table-txt price-table">
+                        <span class="tbl-hd-txt">
+                          <img
+                            src="./assets/images/popup/icon/icon-won-circle.svg"
+                            alt="무료체험"
+                            class="icon"
+                          />
+                          <span class="txt">무료체험</span>
+                        </span>
+                      </span>
+                      <span class="price-table-txt price-table">
+                        <span class="tbl-hd-txt">
+                          <img
+                            src="./assets/images/popup/icon/icon-dia.svg"
+                            alt="BASIC"
+                            class="icon"
+                          />
+                          <span class="txt eng">BASIC</span>
+                        </span>
+                      </span>
+                    </li>
+                    <li class="price-table-tit">
+                      <span class="price-table-txt pricing">가격</span>
+                      <span class="price-table-txt price-gray"
+                        ><strong class="price-blue">무료</strong>(2주
+                        한정)</span
+                      >
+                      <span class="price-table-txt price-gray"
+                        ><strong class="price-blue"
+                          >3,000 <em class="price-won">원</em></strong
+                        >(1인당/월)</span
+                      >
+                    </li>
+                    <li class="price-table-list">
+                      <ul class="price-sub-group">
+                        <li class="price-sub-list table-list-1">
+                          근태 <br class="is-mo-show" />관리
+                        </li>
+                        <li class="price-sub-list table-list-2">
+                          <ul class="price-sub-txt-group">
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  개인 휴대폰으로 출퇴근 인증 (GPS/Wifi 기반)
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">개인 휴대폰으로</p>
+                                  <p class="lh">출퇴근 인증</p>
+                                  <p class="lh">(cps/Wifi 기반)</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  근무 스케줄 공유 및 관리
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">근무 스케줄</p>
+                                  <p class="lh">공유 및 관리</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  휴가일정 및 현황 관리 (연차 잔여일수 실시간
+                                  확인)
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">휴가일정 및 현황</p>
+                                  <p class="lh">관리 (연차 잔여</p>
+                                  <p class="lh">일수 실시간 확인)</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  근태 현황 관리 (출근, 퇴근, 지각, 조퇴 등)
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">근태 현황 관리</p>
+                                  <p class="lh">(출근, 퇴근, 지각,</p>
+                                  <p class="lh">조퇴 등)</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="price-table-list">
+                      <ul class="price-sub-group">
+                        <li class="price-sub-list table-list-1">
+                          인사<br class="is-mo-show" />
+                          관리
+                        </li>
+                        <li class="price-sub-list table-list-2">
+                          <ul class="price-sub-txt-group">
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  사원정보 및 인사기록 관리
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">사원정보 및</p>
+                                  <p class="lh">인사기록 관리</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  각종 증명서 자동발급 (재직증명서 등)
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">각종 증명서</p>
+                                  <p class="lh">자동발급</p>
+                                  <p class="lh">(재직증명서 등)</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="price-table-list">
+                      <ul class="price-sub-group">
+                        <li class="price-sub-list table-list-1">
+                          교육<br class="is-mo-show" />
+                          관리
+                        </li>
+                        <li class="price-sub-list table-list-2">
+                          <ul class="price-sub-txt-group">
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                교육 계획 수립
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  교육 일정 직원 공유
+                                </div>
+                                <p class="is-mo-show">교육 일정 직원</p>
+                                <p class="is-mo-show">공유</p>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  교육 신청 및 현황 관리
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">교육 신청 및 현황</p>
+                                  <p class="lh">관리</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="price-table-list">
+                      <ul class="price-sub-group">
+                        <li class="price-sub-list table-list-1">
+                          급여<br class="is-mo-show" />
+                          관리
+                        </li>
+                        <li class="price-sub-list table-list-2">
+                          <ul class="price-sub-txt-group">
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  연봉에 대한 월급 자동 계산 (월지급액,
+                                  예상실수령액)
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">연봉에 대한 월급</p>
+                                  <p class="lh">자동계산</p>
+                                  <p class="lh">(월지급액, 예상</p>
+                                  <p class="lh">실수령액</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  실수령액을 역산한 연봉 자동 계산
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">실수령액을 역산한</p>
+                                  <p class="lh">연봉 자동 계산</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  연장근무수당 및 기타 수당 반영
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">연장근무수당 및</p>
+                                  <p class="lh">기타 수당 반영</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                급여 대장 관리
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="price-table-list">
+                      <ul class="price-sub-group">
+                        <li class="price-sub-list table-list-1">
+                          전자<br class="is-mo-show" />
+                          결재
+                        </li>
+                        <li class="price-sub-list table-list-2">
+                          <ul class="price-sub-txt-group">
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  휴가, 교육, 연장근무, 증명서 발급 등 각종
+                                  신청서
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">휴가, 교육, 연장</p>
+                                  <p class="lh">근무, 증명서 발급</p>
+                                  <p class="lh">등 각종 신청서</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  사유서, 기안서 등 각종 보고서
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">사유서, 기안서 등</p>
+                                  <p class="lh">각종 보고서</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">
+                                <span class="circle"></span>
+                              </div>
+                              <div class="circle-list circle-last">
+                                <span class="circle blue"></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="price-table-list">
+                      <ul class="price-sub-group">
+                        <li class="price-sub-list table-list-1">
+                          개발<br class="is-mo-show" />
+                          예정
+                        </li>
+                        <li class="price-sub-list table-list-2">
+                          <ul class="price-sub-txt-group">
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  심화 교육 제공 (법정 교육, 직무 교육)
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">심화 교육 제공</p>
+                                  <p class="lh">(법정 교육,</p>
+                                  <p class="lh">직무 교육)</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">-</div>
+                              <div class="circle-list circle-last">-</div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">
+                                <div class="is-mo-hide">
+                                  전자 계약 (개인정보이용동의서, 근로계약서,
+                                  서약서)
+                                </div>
+                                <div class="is-mo-show">
+                                  <p class="lh">전자 계약 (개인</p>
+                                  <p class="lh">(정보이용동의서,</p>
+                                  <p class="lh">근로계약서,</p>
+                                  <p class="lh">서약서</p>
+                                </div>
+                              </div>
+                              <div class="circle-list">-</div>
+                              <div class="circle-list circle-last">-</div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">직원 채용</div>
+                              <div class="circle-list">-</div>
+                              <div class="circle-list circle-last">-</div>
+                            </li>
+                            <li class="price-sub-txt-list">
+                              <div class="price-sub-txt-tit">인사 평가</div>
+                              <div class="circle-list">-</div>
+                              <div class="circle-list circle-last">-</div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- popup conts contact -->
+            <div class="popconts popconts-contact">
+              <div class="pop-center clear">
+                <div class="best-choice-wrap">
+                  <h2 class="tit">Best choice</h2>
+                  <p class="dec">
+                    경영 및 인사관리를 쉽게하는<br />
+                    <b class="bold-txt">최고의 선택!</b>
+                  </p>
+                  <a href="https://me.mediflow.kr/" target="_blank" class="link"
+                    >인사관리 자세히보기&nbsp;&nbsp;&nbsp;></a
+                  >
+                  <img
+                    src="./assets/images/logo/logo_w.svg"
+                    alt="메디플로우 로고"
+                    class="img"
+                  />
+                </div>
+                <div class="contact-wrap">
+                  <h2 class="tit bold-txt">5Seconds</h2>
+                  <p class="dec">5초만에 무료체험 &amp; 상담신청</p>
+                  <form class="applyCounsell" action="#">
+                    <fieldset>
+                      <legend class="is-none">상담 신청하기</legend>
+                      <div class="input-group">
+                        <label class="hos-label">병원명</label>
+                        <input
+                          class="hos-input"
+                          name="name"
+                          type="text"
+                          placeholder="병원명을 입력해주세요."
+                        />
+                      </div>
+                      <div class="input-group">
+                        <label class="hos-label">연락처</label>
+                        <input
+                          class="hos-input"
+                          name="phone"
+                          type="text"
+                          placeholder="연락처를 입력해주세요."
+                        />
+                      </div>
+                      <div class="input-group">
+                        <label class="hos-label">이메일</label>
+                        <input
+                          class="hos-input"
+                          name="mail"
+                          type="text"
+                          placeholder="메일주소를 입력해주세요."
+                        />
+                      </div>
+                      <input
+                        type="submit"
+                        value="무료 체험 및 상담 신청하기"
+                        class="btn-counsel"
+                      />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- E popup contents -->
+        </div>
+      </div>
+    </div>
+    <!-- E 인사관리 팝업  -->
+    <script src="./assets/js/vendor/swiper.min.js"></script>
+    <script src="./assets/js/custom/ui.js"></script>
+    <script>
+      const psnPop = document.querySelector("#pPop");
+      const mngPop = document.querySelector("#mPop");
+
+      const m_embed_lyaer = $("#mPopVideo").attr("src");
+      const p_embed_lyaer = $("#pPopVideo").attr("src");
+
+      function popupOpen(obj) {
+        obj.classList.add("active");
+        $("#mPopVideo").attr({ src: m_embed_lyaer });
+        $("#pPopVideo").attr({ src: p_embed_lyaer });
+        $("body").css({ overflow: "hidden" });
+      }
+
+      function popupClose(obj) {
+        obj.classList.remove("active");
+        $("#mPopVideo").attr({ src: "" });
+        $("#pPopVideo").attr({ src: "" });
+        $("body").css({ overflow: "auto" });
+      }
+
+      $(".applyCounsell").each(function () {
+        $(this).validate({
+          submitHandler: function () {
+            alert("[test] 전송되었습니다.");
+          },
+          rules: {
+            name: {
+              required: true,
+            },
+            phone: {
+              required: true,
+              digits: true,
+              maxlength: 11,
+            },
+            mail: {
+              required: true,
+              email: true,
+              minlength: 2,
+            },
+          },
+          messages: {
+            name: {
+              required: "병원명을 입력해주세요.",
+            },
+            phone: {
+              required: "연락처를 입력해주세요.",
+              digits: "숫자만 입력해주세요.",
+            },
+            mail: {
+              required: "이메일을 입력해주세요.",
+              email: "올바른 형식으로 기입해주세요.",
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

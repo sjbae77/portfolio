@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>나라차 태권도</title>
+
+  <meta name="title" content="나라차태권도" />
+  <meta name="author" content="나라차태권도" />
+  <meta name="description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta name="keywords" content="나라차도장, 전통태권도, 태권도, 태권도 도장, 도장," />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://naracha.co.kr" />
+  <meta property="og:title" content="나라차태권도" />
+  <meta property="og:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta property="og:image" content="../assets/images/favicon/opengraph.png" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="http://www.naracha.co.kr/" />
+  <meta property="twitter:title" content="나라차태권도" />
+  <meta property="twitter:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="../assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="../assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="../assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="../assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#111151" />
+  <meta name="theme-color" content="#111151" />
+
+  <!-- css link -->
+  <link rel="stylesheet" href="../assets/css/vendor/normalize.css" />
+  <link rel="stylesheet" href="../assets/css/vendor/swiper.min.css" />
+  <link rel="stylesheet" href="../assets/css/custom/ui.css" />
+
+  <!-- javascript link -->
+  <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/vendor/vue.min.js"></script>
+  <script src="../assets/js/vendor/swiper.min.js"></script>
+  <script src="../assets/js/custom/ui.js"></script>
+  <script src="../assets/js/vendor/axios.min.js"></script>
+  <script src="../components/layout-footer.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <header class="header mo-header">
+        <div class="l-center">
+          <h1 class="logo">
+            <a href="../index.html">
+              <img src="../assets/images/logo/logo.svg" alt="나라차태권도" class="is-mo-hide" />
+              <img src="../assets/images/logo/mo/m-logo-header.svg" alt="나라차태권도" class="is-mo-show" />
+            </a>
+          </h1>
+          <div class="login-menu" v-if="!user">
+            <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list">
+                <a href="./login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+              </li>
+              <!-- <li class="login-menu-list">
+                <a href="./sign-up.html" class="login-menu-link">SIGN UP</a>
+              </li> -->
+              <li class="login-menu-list">
+
+                <a href="../index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <div class="login-menu" v-else>
+            <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list" v-if="user.user_provider === 'local'">
+                <a @click="logout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list" v-else>
+                <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list">
+                <a href="./mypage.html" class="login-menu-link">MY PAGE</a>
+              </li>
+              <li class="login-menu-list">
+
+                <a href="../index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 모바일 메뉴 버튼 -->
+          <a class="mo-menu-back-btn is-mo-show" onclick="event.preventDefault();history.back();">
+            <img src="../assets/images/btn/mo/btn-back.svg" alt="뒤로가기" class="mo-menu-back-img">
+          </a>
+          <button class="mo-menu-btn is-mo-show">
+            <img src="../assets/images/btn/mo/btn-menu.svg" alt="모바일 메뉴" class="mo-menu-btn-img">
+          </button>
+        </div>
+      </header>
+      <nav class="gnb-wrap sub-nav is-mo-hide">
+        <ul class="gnb-group">
+          <li class="gnb-list">
+            <a href="gnb-about.html" class="gnb-link">about</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-family-group.html" class="gnb-link">가족도장</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-practice-intro.html" class="gnb-link">수련&#47;용품</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-news.html" class="gnb-link">News</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-notice.html" class="gnb-link">Notice</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-qna.html" class="gnb-link">Q&A</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 모바일 메뉴 -->
+      <div class="mo-menu-wrap is-mo-show">
+
+        <div class="menu-header">
+
+          <span class="menu-tit">MENU</span>
+          <button class="menu-clse-btn">
+            <img src="../assets/images/btn/mo/btn-menu-close.svg" alt="메뉴닫기">
+          </button>
+        </div>
+
+        <ul class="mo-menu-group">
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-about.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">About</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="about">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-family-group.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">가족도장</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="가족도장">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-practice-intro.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">수련&#47;용품</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="수련/용품">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-news.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">News</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="News">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-notice.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Notice</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Notice">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-qna.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Q&A</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Q&A">
+            </a>
+          </li>
+        </ul>
+        <div class="login-menu" v-if="!user">
+          <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list">
+              <a href="./login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+            </li>
+            <!-- <li class="login-menu-list">
+              <a href="./sign-up.html" class="login-menu-link">SIGN UP</a>
+            </li> -->
+            <li class="login-menu-list">
+
+              <a href="../index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+        <div class="login-menu" v-else>
+          <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list" v-if="user.user_provider === 'local'">
+              <a @click="logout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list" v-else>
+              <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list">
+              <a href="./mypage.html" class="login-menu-link">MY PAGE</a>
+            </li>
+            <li class="login-menu-list">
+
+              <a href="../index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cover"></div>
+
+      <section class="sec-mypage">
+        <div class="find-wrap l-center">
+          <h2 class="sign-up-tit">MY PAGE</h2>
+
+          <form v-if="user">
+            <fieldset class="login-wrap">
+              <legend class="is-none">내정보</legend>
+              <div class="login-input-group">
+                <span class="login-label">아이디(이메일)</span>
+                <p class="info-txt">{{user.user_id}}</p>
+              </div>
+              <div class="login-input-group">
+                <label class="login-label">비밀번호</label>
+                <input type="password" name="login-pw" class="login-input" placeholder="비밀번호를 입력해주세요."
+                  v-model="user_pw" />
+              </div>
+              <div class="login-input-group">
+                <label class="login-label">비밀번호 확인</label>
+                <input type="password" name="login-pw-check" class="login-input" placeholder="비밀번호를 입력해주세요."
+                  v-model="user_pw_check" />
+              </div>
+              <div class="login-input-group">
+                <span class="login-label">이름</span>
+                <p class="info-txt">{{user.user_name}}</p>
+              </div>
+              <div class="login-input-group">
+                <span class="login-label">핸드폰 번호</span>
+                <p class="info-txt">{{user.user_contact}}</p>
+              </div>
+
+              <div class="login-input-group login-btn-wrap">
+                <input type="button" value="적용하기" class="login-btn" @click="changePw" />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <layout-footer></layout-footer>
+
+    </div>
+  </div>
+  <script>
+    var app1 = new Vue({
+      el: "#app",
+      data: function () {
+        return {
+          user: null,
+          isRunning: false,
+          user_pw: '',
+          user_pw_check: ''
+        };
+      },
+      created: function () {
+        if (localStorage.getItem('narachaToken')) {
+          axios.get("http://api.naracha.co.kr/api/v1/user/auth/profile", {
+            headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+          })
+            .then(function (res) {
+              app1.user = res.data.query
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+        }
+      },
+      // mounted: function () {
+      //   console.log(this.introduceTest);
+      // },
+      methods: {
+        async changePw() {
+          if (app1.user_pw.length < 1) {
+            alert('비밀번호를 입력해주세요')
+            return
+          } else if (app1.user_pw !== app1.user_pw_check) {
+            alert('비밀번호 확인을 다시 확인해주세요')
+            return
+          }
+          axios
+            .put("http://api.naracha.co.kr/api/v1/user/auth/change-pw", {
+              user_pw: app1.user_pw
+            }, {
+              headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+            })
+            .then(function (res) {
+              if (res.data.state === 1 && res.data.query) {
+                alert('비밀번호가 변경되었습니다')
+                localStorage.narachaToken = res.data.query
+                window.location.reload()
+              }
+            })
+        },
+        async logout() {
+          localStorage.removeItem('narachaToken')
+          window.location.href = '/'
+        },
+        async kakaoLogout() {
+          axios
+            .get("http://api.naracha.co.kr/api/v1/user/auth/logout/kakao", {
+              headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+            })
+            .then(function (res) {
+              if (res.data.redirect) {
+                localStorage.removeItem('narachaToken')
+                window.location.href = res.data.redirect
+              }
+            })
+        }
+      },
+    });
+
+  </script>
+</body>
+
+</html>

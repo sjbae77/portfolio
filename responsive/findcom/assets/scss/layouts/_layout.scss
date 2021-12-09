@@ -1,0 +1,238 @@
+html {
+  font-size: 16px;
+  color: color(text);
+  letter-spacing: -0.04em;
+
+  @include media(1024px) {
+    font-size: 15px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+
+  @include media(320px) {
+    font-size: 15px;
+  }
+}
+
+body {
+  @include mobile {
+    background-color: #2d2d2d;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.wrap {
+  background-color: #fafafc;
+
+  @include mobile {
+    background-color: #fff;
+  }
+
+  &.main-wrap {
+    background-color: #fff;
+  }
+}
+
+.page-wrap {
+  @include flex;
+
+  position: relative;
+}
+
+.page {
+  padding: 100px 210px 150px 290px;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include media(1550px) {
+    padding-left: 70px;
+  }
+
+  @include media(1340px) {
+    padding-right: calc(12.882% + 39px);
+  }
+
+  @include mobile {
+    padding: 50px 0 0;
+  }
+
+  &.download-page {
+    padding-top: 100px;
+  }
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .com-box {
+    margin-bottom: 20px;
+
+    @include mobile {
+      margin-bottom: 0;
+      border: 0;
+    }
+  }
+}
+
+.l-center {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+// 컨텐츠 공통요소
+.com-box {
+  position: relative;
+  padding: 0 rem(50);
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ececf1;
+  width: 100%;
+
+  @include media(1340px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.is-inactive {
+    &::after {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #ffffff, $alpha: 0.7);
+    }
+
+    .btn {
+      background-color: color(grayc3);
+      color: #ececf1;
+    }
+  }
+
+  &.bk {
+    background-color: #303038;
+    color: #ffffff;
+  }
+
+  &.filt-box {
+    .l-center {
+      padding: 0;
+    }
+
+    .slt-wrap {
+      padding: 0 20px;
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+  }
+
+  &.inquire-box {
+    padding: 0;
+  }
+
+  .l-center {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 rem(50);
+
+    @include media(1340px) {
+      padding: 0 25px;
+    }
+
+    @include mobile {
+      padding: 0 20px;
+    }
+
+    &.no-padding {
+      @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .com-ttl {
+    padding: rem(30) 0 rem(24);
+
+    @include mobile {
+      padding: rem(41) 0 rem(21);
+    }
+  }
+
+  .btn-wrap {
+    margin-bottom: rem(50);
+
+    @include mobile {
+      margin-bottom: rem(40);
+    }
+  }
+}
+
+// icon gnb 관련 스타일
+.icon-gnb-page {
+  .page {
+    padding-left: 76px;
+
+    @include media(1550px) {
+      padding-left: 70px;
+    }
+
+    @include mobile {
+      padding-left: 0;
+    }
+
+    .page-container {
+      max-width: 100%;
+    }
+
+    .bt-banner-wrap {
+      max-width: 100%;
+    }
+  }
+
+  ~ .com-ft {
+    padding-left: 76px;
+
+    @include media(1550px) {
+      padding-left: 70px;
+    }
+
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+  &.is-active {
+    .page {
+      padding-left: 290px;
+
+      @include media(1550px) {
+        padding-left: 70px;
+      }
+    }
+    
+    ~ .com-ft {
+      padding-left: 290px;
+
+      @include media(1550px) {
+        padding-left: 70px;
+      }
+    }
+  }
+}
+// END icon gnb 관련 스타일

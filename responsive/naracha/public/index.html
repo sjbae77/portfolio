@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>나라차 태권도</title>
+
+  <meta name="title" content="나라차태권도" />
+  <meta name="author" content="나라차태권도" />
+  <meta name="description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta name="keywords" content="나라차도장, 전통태권도, 태권도, 태권도 도장, 도장," />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://naracha.co.kr" />
+  <meta property="og:title" content="나라차태권도" />
+  <meta property="og:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta property="og:image" content="./assets/images/favicon/favicon.png" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="http://www.naracha.co.kr/" />
+  <meta property="twitter:title" content="나라차태권도" />
+  <meta property="twitter:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="./assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="./assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="./assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="./assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#111151" />
+  <meta name="theme-color" content="#111151" />
+
+  <!-- css link -->
+  <link rel="stylesheet" href="./assets/css/vendor/normalize.css" />
+  <link rel="stylesheet" href="./assets/css/vendor/swiper.min.css" />
+  <link rel="stylesheet" href="./assets/css/vendor/aos.css" />
+  <link rel="stylesheet" href="./assets/css/custom/ui.css" />
+
+  <!-- javascript link -->
+  <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/vendor/vue.min.js"></script>
+  <script src="./assets/js/vendor/swiper.min.js"></script>
+  <script src="./assets/js/custom/ui.js"></script>
+  <script src="./assets/js/vendor/axios.min.js"></script>
+  <script src="./assets/js/vendor/moment.min.js"></script>
+  <script src="./assets/js/vendor/aos.js"></script>
+  <script src="./components/index-footer.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <header class="header">
+        <div class="l-center">
+          <h1 class="logo">
+            <a href="./index.html">
+              <img src="./assets/images/logo/logo.svg" alt="나라차태권도" class="is-mo-hide" />
+              <img src="./assets/images/logo/mo/m-logo-header.svg" alt="나라차태권도" class="is-mo-show" />
+            </a>
+          </h1>
+          <div class="login-menu" v-if="!user">
+            <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list">
+                <a href="pages/login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+              </li>
+              <!-- <li class="login-menu-list">
+                <a href="pages/sign-up.html" class="login-menu-link">SIGN UP</a>
+              </li> -->
+              <li class="login-menu-list">
+                <a href="./index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <div class="login-menu" v-else>
+            <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list" v-if="user.user_provider === 'local'">
+                <a @click="logout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list" v-else>
+                <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list">
+                <a href="pages/mypage.html" class="login-menu-link">MY PAGE</a>
+              </li>
+              <li class="login-menu-list">
+                <a href="./index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 모바일 메뉴 버튼 -->
+          <button class="mo-menu-btn is-mo-show">
+            <img src="./assets/images/btn/mo/btn-menu.svg" alt="모바일 메뉴" class="mo-menu-btn-img">
+          </button>
+        </div>
+      </header>
+      <nav class="gnb-wrap is-mo-hide">
+        <ul class="gnb-group">
+          <!-- active : 헤당 메뉴 클릭시 border-bottom 생김 -->
+          <li class="gnb-list">
+            <a href="pages/gnb-news.html" class="gnb-link">News</a>
+          </li>
+          <li class="gnb-list">
+            <a href="pages/gnb-notice.html" class="gnb-link">Notice</a>
+          </li>
+          <li class="gnb-list">
+            <a href="pages/gnb-qna.html" class="gnb-link">Q&A</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 모바일 메뉴 -->
+      <div class="mo-menu-wrap is-mo-show">
+
+        <div class="menu-header">
+
+          <span class="menu-tit">MENU</span>
+          <button class="menu-clse-btn">
+            <img src="./assets/images/btn/mo/btn-menu-close.svg" alt="메뉴닫기">
+          </button>
+        </div>
+
+        <ul class="mo-menu-group">
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-about.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">About</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="about">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-family-intro.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">가족도장</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="가족도장">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-practice-intro.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">수련&#47;용품</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="수련/용품">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-news.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">News</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="News">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-notice.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Notice</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="Notice">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="./pages/gnb-qna.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Q&A</span>
+              <img src="./assets/images/btn/mo/btn-menu-list.svg" alt="Q&A">
+            </a>
+          </li>
+        </ul>
+
+        <div class="login-menu" v-if="!user">
+          <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list">
+              <a href="pages/login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+            </li>
+            <!-- <li class="login-menu-list">
+              <a href="pages/sign-up.html" class="login-menu-link">SIGN UP</a>
+            </li> -->
+            <li class="login-menu-list">
+              <a href="./index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+        <div class="login-menu" v-else>
+          <img src="./assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list" v-if="user.user_provider === 'local'">
+              <a @click="logout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list" v-else>
+              <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list">
+              <a href="pages/mypage.html" class="login-menu-link">MY PAGE</a>
+            </li>
+            <li class="login-menu-list">
+              <a href="./index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cover"></div>
+      <main class="main">
+        <section class="sec-main-container">
+
+          <div class="swiper-container">
+            <div class="swiper-wrapper main-swiper-wrapper">
+              <div class="swiper-slide slide-img-01">
+              </div>
+              <div class="swiper-slide slide-img-02">
+              </div>
+              <div class="swiper-slide slide-img-03">
+              </div>
+            </div>
+
+            <div class="slide-center">
+              <div class="l-center">
+                <div class="main-tit-wrap">
+                  <h2 class="main-tit" data-aos="fade-up" data-aos-duration="1000">
+                    ABOUT<br />
+                    NARACHA
+                  </h2>
+                  <p class="main-dec" data-aos="fade-up" data-aos-duration="1400">
+                    대한민국의 자랑 전통태권도를 지도하는 나라차 도장!<br />
+                    나라차태권도를 더 자세히 알고 싶다면?
+                  </p>
+                  <a href="pages/gnb-about.html" class="view" data-aos="fade-up" data-aos-duration="1400"> Detail View
+                  </a>
+                </div>
+
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-prev slide-btn-prev main-slide-prev"></div>
+                <div class="swiper-button-next slide-btn-next main-slide-next"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-conts">
+            <div class="main-cont" onclick="location.href='pages/gnb-about.html'" data-aos="fade-up"
+              data-aos-duration="1200" data-aos-delay="200">
+              <img src="./assets/images/btn/btn-top.svg" alt="about arrow" class="top-arrow" />
+              <span class="main-cont-tit"> About </span>
+              <p class="main-cont-dec">
+                나라차 태권도를<br />
+                소개합니다
+              </p>
+            </div>
+            <div class="main-cont" onclick="location.href='pages/gnb-family-group.html'" data-aos="fade-up"
+              data-aos-duration="1200" data-aos-delay="400">
+              <img src="./assets/images/btn/btn-top.svg" alt="about arrow" class="top-arrow" />
+              <span class="main-cont-tit"> Family </span>
+              <p class="main-cont-dec">
+                가족도장<br />
+                나라차 태권도
+              </p>
+            </div>
+            <div class="main-cont" onclick="location.href='pages/gnb-practice-intro.html'" data-aos="fade-up"
+              data-aos-duration="1200" data-aos-delay="600">
+              <img src="./assets/images/btn/btn-top.svg" alt="about arrow" class="top-arrow" />
+              <span class="main-cont-tit"> Training </span>
+              <p class="main-cont-dec">
+                나라차 태권도<br />
+                수련&#47;용품
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="sec-introduce">
+          <div class="bg-wrap">
+            <img :src="`http://api.naracha.co.kr/storage/layout_main/${main_layout.intro_ceo_img}`" alt="나라차태권도 관장 임미화"
+              class="bg-sec-introduce-img is-mo-hide" />
+            <img src="./assets/images/img/bg-symbol.svg" alt="나라차 로고" class="bg-symbol-img" />
+          </div>
+          <div class="l-center">
+            <div class="img-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="300"
+              data-aos-offset="300">
+              <img :src="`http://api.naracha.co.kr/storage/layout_main/${main_layout.main_ceo_img}`" alt="나라차태권도 관장님 사진"
+                class="sec-introduce-pic-img" />
+            </div>
+            <div class="txt-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500"
+              data-aos-offset="300">
+              <h2 class="tit bold-txt">
+                {{main_layout.intro_title}}</h2>
+              <h3 class="sub-tit">
+                {{main_layout.main_greetings}}</h3>
+              <p class="dec">
+                {{main_layout.intro_text}}
+              </p>
+              <a href="https://forms.gle/9KywongvsYXjj83cA" target="_blank" class="btn-inquiry">가족도장
+                문의하기</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec-history">
+          <div class="l-center">
+            <div class="left-wrap">
+              <div class="chapter-wrap" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300">
+                <h2 class="tit bold-txt">HISTORY</h2>
+                <h3 class="sub-tit">나라차<br />태권도의<br />역사</h3>
+              </div>
+              <div class="history-wrap">
+                <ul class="history-group" data-aos-duration="1200" data-aos-delay="400" data-aos="fade-up"
+                  data-aos-offset="300">
+                  <li class="history-list" v-for="item in items2">
+                    <span class="dots"></span>
+                    <div class="txt-wrap">
+                      <p class="date bold-txt">{{moment(item.ht_date).format('YYYY.MM')}}</p>
+                      <p class="event">{{item.ht_content}}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="right-wrap">
+              <img src="./assets/images/logo/logo.svg" alt="나라차 로고" class="logo-img" data-aos="zoom-out"
+                data-aos-duration="3000" />
+              <img src="./assets/images/obj/obj01.svg" alt="배경 도형" class="obj01" data-aos="fade-up"
+                data-aos-duration="2000" />
+              <img src="./assets/images/obj/obj02.svg" alt="배경 도형" class="obj02" data-aos="fade-up"
+                data-aos-duration="2000" />
+              <img src="./assets/images/obj/obj03.svg" alt="배경 도형" class="obj03" data-aos="fade-up"
+                data-aos-duration="2000" data-aos-offset="-100" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <index-footer></index-footer>
+    </div>
+  </div>
+  <script>
+    var app1 = new Vue({
+      el: "#app",
+      data: function () {
+        return {
+          user: null,
+          isRunning: false,
+          items: [],
+          items2: [],
+          selectedKind: 1,
+          main_layout: {
+            main_ceo_img: null,
+            intro_ceo_img: null,
+            intro_title: null,
+            main_greetings: null,
+            intro_text: null
+          }
+        };
+      },
+      created: function () {
+        if (localStorage.getItem('narachaToken')) {
+          axios.get("http://api.naracha.co.kr/api/v1/user/auth/profile", {
+            headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+          })
+            .then(function (res) {
+              app1.user = res.data.query
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+        }
+        this.fetchData();
+      },
+      methods: {
+        fetchData: function () {
+          if (this.isRunning) {
+            return;
+          }
+          this.isRunning = true;
+
+          var res1 = axios
+            .get("http://api.naracha.co.kr/api/v1/user/layout-main")
+            .then(function (res) {
+              app1.items = app1.items.concat(res.data.query);
+              console.log(app1.items);
+              Object.keys(app1.main_layout).forEach(key => {
+                app1.items.forEach(x => {
+                  if (key === x.lm_setting_key) app1.main_layout[key] = x.lm_setting_value
+                })
+              })
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+            .then(function () {
+              app1.isRunning = false;
+            });
+
+          var res2 = axios
+            .get("http://api.naracha.co.kr/api/v1/user/history")
+            .then(function (res) {
+              app1.items2 = app1.items2.concat(res.data.query);
+              Object.keys(app1.main_layout).forEach(key => {
+                app1.items2.forEach(x => {
+                  if (key === x.lm_setting_key) app1.main_layout[key] = x.lm_setting_value
+                })
+              })
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+            .then(function () {
+              app1.isRunning = false;
+            });
+        },
+        async logout() {
+          localStorage.removeItem('narachaToken')
+          window.location.href = '/'
+        },
+        async kakaoLogout() {
+          axios
+            .get("http://api.naracha.co.kr/api/v1/user/auth/logout/kakao", {
+              headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+            })
+            .then(function (res) {
+              if (res.data.redirect) {
+                localStorage.removeItem('narachaToken')
+                window.location.href = res.data.redirect
+              }
+            })
+        }
+      },
+    });
+
+    // 메인 이미지 슬라이드
+    new Swiper(".swiper-container", {
+
+      loop: true,
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    AOS.init({
+      disable: 'mobile',
+      once: true
+    });
+
+  </script>
+</body>
+
+</html>

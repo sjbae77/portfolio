@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="menu-04" transform="translate(21534 14736)">
+    <rect id="사각형_80" data-name="사각형 80" width="25" height="25" transform="translate(-21534 -14736)" fill="red" opacity="0"/>
+    <g id="그룹_233" data-name="그룹 233" transform="translate(-21531 -14731)">
+      <rect id="사각형_65" data-name="사각형 65" width="19.023" height="12.416" transform="translate(0 2.85)" fill="#fff" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+      <line id="선_13" data-name="선 13" y2="11.475" transform="translate(3.305 3.307)" fill="#fff" stroke="#6bd998" stroke-linejoin="bevel" stroke-width="1"/>
+      <line id="선_14" data-name="선 14" y2="11.475" transform="translate(15.719 3.307)" fill="#fff" stroke="#6bd998" stroke-linejoin="bevel" stroke-width="1"/>
+      <rect id="사각형_66" data-name="사각형 66" width="6.468" height="2.85" transform="translate(6.278)" fill="none" stroke="#303038" stroke-linejoin="bevel" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

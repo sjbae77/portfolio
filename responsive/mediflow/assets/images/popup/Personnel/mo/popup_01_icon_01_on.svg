@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63">
+  <g id="popup_01_icon_01_on" transform="translate(17928 4597)">
+    <rect id="사각형_889" data-name="사각형 889" width="63" height="63" rx="20" transform="translate(-17928 -4597)" fill="#fff"/>
+    <g id="그룹_2040" data-name="그룹 2040" transform="translate(-17911.637 -4580.636)">
+      <g id="그룹_1886" data-name="그룹 1886" transform="translate(0 0)">
+        <circle id="타원_490" data-name="타원 490" cx="7.3" cy="7.3" r="7.3" transform="translate(2.724)" fill="#2b5bdf"/>
+        <rect id="사각형_846" data-name="사각형 846" width="20.047" height="11.796" rx="5.848" transform="translate(0 17.826)" fill="#2b5bdf"/>
+      </g>
+      <path id="패스_19631" data-name="패스 19631" d="M443.1,583.368a7.3,7.3,0,1,0,0-12.1,9.144,9.144,0,0,1,0,12.1Z" transform="translate(-426.16 -570.019)" fill="#8ebbfe"/>
+      <path id="패스_19632" data-name="패스 19632" d="M452.4,591.806h-5.686a6.705,6.705,0,0,1,2.05,4.827v2.142a6.708,6.708,0,0,1-2.05,4.826H452.4a5.463,5.463,0,0,0,5.463-5.463v-.87A5.463,5.463,0,0,0,452.4,591.806Z" transform="translate(-426.818 -573.98)" fill="#8ebbfe"/>
+    </g>
+  </g>
+</svg>

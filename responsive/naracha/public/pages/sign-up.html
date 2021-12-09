@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>나라차 태권도</title>
+
+  <meta name="title" content="나라차태권도" />
+  <meta name="author" content="나라차태권도" />
+  <meta name="description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta name="keywords" content="나라차도장, 전통태권도, 태권도, 태권도 도장, 도장," />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://naracha.co.kr" />
+  <meta property="og:title" content="나라차태권도" />
+  <meta property="og:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta property="og:image" content="../assets/images/favicon/opengraph.png" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="http://www.naracha.co.kr/" />
+  <meta property="twitter:title" content="나라차태권도" />
+  <meta property="twitter:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="../assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="../assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="../assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="../assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#111151" />
+  <meta name="theme-color" content="#111151" />
+
+  <!-- css link -->
+  <link rel="stylesheet" href="../assets/css/vendor/normalize.css" />
+  <link rel="stylesheet" href="../assets/css/vendor/swiper.min.css" />
+  <link rel="stylesheet" href="../assets/css/custom/ui.css" />
+</head>
+
+<!-- css link -->
+<link rel="stylesheet" href="../assets/css/vendor/normalize.css" />
+<link rel="stylesheet" href="../assets/css/vendor/swiper.min.css" />
+<link rel="stylesheet" href="../assets/css/custom/ui.css" />
+
+<!-- javascript link -->
+<script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/vendor/vue.min.js"></script>
+<script src="../assets/js/vendor/swiper.min.js"></script>
+<script src="../assets/js/custom/ui.js"></script>
+<script src="../assets/js/vendor/axios.min.js"></script>
+<script src="../components/layout-footer.js"></script>
+
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <header class="header mo-header">
+        <div class="l-center">
+          <h1 class="logo">
+            <a href="../index.html">
+              <img src="../assets/images/logo/logo.svg" alt="나라차태권도" class="is-mo-hide" />
+              <img src="../assets/images/logo/mo/m-logo-header.svg" alt="나라차태권도" class="is-mo-show" />
+            </a>
+          </h1>
+          <div class="login-menu">
+            <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list">
+                <a href="./login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+              </li>
+              <!-- <li class="login-menu-list">
+                <a href="./sign-up.html" class="login-menu-link">SIGN UP</a>
+              </li> -->
+              <li class="login-menu-list">
+
+                <a href="../index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 모바일 메뉴 버튼 -->
+          <a href="./login.html" class="mo-menu-back-btn is-mo-show">
+            <img src="../assets/images/btn/mo/btn-back.svg" alt="뒤로가기" class="mo-menu-back-img">
+          </a>
+          <button class="mo-menu-btn is-mo-show">
+            <img src="../assets/images/btn/mo/btn-menu.svg" alt="모바일 메뉴" class="mo-menu-btn-img">
+          </button>
+        </div>
+      </header>
+      <nav class="gnb-wrap sub-nav is-mo-hide">
+        <ul class="gnb-group">
+          <li class="gnb-list">
+            <a href="gnb-about.html" class="gnb-link">about</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-family-group.html" class="gnb-link">가족도장</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-practice-intro.html" class="gnb-link">수련&#47;용품</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-news.html" class="gnb-link">News</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-notice.html" class="gnb-link">Notice</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-qna.html" class="gnb-link">Q&A</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 모바일 메뉴 -->
+      <div class="mo-menu-wrap is-mo-show">
+
+        <div class="menu-header">
+
+          <span class="menu-tit">MENU</span>
+          <button class="menu-clse-btn">
+            <img src="../assets/images/btn/mo/btn-menu-close.svg" alt="메뉴닫기">
+          </button>
+        </div>
+
+        <ul class="mo-menu-group">
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-about.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">About</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="about">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-family-group.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">가족도장</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="가족도장">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-practice-intro.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">수련&#47;용품</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="수련/용품">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-news.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">News</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="News">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-notice.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Notice</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Notice">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-qna.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Q&A</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Q&A">
+            </a>
+          </li>
+        </ul>
+
+        <div class="login-menu">
+          <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list">
+              <a href="../pages/login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+            </li>
+            <!-- <li class="login-menu-list">
+              <a href="../pages/sign-up.html" class="login-menu-link">SIGN UP</a>
+            </li> -->
+            <li class="login-menu-list">
+
+              <a href="../index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cover"></div>
+
+      <section class="sec-sign-up">
+        <div class="l-center">
+          <h2 class="sign-up-tit">회원가입</h2>
+          <form action="#">
+            <fieldset class="login-wrap">
+              <legend class="is-none">회원가입</legend>
+              <div class="login-input-group">
+                <label class="login-label">아이디(이메일)</label>
+                <input type="text" name="login-id" class="login-input" placeholder="로그인시 사용하실 이메일을 입력해주세요."
+                  v-model="user_id" />
+              </div>
+              <div class="login-input-group">
+                <label class="login-label">비밀번호</label>
+                <input type="password" name="login-pw" class="login-input" placeholder="비밀번호를 입력해주세요."
+                  v-model="user_pw" />
+              </div>
+              <div class="login-input-group">
+                <label class="login-label">비밀번호 확인</label>
+                <input type="password" name="login-pw-check" class="login-input" placeholder="비밀번호를 입력해주세요."
+                  v-model="user_pw_check" />
+              </div>
+              <div class="login-input-group">
+                <label class="login-label">이름</label>
+                <input type="text" name="login-name" class="login-input" placeholder="실명을 입력해주세요."
+                  v-model="user_name" />
+              </div>
+              <div class="login-input-group">
+                <label class="login-label">핸드폰 번호</label>
+                <input type="text" name="login-phone" class="login-input" placeholder="'-' 없이 입력해주세요."
+                  v-model="user_contact" />
+              </div>
+
+              <div class="login-input-group check">
+                <input type="checkbox" name="cb-input" class="cb-input" id="cb1" v-model="agree1" />
+                <label class="cb-label" for="cb1">
+                  <span class="cb-btn"><img src="./../assets/images/btn/check.svg" alt="체크" class="check-img" /></span>
+                  <span class="agree-tit">이용약관에 동의합니다.</span>
+                </label>
+                <a href="guide.html" target="_blank" class="tos-wrap">
+                  <span class="tos-link">보기</span>
+                  <img src="./../assets/images/btn/btn-next-black.svg" alt="오른쪽 화살표" />
+                </a>
+              </div>
+              <div class="login-input-group check">
+                <input type="checkbox" name="cb-input" class="cb-input" id="cb2" v-model="agree2" />
+                <label class="cb-label" for="cb2">
+                  <span class="cb-btn"><img src="./../assets/images/btn/check.svg" alt="체크" class="check-img" /></span>
+                  <span class="agree-tit">개인정보처리방침에 동의합니다.</span>
+                </label>
+                <a href="privacy.html" target="_blank" class="tos-wrap">
+                  <span class="tos-link">보기</span>
+                  <img src="./../assets/images/btn/btn-next-black.svg" alt="오른쪽 화살표" />
+                </a>
+              </div>
+
+              <div class="login-input-group login-btn-wrap">
+                <input type="button" value="회원가입" class="login-btn" @click="regist()" />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <layout-footer></layout-footer>
+
+    </div>
+  </div>
+  </div>
+  <script>
+    var app1 = new Vue({
+      el: "#app",
+      data: function () {
+        return {
+          isRunning: false,
+          user_id: "",
+          user_pw: "",
+          user_pw_check: "",
+          user_name: "",
+          user_contact: "",
+          agree1: false,
+          agree2: false,
+        };
+      },
+      created() {
+        if (localStorage.getItem('narachaToken')) {
+          axios.get("http://api.naracha.co.kr/api/v1/user/auth/profile", {
+            headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+          })
+            .then(function (res) {
+              app1.user = res.data.query
+              if (res.data.state === 1 && res.data.query !== null) {
+                window.location.href = '/'
+              }
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+        }
+      },
+      methods: {
+        regist() {
+          if (app1.isRunning) {
+            return
+          }
+          app1.isRunning = true
+          if (app1.user_id.length < 1) {
+            alert("아이디를 입력해주세요");
+            return;
+          }
+          if (app1.user_pw.length < 1) {
+            alert("비밀번호를 입력해주세요");
+            return;
+          } else if (app1.user_pw !== app1.user_pw_check) {
+            alert("비밀번호확인이 일치하지 않습니다");
+            return;
+          }
+          if (app1.user_name.length < 1) {
+            alert("이름을 입력해주세요");
+            return;
+          }
+          if (app1.user_contact.length < 1) {
+            alert("핸드폰 번호를 입력해주세요");
+            return;
+          }
+          if (!app1.agree1) {
+            alert("이용약관에 동의해주세요");
+            return;
+          }
+          if (!app1.agree2) {
+            alert("개인정보처리방침에 동의해주세요");
+            return;
+          }
+          axios.post("http://api.naracha.co.kr/api/v1/user/auth/register", {
+            user_id: this.user_id,
+            user_pw: this.user_pw,
+            user_name: this.user_name,
+            user_contact: this.user_contact,
+          })
+            .then(function (res) {
+              if (res.data.state === 1 && res.data.query) {
+                alert("회원가입이 완료되었습니다. 로그인해주세요");
+                window.location.href = "login.html";
+              }
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+            .then(function () {
+              app1.isRunning = false;
+            });
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

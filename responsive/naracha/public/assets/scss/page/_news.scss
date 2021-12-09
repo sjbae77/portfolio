@@ -1,0 +1,135 @@
+/* ==================== news ==================== */
+.sec-news {
+  padding: 37px 0 80px;
+
+  @include media-dv(mb) {
+    padding: 22px 0 0 0;
+  }
+
+  .content-wrap {
+    padding-top: 24px;
+    width: 100%;
+
+    .tit {
+      font-size: rem(28);
+      margin-bottom: 37px;
+
+      @include media-dv(mb) {
+        font-size: rem(24);
+        margin-bottom: 31px;
+      }
+    }
+
+    .notice-pagination-group {
+      @include media-dv(mb) {
+        display: none;
+      }
+    }
+  }
+}
+
+.news-wrap {
+  padding: 45px 40px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  margin-bottom: 48px;
+  border-bottom: 8px solid #dfdfdf;
+
+  @include media-dv(mb) {
+    padding: 0 15px 30px;
+    border-radius: 0;
+    border-bottom: 12px solid #f2f2f2;
+  }
+
+  .info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21.5px 0;
+    border-bottom: 1px solid #dfdfdf;
+
+    @include media-dv(mb) {
+      display: block;
+      padding: 15px 0;
+    }
+
+    .news-tit {
+      color: #012559;
+      font-size: rem(27);
+
+      @include media-dv(mb) {
+        font-size: rem(16);
+        margin-bottom: 7px;
+      }
+    }
+
+    .news-date {
+      color: #959595;
+      font-size: rem(16);
+
+      @include media-dv(mb) {
+        font-size: rem(12);
+      }
+    }
+  }
+
+  .news-dec {
+    padding: 21.5px 0;
+    font-size: rem(18);
+    color: #000;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 9.5px;
+    white-space: pre-line;
+
+    @include media-dv(mb) {
+      padding: 35.5px 0 30.5px;
+      font-size: rem(14);
+    }
+  }
+}
+
+
+// gallery layout
+.gallery-img-group {
+  display: flex;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media-dv(mb) {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  .gallery-img-list {
+    @include wh(200px, 200px);
+    margin-bottom: 30px;
+    margin-right: 35px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    @include media-dv(mb) {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    &:nth-child(5n) {
+      margin-right: 0;
+
+      @include media-dv(mb) {
+        margin-right: 5px;
+      }
+    }
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: bottom;
+    }
+  }
+}
+
+/* ==================== End of news ==================== */

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>나라차 태권도</title>
+  <meta name="title" content="나라차태권도" />
+  <meta name="author" content="나라차태권도" />
+  <meta name="description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta name="keywords" content="나라차도장, 전통태권도, 태권도, 태권도 도장, 도장," />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="나라차태권도" />
+  <meta property="og:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+  <meta property="og:image" content="../assets/images/favicon/opengraph.png" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="http://naracha.co.kr" />
+  <meta property="twitter:title" content="나라차태권도" />
+  <meta property="twitter:description" content="대한민국의 자랑 전통태권도를 지도하는 나라차 도장!" />
+
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="../assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="../assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="../assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="../assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#111151" />
+  <meta name="theme-color" content="#111151" />
+
+  <!-- END favicon -->
+
+  <!-- css link -->
+  <link rel="stylesheet" href="../assets/css/vendor/normalize.css" />
+  <link rel="stylesheet" href="../assets/css/custom/ui.css" />
+
+  <!-- javascript link -->
+  <script src="../assets/js/vendor/vue.min.js"></script>
+  <script src="../assets/js/vendor/swiper.min.js"></script>
+  <script src="../assets/js/vendor/axios.min.js"></script>
+  <script src="../assets/js/vendor/moment.min.js"></script>
+  <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/custom/ui.js"></script>
+  <script src="../assets/js/vendor/url-parse.min.js"></script>
+  <script src="../components/layout-footer.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <header class="header mo-header">
+        <div class="l-center">
+          <h1 class="logo is-mo-hide">
+            <a href="../index.html">
+              <img src="../assets/images/logo/logo.svg" alt="나라차태권도" class="is-mo-hide" />
+              <span class="mo-page-tit is-mo-show">News</span>
+            </a>
+          </h1>
+          <h1 class="logo is-mo-show">
+            <a href="#">
+              <img src="../assets/images/logo/logo.svg" alt="나라차태권도" class="is-mo-hide" />
+              <span class="mo-page-tit is-mo-show">News</span>
+            </a>
+          </h1>
+          <div class="login-menu" v-if="!user">
+            <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list">
+                <a href="./login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+              </li>
+              <!-- <li class="login-menu-list">
+                <a href="./sign-up.html" class="login-menu-link">SIGN UP</a>
+              </li> -->
+              <li class="login-menu-list">
+
+                <a href="../index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <div class="login-menu" v-else>
+            <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+            <ul class="login-menu-group">
+              <li class="login-menu-list" v-if="user.user_provider === 'local'">
+                <a @click="logout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list" v-else>
+                <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+              </li>
+              <li class="login-menu-list">
+                <a href="./mypage.html" class="login-menu-link">MY PAGE</a>
+              </li>
+              <li class="login-menu-list">
+
+                <a href="../index-en.html" class="login-menu-link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 모바일 메뉴 버튼 -->
+          <a href="../index.html" class="mo-menu-back-btn is-mo-show">
+            <img src="../assets/images/btn/mo/btn-home.svg" alt="메인으로가기" class="mo-menu-back-img">
+          </a>
+          <button class="mo-menu-btn is-mo-show">
+            <img src="../assets/images/btn/mo/btn-menu.svg" alt="모바일 메뉴" class="mo-menu-btn-img">
+          </button>
+        </div>
+      </header>
+      <nav class="gnb-wrap sub-nav is-mo-hide">
+        <ul class="gnb-group">
+          <li class="gnb-list">
+            <a href="gnb-about.html" class="gnb-link">about</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-family-group.html" class="gnb-link">가족도장</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-practice-intro.html" class="gnb-link">수련&#47;용품</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-news.html" class="gnb-link">News</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-notice.html" class="gnb-link">Notice</a>
+          </li>
+          <li class="gnb-list">
+            <a href="gnb-qna.html" class="gnb-link">Q&A</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 모바일 메뉴 -->
+      <div class="mo-menu-wrap is-mo-show">
+
+        <div class="menu-header">
+
+          <span class="menu-tit">MENU</span>
+          <button class="menu-clse-btn">
+            <img src="../assets/images/btn/mo/btn-menu-close.svg" alt="메뉴닫기">
+          </button>
+        </div>
+
+        <ul class="mo-menu-group">
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-about.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">About</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="about">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-family-group.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">가족도장</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="가족도장">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-practice-intro.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">수련&#47;용품</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="수련/용품">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-news.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">News</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="News">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-notice.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Notice</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Notice">
+            </a>
+          </li>
+          <li class="mo-menu-list">
+            <a href="../pages/gnb-qna.html" class="mo-menu-list-btn">
+              <span class="mo-menu-list-tit">Q&A</span>
+              <img src="../assets/images/btn/mo/btn-menu-list.svg" alt="Q&A">
+            </a>
+          </li>
+        </ul>
+        <div class="login-menu" v-if="!user">
+          <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list">
+              <a href="./login.html" class="login-menu-link">LOGIN&middot;SIGN UP</a>
+            </li>
+            <!-- <li class="login-menu-list">
+              <a href="./sign-up.html" class="login-menu-link">SIGN UP</a>
+            </li> -->
+            <li class="login-menu-list">
+
+              <a href="../index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+        <div class="login-menu" v-else>
+          <img src="../assets/images/icon/lock.svg" alt="자물쇠" class="lock-img" />
+          <ul class="login-menu-group">
+            <li class="login-menu-list" v-if="user.user_provider === 'local'">
+              <a @click="logout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list" v-else>
+              <a @click="kakaoLogout" class="login-menu-link">LOGOUT</a>
+            </li>
+            <li class="login-menu-list">
+              <a href="./mypage.html" class="login-menu-link">MY PAGE</a>
+            </li>
+            <li class="login-menu-list">
+
+              <a href="../index-en.html" class="login-menu-link">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cover"></div>
+
+      <div class="sec-news">
+        <div class="l-center">
+          <div class="content-wrap">
+            <h2 class="tit bold-txt">개인정보 처리방침</h2>
+            <div class="news-wrap">
+              <div class="info-wrap">
+                <div class="terms-contents-wrapper">
+                  <section class="terms-section">
+                    <!-- <h2 class="hide-text">개인정보 처리방침 내용</h2> -->
+
+                    <article class="terms-article">
+                      <h3 class="terms-article-title">개인정보의 수집항목</h3>
+                      <p class="terms-paragraph">
+                        나라차태권도는 홈페이지 회원 가입 시 회원 서비스 제공에 필요한
+                        최소한의 정보를 수집하고 있으며 개인정보파일에 수집되는 항목은
+                        다음과 같습니다.
+                      </p>
+                      <ul class="terms-ul type-in-num">
+                        <li>
+                          회원 가입시 수집하는 개인정보의 범위
+                          <ul class="terms-ul type-default">
+                            <li>이름, 아이디, 연락처, 이메일</li>
+                          </ul>
+                        </li>
+                        <!-- 
+                        <li>
+                          문의 이용 시 수집하는 개인정보의 범위
+                          <ul class="terms-ul type-default">
+                            <li>항목: 성함, 연락처, 전자우편주소</li>
+                          </ul>
+                        </li> -->
+
+                        <!-- <li>
+                          개인정보의 수집방법
+                          <p class="terms-desc">
+                            홈페이지(스테비노스 제품구매, 스테비스 F&amp;B 가맹문의,
+                            스테비스 제품구매, 펩스데이 제품구매)와 팩스, 전화, 이메일,
+                            제휴사로부터의 제공 등을 통해 개인정보를 수집하고 있습니다.
+                          </p>
+                        </li> -->
+                      </ul>
+                    </article>
+
+                    <article class="terms-article">
+                      <h3 class="terms-article-title">개인정보 수집목적</h3>
+                      <p class="terms-paragraph">
+                        나라차태권도가 제공하는 맞춤화된 서비스(태권도 컨텐츠 제공, 각종
+                        서비스 안내 및 참가신청 등) 및 개발(사전조사 및 만족도 설문조사,
+                        고객문의 등)을 위해 수집합니다. 나라차태권도는 원칙적으로 이용자의
+                        개인정보를 수집 및 이용 목적범위 내에서 처리하며, 이용자의 사전
+                        동의 없이는 본래의 범위를 초과하여 처리하거나 제3자에게 제공하지
+                        않습니다.
+                      </p>
+                      <ul class="terms-ul type-in-num">
+                        <!-- <li>회원 가입시 수집하는 개인정보의 범위
+                          <ul class="terms-ul type-default">
+                            <li>필수항목 : 희망 ID, 비밀번호, 성명, 전화번호, 이메일주소</li>
+                          </ul>
+                        </li> -->
+
+                        <li>
+                          가. 회원관리
+                          <ul class="terms-ul type-default">
+                            <li>
+                              항목: 회원 맞춤 서비스 제공, 개인식별, 전체 서비스의 원활한
+                              운영을 위한 관리, 회원탈퇴 의사 확인
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                          나. 고유서비스 이용 및 신규 개발
+                          <ul class="terms-ul type-default">
+                            <li>
+                              나라차태권도에서 제공하는 컨설팅을 비롯한 각종 고유 서비스
+                              제공의 필요 시, 신규 서비스 개발 시 의견수렴 및 안내
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </article>
+
+                    <article class="terms-article">
+                      <h3 class="terms-article-title">개인정보의 보유기간</h3>
+                      <p class="terms-paragraph">
+                        홈페이지 회원가입에 따라 수집된 개인정보 보유기간은 2년입니다.
+                      </p>
+                    </article>
+
+                    <article class="terms-article">
+                      <h3 class="terms-article-title">기타사항(거부할 권리 등)</h3>
+
+                      <p class="terms-paragraph">
+                        회원가입에 따른 개인정보의 수집, 이용, 제공에 대해 귀하께서
+                        동의하신 내용은 언제든지 철회 또는 거부하실 수 있습니다. 이의 경우
+                        회원탈퇴로 처리되며 동의철회(거부)는 「회원탈퇴」를 클릭하거나
+                        개인정보관리담당(책임자)에게 서면, 전화 이메일 등으로 연락하시면
+                        즉시 개인정보의 삭제 및 파기 등 필요한 조치를 하겠습니다.
+                      </p>
+
+                      <ul class="terms-ul">
+                        <li>
+                          - 개인정보제공 동의 거부에 의한 홈페이지 이용 제한
+                          <ul class="terms-ul type-default">
+                            <li>
+                              나라차태권도 홈페이지 : 기본 서비스에 대한 이용 제한 없음
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </article>
+
+                    <article class="terms-article">
+                      <h3 class="terms-article-title">
+                        나라차태권도 개인정보보호책임 관련 신고 및 문의
+                      </h3>
+
+                      <article class="in-mini-contents">
+                        <h4 class="in-subject">
+                          나라차태권도 개인정보보호책임 관련 신고 및 문의
+                        </h4>
+
+                        <ul>
+                          <li>☏ 전화번호 : 010-5393-9135</li>
+                          <li>♧ 이메일 : narachatkd@gmail.com</li>
+                          <li>
+                            ♧ 우편 : 경기도 성남시 분당구 KR 정자동 8-4 태남프라자
+                            나라차태권도 개인정보보호책임자 앞
+                          </li>
+                          <li>
+                            ♧ 근무시간 : 평일 09:00 ~ 18:00 <br />
+                            (토요일 및 일요일, 공휴일은 휴무 / 점심시간 12:00~13:00)
+                          </li>
+                        </ul>
+                      </article>
+
+                      <p class="terms-paragraph">
+                        기타 개인정보에 관한 상담 및 문의가 필요한 경우에는
+                        개인정보침해신고센터 등으로 문의하실 수 있습니다.
+                      </p>
+
+                      <ul class="terms-ul type-etc">
+                        <li>
+                          · 한국인터넷진흥원 개인정보침해신고센터 (www.1336.or.kr / 118)
+                        </li>
+                        <li>
+                          · 정보보호마크인증위원회 (www.eprivacy.or.kr / 02-580-0533~4)
+                        </li>
+                        <li>· 경찰청 사이버테러대응센터 (www.ctrc.go.kr / 182)</li>
+                      </ul>
+                    </article>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <layout-footer></layout-footer>
+
+    </div>
+  </div>
+
+  <script>
+    var query = URLParse(window.location, true).query
+    var app1 = new Vue({
+      el: "#app",
+      data: function () {
+        return {
+          user: null,
+          isRunning: false,
+          items: [],
+          selectedKind: 1,
+          pagenation: {
+            start: 0,
+            limit: 10,
+            page: parseInt(query.page) || 1,
+            maxPage: null,
+            count: 0
+          },
+        };
+      },
+      created: function () {
+        if (localStorage.getItem('narachaToken')) {
+          axios.get("http://api.naracha.co.kr/api/v1/user/auth/profile", {
+            headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+          })
+            .then(function (res) {
+              app1.user = res.data.query
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+        }
+        this.fetchData();
+      },
+      watch: {
+        'pagenation.page': function () {
+          if (app1.pagenation.page > app1.pagenation.maxPage) {
+            app1.pagenation.page = app1.pagenation.maxPage
+          }
+          if (app1.pagenation.page < 1) {
+            app1.pagenation.page = 1
+          }
+          window.history.replaceState('', '', '?' + 'page=' + app1.pagenation.page);
+
+          this.fetchData()
+        }
+      },
+      methods: {
+        fetchData: function () {
+          if (this.isRunning) {
+            return;
+          }
+          this.isRunning = true;
+          this.pagenation.start = this.pagenation.limit * (this.pagenation.page - 1)
+
+          axios
+            .get("http://api.naracha.co.kr/api/v1/user/news", {
+              params: {
+                offset: this.pagenation.start,
+                limit: this.pagenation.limit
+              }
+            })
+            .then(function (res) {
+              app1.pagenation.count = res.data.pagination.count
+              app1.pagenation.maxPage = Math.ceil(app1.pagenation.count / app1.pagenation.limit)
+              app1.items = res.data.query;
+            })
+            .catch(function (e) {
+              console.log(e);
+            })
+            .then(function () {
+              app1.isRunning = false;
+            });
+        },
+        async logout() {
+          localStorage.removeItem('narachaToken')
+          window.location.href = '/'
+        },
+        async kakaoLogout() {
+          axios
+            .get("http://api.naracha.co.kr/api/v1/user/auth/logout/kakao", {
+              headers: { Authorization: `Bearer ${localStorage.narachaToken}` }
+            })
+            .then(function (res) {
+              if (res.data.redirect) {
+                localStorage.removeItem('narachaToken')
+                window.location.href = res.data.redirect
+              }
+            })
+        }
+      },
+    });
+
+  </script>
+
+</body>
+
+</html>

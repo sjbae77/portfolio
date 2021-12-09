@@ -1,0 +1,7 @@
+<svg id="btn-back" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <rect id="사각형_603" data-name="사각형 603" width="38" height="38" fill="#fff"/>
+  <g id="그룹_87" data-name="그룹 87" transform="translate(10 12)">
+    <line id="선_21" data-name="선 21" x1="7.246" y2="7.246" fill="none" stroke="#b72937" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="선_22" data-name="선 22" x2="7.246" y2="7.246" transform="translate(0 7.246)" fill="none" stroke="#b72937" stroke-linecap="round" stroke-width="2.5"/>
+  </g>
+</svg>

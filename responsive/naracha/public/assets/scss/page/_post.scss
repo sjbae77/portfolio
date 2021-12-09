@@ -1,0 +1,118 @@
+/* ==================== post ==================== */
+.sec-post {
+  padding: 37px 0 80px;
+
+  @include media-dv(mb) {
+    padding: 0 0 80px;
+  }
+
+  .content-wrap {
+    width: 100%;
+    padding-top: 24px;
+
+    .tit {
+      font-size: rem(28);
+      margin-bottom: 37px;
+      color: #000;
+
+      @include media-dv(mb) {
+        font-size: rem(24);
+        margin-bottom: 31px;
+      }
+    }
+
+    .btn-list {
+      @include input-style;
+      @include wh(180px, 55px);
+      margin: 0 auto;
+      margin-top: 65.9px;
+      border-radius: 5px;
+      background-color: #b72937;
+      color: #fff;
+      font-size: rem(22);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s;
+      text-align: center;
+
+      @include media-dv(mb) {
+        @include wh(136px, 60px);
+        font-size: rem(18);
+        margin-top: 44.5px;
+      }
+
+      &:hover {
+        background-color: darken(#b72937, 10%);
+      }
+
+      &:active {
+        background-color: darken(#b72937, 15%);
+      }
+    }
+  }
+}
+
+.post-wrap {
+  .info-wrap {
+    padding: 21.5px 20px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #b72937;
+    border-bottom: 1px solid #dfdfdf;
+
+    @include media-dv(mb) {
+      padding: 15px;
+    }
+
+    .post-tit {
+      font-size: rem(24);
+      font-weight: 500;
+      margin-bottom: 6px;
+
+      @include media-dv(mb) {
+        font-size: rem(16);
+      }
+    }
+
+    .post-date {
+      margin-right: 8px;
+    }
+
+    .post-date,
+    .post-name {
+      font-size: rem(14);
+      font-weight: 400;
+      color: #959595;
+
+      @include media-dv(mb) {
+        font-size: rem(12);
+      }
+    }
+  }
+
+  .content-wrap {
+    padding: 34px 20px;
+    border-bottom: 1px solid #b72937;
+
+    @include media-dv(mb) {
+      padding: 22.5px 15px;
+    }
+
+    .post-img {
+      max-width: 100%;
+      object-fit: cover;
+      vertical-align: bottom;
+    }
+
+    .post-content {
+      font-size: rem(18);
+      color: #535353;
+      line-height: 1.3;
+      font-weight: 400;
+
+      @include media-dv(mb) {
+        font-size: rem(16);
+      }
+    }
+  }
+}
+/* ==================== End of post ==================== */

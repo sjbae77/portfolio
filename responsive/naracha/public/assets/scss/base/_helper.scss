@@ -1,0 +1,96 @@
+/* =================== helper =================== */
+// 노출되지 않을 영역
+.is-none {
+  display: none;
+}
+
+// 보이진 않지만 리딩되는 영역
+.is-voice-only {
+  @include absolute($l: -9999rem);
+
+  font-size: 0;
+}
+
+// 영어, 숫자만 있는 콘텐츠
+.is-en {
+  letter-spacing: 0;
+}
+
+// 브라우저 크기별 레이아웃 보이기
+.is-tab-show {
+  display: none;
+  @include media-dv(tab) {
+    display: block;
+  }
+}
+
+.is-tab-hide {
+  @include media-dv(tab) {
+    display: none;
+  }
+}
+
+.is-mo-show {
+  display: none;
+  @include media-dv(mb) {
+    display: block;
+  }
+}
+
+.is-mo-hide {
+  @include media-dv(mb) {
+    display: none;
+  }
+}
+
+.is-mo-sm-show {
+  display: none;
+  @include media(360px) {
+    display: block;
+  }
+}
+
+.is-mo-sm-hide {
+  @include media(360px) {
+    display: none;
+  }
+}
+
+.is-mo-xsm-show {
+  display: none;
+  @include media(320px) {
+    display: block;
+  }
+}
+
+.is-mo-xsm-hide {
+  @include media(320px) {
+    display: none;
+  }
+}
+
+// flexible content wrap
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// scroll custom element에 height 지정 필수
+.scroll-custom {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: color(sub);
+  }
+
+  @include ie-style {
+    scrollbar-arrow-color: color(main);
+    scrollbar-face-color: color(main);
+    scrollbar-track-color: color(sub);
+  }
+}

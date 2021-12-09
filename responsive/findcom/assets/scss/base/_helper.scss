@@ -1,0 +1,62 @@
+/* =================== helper =================== */
+// 노출되지 않을 영역
+.none {
+  display: none !important;
+}
+
+// 보이진 않지만 리딩되는 영역
+.voice-only {
+  @include absolute($l: -9999rem);
+
+  font-size: 0;
+}
+
+// IE 스크롤 커스텀
+.ie-scroll {
+  @include ie-style {
+    overflow-x: auto;
+    scrollbar-face-color: rgba(0, 0, 0, 0.5);
+    scrollbar-track-color: color(text);
+    scrollbar-shadow-color: color(text);
+    scrollbar-arrow-color: color(main);
+  }
+}
+
+// 모바일일 때 보이니 안보이니 클래스 아래거 사용
+.mb-hide {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.mb-show {
+  display: none !important;
+
+  @include mobile {
+    display: block !important;
+  }
+}
+
+.mb-show-flex {
+  display: none !important;
+
+  @include mobile {
+    display: flex !important;
+  }
+}
+
+.mb-show-ib {
+  display: none !important;
+
+  @include mobile {
+    display: inline-block !important;
+  }
+}
+
+// flexible content wrap
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+

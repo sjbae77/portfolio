@@ -1,30 +1,30 @@
 // Init ScrollMagic
-var ctrl = new ScrollMagic.Controller({
-  globalSceneOptions: {
-    triggerHook: "onLeave",
-  },
-});
+// var ctrl = new ScrollMagic.Controller({
+//   globalSceneOptions: {
+//     triggerHook: "onLeave",
+//   },
+// });
 
 // Get window height
-var wh = window.innerHeight;
+// var wh = window.innerHeight;
 
-new ScrollMagic.Scene({
-  offset: wh * 4,
-})
-  .setClassToggle("section#sec4", "is-active")
-  .addTo(ctrl);
+// new ScrollMagic.Scene({
+//   offset: wh * 4,
+// })
+//   .setClassToggle("section#sec4", "is-active")
+//   .addTo(ctrl);
 
-$(window).scroll(function () {
-  if (
-    $(window).scrollTop() + $(window).height() ==
-    $(document).height()
-  ) {
-    //alert("bottom!");
-    $("#sec4").css({
-      background: "#222",
-    });
-  }
-});
+// $(window).scroll(function () {
+//   if (
+//     $(window).scrollTop() + $(window).height() ==
+//     $(document).height()
+//   ) {
+//     //alert("bottom!");
+//     $("#sec4").css({
+//       background: "#222",
+//     });
+//   }
+// });
 
 
 // Navigation

@@ -1,0 +1,445 @@
+/* section login-page */
+.sub-nav {
+  font-weight: 600;
+}
+
+.sub-nav .gnb-group .gnb-list {
+  padding: rem(24) 0;
+}
+
+.login-tit-wrap {
+  height: 225px;
+  background-image: url("../../images/img/bg-sec-login.png");
+  color: #fff;
+  text-align: center;
+
+  @include media(600px) {
+    background-image: url("../../images/img/mo/m-bg-login.png");
+  }
+
+  .login-tit {
+    padding-top: rem(56);
+    padding-bottom: rem(24);
+    font-size: rem(55);
+    font-weight: 600;
+
+    @include media(600px) {
+      padding-top: 80px;
+      padding-bottom: 18px;
+      font-size: rem(25);
+    }
+  }
+
+  .login-dec {
+    padding-bottom: rem(48);
+    font-size: rem(25);
+
+    @include media(600px) {
+      font-size: rem(15);
+    }
+  }
+}
+
+.sec-login .l-center {
+  width: 90%;
+}
+
+/* =========== 로그인폼 =========== */
+.login-wrap {
+  margin-top: 49px;
+  padding: 0 rem(265);
+
+  @include media(600px) {
+    margin-top: 37px;
+    padding: 0;
+  }
+}
+
+.login-input-group {
+  @include flex-col {
+    padding-bottom: rem(24);
+  }
+
+  &.login-btn-wrap {
+    padding-bottom: rem(20);
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.login-label {
+  padding-bottom: 5px;
+  font-size: rem(20);
+  font-weight: 600;
+  color: #012559;
+  line-height: 1.4;
+
+  @include media(600px) {
+    font-size: rem(15);
+  }
+}
+
+.login-input {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+  text-indent: 17px;
+  font-size: 18px;
+
+  &:focus {
+    outline: none;
+    border-color: #012559;
+  }
+
+  &::placeholder {
+    font-size: rem(18);
+    color: rgba($color: #000, $alpha: 0.25);
+  }
+}
+
+.login-btn {
+  height: 55px;
+  background-color: #012559;
+  border-radius: 5px;
+  color: #fff;
+  font-size: rem(22);
+  font-weight: 600;
+  cursor: pointer;
+
+  @include media(600px) {
+    font-size: rem(18);
+  }
+
+  &.kakao-btn {
+    @include flex;
+    @include flex-item-center;
+
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #DFDFDF;
+    font-weight: 500;
+  }
+
+  .kakao-btn-tit {
+    padding-left: 12px;
+  }
+}
+
+/* =========== // 로그인폼 =========== */
+
+.find-group {
+  @include flex-center;
+
+  padding: rem(40) 0 rem(80) 0;
+  font-size: rem(18);
+
+  @include media(600px) {
+    font-size: rem(15);
+  }
+
+  @include media(320px) {
+    font-size: 14px;
+  }
+
+  .find-list {
+    position: relative;
+    padding: 0 rem(27.5);
+
+    @include media(600px) {
+      padding: 0 22.5px;
+    }
+
+    @include media(320px) {
+      padding: 0 18px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      content: "";
+      width: 1px;
+      height: 17px;
+      background-color: #000;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &:first-child {
+
+      @include media(600px) {
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+
+      @include media(600px) {
+        padding-right: 0;
+      }
+    }
+
+  }
+}
+
+
+/* section sigin-up */
+.sign-up-tit {
+  padding: rem(45) 0 0 rem(265);
+  font-size: rem(45);
+  font-weight: 800;
+  color: #012559;
+
+  @include media(600px) {
+    padding: 0;
+    font-size: rem(25);
+  }
+
+  &.pw-tit {
+    padding-top: 0;
+  }
+}
+
+
+
+/* ========== 체크박스 디자인 ========== */
+.cb-label {
+  @include flex {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.check-img {
+  pointer-events: none;
+}
+
+// 가짜 체크박스
+input[type="checkbox"]+.cb-label .cb-btn {
+  @include flex-center;
+
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+// 체크박스 체크 했을 때
+input[type="checkbox"]:checked+.cb-label .cb-btn {
+  background-color: #012559;
+  border: none;
+}
+
+input[type="checkbox"]:checked+.cb-label .agree-tit {
+  color: #000;
+}
+
+
+//진짜 체크박스는 숨김
+input[type="checkbox"] {
+  display: none;
+}
+
+/* ========== //체크박스 디자인 ========== */
+
+.check {
+  position: relative;
+}
+
+.agree-tit {
+  font-size: rem(18);
+  color: rgba($color: #000, $alpha: 0.25);
+
+  @include media(600px) {
+    font-size: rem(15);
+  }
+}
+
+.tos-wrap {
+  @include flex {
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+
+  .tos-link {
+    padding-right: 12px;
+    font-size: rem(18);
+  }
+}
+
+.sec-sign-up {
+
+  @include media(600px) {
+    padding: 50px 0;
+  }
+}
+
+.sec-sign-up .l-center {
+
+  @include media(600px) {
+    width: 90%;
+  }
+}
+
+.sec-sign-up .login-btn-wrap {
+  margin-bottom: 80px;
+}
+
+/* section find-wrap */
+.line {
+  display: block;
+  margin: 65.5px auto;
+  width: 100%;
+  height: 1px;
+  background-color: #DFDFDF;
+
+  &.l-center {
+    max-width: 700px;
+  }
+
+  @include media(600px) {
+    margin-top: 50.5px;
+    margin-bottom: 42.5px;
+  }
+}
+
+.sec-find-wrap {
+  @include media(600px) {
+    padding: 50px 0;
+  }
+}
+
+.sec-find-wrap .l-center {
+  @include media(600px) {
+    width: 90%;
+  }
+}
+
+
+.pw-find-btn {
+  margin-bottom: 80px;
+
+  @include media(600px) {
+    margin-bottom: 0;
+  }
+}
+
+
+/* 아이디, 비밀번호 찾기 팝업 */
+.find-popup-wrap {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 839px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #012559;
+  border-radius: 5px;
+  box-shadow: 0 5px 17px rgba($color: #000, $alpha: 0.12);
+
+  @include media(600px) {
+    width: 300px;
+  }
+
+  .find-popup {
+    @include flex-col {
+      justify-content: center;
+      align-items: center;
+      padding: rem(70) rem(70) rem(78) rem(70);
+
+      @include media(600px) {
+        padding: 25px 20px 20px 20px;
+      }
+    }
+
+    & .login-btn {
+      width: 100%;
+    }
+
+    & .close-btn {
+      text-align: center;
+      line-height: 55px;
+    }
+
+    .find-pupup-tit {
+      padding-top: rem(21);
+      padding-bottom: rem(45);
+      font-size: rem(25);
+      text-align: center;
+      line-height: 1.7;
+
+      @include media(600px) {
+        font-size: rem(14);
+        padding-bottom: 33px;
+      }
+
+      .find-pupup-dec {
+        color: #012559;
+        font-weight: 600;
+      }
+    }
+
+  }
+}
+
+.find-popup .login-input-group {
+  width: 100%;
+}
+
+.pw-find .find-popup .find-pupup-tit {
+  padding-bottom: rem(15.8);
+
+  @include media(600px) {
+    padding-bottom: 10px;
+  }
+}
+
+.pop-input-group {
+  @include media(600px) {
+    padding-bottom: 15px;
+  }
+}
+
+/* section - mypage */
+.sec-mypage {
+  padding: 50px 0;
+
+  .l-center {
+
+    @include media(600px) {
+      width: 90%;
+    }
+  }
+}
+
+.sec-mypage .login-btn-wrap {
+  margin-top: 26px;
+  margin-bottom: 80px;
+
+  @include media(600px) {
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+}
+
+.info-txt {
+  font-size: rem(18);
+  font-weight: 500;
+  text-indent: 17px;
+  margin-top: 7px;
+}

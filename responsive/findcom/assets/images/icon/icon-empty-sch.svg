@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111.181" height="79.727" viewBox="0 0 111.181 79.727">
+  <g id="icon-empty-sch" transform="translate(-943.123 -359.258)">
+    <g id="그룹_242" data-name="그룹 242" transform="translate(11.124 -15.595)">
+      <g id="그룹_241" data-name="그룹 241" transform="translate(950.001 385)">
+        <path id="패스_420" data-name="패스 420" d="M884.569,317.192V381.54h14.7v-9.781l1.721-1.721h9.239l1.721,1.721v9.781H926.66V317.192Zm10.1,42.006h-4.7v-3.442h4.7Zm0-8.168h-4.7v-3.442h4.7Zm0-8.168h-4.7v-3.442h4.7Zm0-8.168h-4.7v-3.442h4.7Zm0-8.168h-4.7v-3.442h4.7Zm8.868,32.671h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707ZM912.4,359.2h-4.707v-3.442H912.4Zm0-8.168h-4.707v-3.442H912.4Zm0-8.168h-4.707v-3.442H912.4Zm0-8.168h-4.707v-3.442H912.4Zm0-8.168h-4.707v-3.442H912.4Zm8.865,32.671h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707Zm0-8.168h-4.707v-3.442h4.707Z" transform="translate(-867.366 -317.192)" fill="#6bd998"/>
+        <rect id="사각형_88" data-name="사각형 88" width="5.796" height="8.06" transform="translate(35.35 56.288)" fill="#6bd998"/>
+        <rect id="사각형_89" data-name="사각형 89" width="13.761" height="31.472" transform="translate(0 32.876)" fill="#6bd998"/>
+        <rect id="사각형_90" data-name="사각형 90" width="13.761" height="31.472" transform="translate(62.736 32.876)" fill="#6bd998"/>
+      </g>
+    </g>
+    <g id="icon-search-bk" transform="translate(511.123 203.258)">
+      <g id="타원_1" data-name="타원 1" transform="translate(432 178)" fill="none" stroke="#303038" stroke-width="7">
+        <circle cx="23.618" cy="23.618" r="23.618" stroke="none"/>
+        <circle cx="23.618" cy="23.618" r="20.118" fill="none"/>
+      </g>
+      <line id="선_1" data-name="선 1" x2="16.961" y2="16.826" transform="translate(470.416 216.416)" fill="none" stroke="#303038" stroke-width="7"/>
+    </g>
+    <g id="icon-search-bk-2" data-name="icon-search-bk" transform="translate(1014.249 359.258)">
+      <g id="타원_1-2" data-name="타원 1" transform="translate(5.889)" fill="none" stroke="#303038" stroke-width="7">
+        <circle cx="17.083" cy="17.083" r="17.083" stroke="none"/>
+        <circle cx="17.083" cy="17.083" r="13.583" fill="none"/>
+      </g>
+      <line id="선_1-2" data-name="선 1" x1="12.268" y2="12.171" transform="translate(0 27.787)" fill="none" stroke="#303038" stroke-width="7"/>
+    </g>
+  </g>
+</svg>

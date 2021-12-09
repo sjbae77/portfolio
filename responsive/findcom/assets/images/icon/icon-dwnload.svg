@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="icon-dwnload" transform="translate(-12 -9)">
+    <rect id="사각형_54" data-name="사각형 54" width="22" height="22" transform="translate(12 9)" fill="red" opacity="0"/>
+    <g id="그룹_240" data-name="그룹 240" transform="translate(-28.655 -220.991)">
+      <path id="패스_418" data-name="패스 418" d="M43.653,245.634v5.2H60.161v-5.2" transform="translate(0 -2.852)" fill="none" stroke="#26be63" stroke-linejoin="bevel" stroke-width="1.5"/>
+      <line id="선_27" data-name="선 27" y2="9.836" transform="translate(51.907 233.99)" fill="none" stroke="#26be63" stroke-linejoin="bevel" stroke-width="1.5"/>
+      <path id="패스_419" data-name="패스 419" d="M57.337,241.906l-4.075,4.075-4.075-4.075" transform="translate(-1.356 -1.939)" fill="none" stroke="#26be63" stroke-linejoin="bevel" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>FIND COMPANY</title>
+
+  <meta name="title" content="FIND COMPANY" />
+  <meta name="author" content="(주)비즈부스터" />
+  <meta name="description" content="글로벌 비즈니스 플랫폼을 만들어 갑니다" />
+  <meta name="keywords" content="기업검색, 기업정보, 휴폐업조회, 기업발굴" />
+
+  <!-- FIXME: 도메인 확인되면 기입 필요 -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="FIND COMPANY" />
+  <meta property="og:description" content="글로벌 비즈니스 플랫폼을 만들어 갑니다" />
+  <meta property="og:image" content="/assets/images/favicon/og.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:url" content="" />
+  <meta property="twitter:title" content="FIND COMPANY" />
+  <meta property="twitter:description" content="글로벌 비즈니스 플랫폼을 만들어 갑니다" />
+
+  <!-- END Open Graph -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="../assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="../assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="../assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="../assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- END favicon -->
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- script -->
+  <script src="../assets/js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/js/custom/ui.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/ui.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <header class="header">
+        <div class="hd-inner">
+          <div class="hd-left-wrap">
+            <!-- TODO: js) 클릭시 메뉴 토글 -->
+            <div class="menu-btn">
+              <img src="../assets/images/btn/btn-menu-bk.svg" alt="햄버거 메뉴" class="off" />
+              <img src="../assets/images/btn/btn-menu-gn.svg" alt="햄버거 메뉴" class="on" />
+            </div>
+            <h1 class="logo">
+              <a href="../index.html">
+                <img src="../assets/images/logo/logo-header.svg" alt="FINDCOMPANY 로고" />
+              </a>
+            </h1>
+            <div class="hd-search-wrap">
+              <!-- TODO: js) 키보드 입력시 keyword-box 나타남 -->
+              <input type="text" id="main-search" class="search-inp" placeholder="기업명을 입력해주세요." />
+              <button type="button" class="search-btn"></button>
+              <div class="keyword-box">
+                <div class="keyword-cont">
+                  <div class="type">상장기업<span class="num">(3)</span></div>
+                  <ul class="keyword-group">
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>
+                    </li>
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>차
+                    </li>
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>중공업
+                    </li>
+                  </ul>
+                </div>
+                <div class="keyword-cont">
+                  <div class="type">외감기업<span class="num">(1)</span></div>
+                  <ul class="keyword-group">
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="keyword-cont">
+                  <div class="type">일반기업<span class="num">(1)</span></div>
+                  <ul class="keyword-group">
+                    <li class="keyword-list">
+                      <span class="coincide">현대</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="inquire.html" class="inquiry-btn">
+            <span>고객문의</span>
+            <img src="../assets/images/icon/icon-cs.svg" alt="문의하기 아이콘 /" />
+          </a>
+        </div>
+      </header>
+
+      <!-- TODO: mobile: 모바일시, 상단고정 -->
+      <div class="search-check-wrap fix-wrap mb-show-flex">
+        <div class="chk-group">
+          <div class="chk-list">
+            <input type="checkbox" name="type" id="m-chk" class="chk-inp" />
+            <label for="m-chk">&nbsp;</label>
+            <label for="m-chk" class="ttl">전화번호 있는 기업만 보기</label>
+          </div>
+        </div>
+        <!-- TODO: js) 클릭시 엑셀 다운로드 팝업열림 -->
+        <button type="button" class="download-btn popup-btn popup-download-btn">
+          <img src="../assets/images/icon/icon-dwnload.svg" alt="다운로드" />
+          엑셀 다운로드
+        </button>
+      </div>
+
+      <div class="page-wrap icon-gnb-page">
+        <div class="vertical-gnb-wrap">
+          <div class="main-gnb-wrap">
+            <div class="gnb-cont">
+              <span class="ttl">기업정보</span>
+              <ul class="gnb-wrap">
+                <li class="gnb-list is-active">
+                  <a href="search-results.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-01.svg" alt="기업검색" />
+                    <span class="txt">기업검색</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="conditional-search.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-02.svg" alt="조건검색" />
+                    <span class="txt">조건검색</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="info.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-03.svg" alt="기업정보" />
+                    <span class="txt">기업정보</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="closed-business.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-04.svg" alt="휴폐업조회" />
+                    <span class="txt">휴폐업조회</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="gnb-cont">
+              <span class="ttl">프리미엄</span>
+              <ul class="gnb-wrap">
+                <li class="gnb-list">
+                  <a href="discovery.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-05.svg" alt="기업발굴" />
+                    <span class="txt">기업발굴</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sub-gnb-wrap">
+            <div class="gnb-cont">
+              <ul class="gnb-wrap">
+                <li class="gnb-list">
+                  <a href="inquire.html" class="link">
+                    <img src="../assets/images/menu-icon/menu-06.svg" alt="고객문의" />
+                    <span class="txt">고객문의</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-07.svg" alt="메일 리스트" />
+                    <span class="txt">메일 리스트</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-08.svg" alt="블로그" />
+                    <span class="txt">블로그</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-09.svg" alt="도움말" />
+                    <span class="txt">도움말</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <img src="../assets/images/menu-icon/menu-10.svg" alt="공지/이벤트" />
+                    <span class="txt">공지/이벤트</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- TODO: mobile: pc에서 푸터 일부 모바일 네비로 이동 -->
+          <div class="company-gnb-wrap mb-show">
+            <div class="gnb-cont">
+              <ul class="gnb-wrap">
+                <li class="gnb-list">
+                  <a href="../index.html" class="link">
+                    <span>메인으로</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="findcompany-info.html" class="link">
+                    <span>회사소개</span>
+                  </a>
+                </li>
+                <li class="sub-cont">
+                  <button type="button" class="gnb-btn">
+                    <span>제품</span>
+                    <img src="../assets/images/icon/icon_ft_select.svg" alt="삼각형모양 화살표">
+                  </button>
+                  <ul class="sub-wrap">
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>Analytics</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>Data Inteligence</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>AI Index</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>On-Premises</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>Valuation</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sub-cont">
+                  <button type="button" class="gnb-btn">
+                    <span>홍보</span>
+                    <img src="../assets/images/icon/icon_ft_select.svg" alt="삼각형모양 화살표">
+                  </button>
+                  <ul class="sub-wrap">
+                    <li class="sub-list">
+                      <a href="press-release.html" class="sub-link">
+                        <span>보도자료</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>블로그</span>
+                      </a>
+                    </li>
+                    <li class="sub-list">
+                      <a href="#" class="sub-link">
+                        <span>공지/이벤트</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnb-list">
+                  <a href="findcompany-employ.html" class="link">
+                    <span>채용</span>
+                  </a>
+                </li>
+                <li class="gnb-list">
+                  <a href="#" class="link">
+                    <span>파인드 컴퍼니 퀵가이드</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sns-area mb-show-flex">
+            <span class="ttl">
+              FINDCOMPANY SNS
+            </span>
+            <div class="sns-link-wrap mb-show-flex">
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-blog-a.svg" alt="네이버 블로그 바로가기" />
+              </a>
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-face-a.svg" alt="페이스북 바로가기" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="page download-page">
+          <!-- page 구성요소 1. 페이지 컨텐츠 영역 -->
+          <div class="page-container">
+            <!-- empty content -->
+            <div class="empty-content">
+              <img src="../assets/images/icon/icon-empty-sch.svg" alt="결과없음 아이콘" class="img" />
+              <h3 class="empty-ttl">
+                <span class="green">[</span>
+                <span class="txt">검색결과없음</span>
+                <span class="green">]</span>
+              </h3>
+              <p class="empty-dec">검색결과가 없습니다.</p>
+            </div>
+            <!-- END empty content -->
+            <div class="com-box">
+              <div class="l-center no-padding">
+                <div class="search-results-ttl-wrap">
+                  <div class="ttl-wrap">
+                    <img src="../assets/images/icon/menu-01.svg" alt="빌딩 아이콘" />
+                    <div class="ttl-cont">
+                      <div class="ttl"><b>[</b> 기업명 <b>]</b></div>
+                      <div class="sub">
+                        기업명 <span class="num">(50+)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TODO: mobile: 모바일시, 상단고정 -->
+                  <div class="search-check-wrap mb-hide">
+                    <div class="chk-group">
+                      <div class="chk-list">
+                        <input type="checkbox" name="type" id="chk" class="chk-inp" />
+                        <label for="chk">&nbsp;</label>
+                        <label for="chk" class="ttl">전화번호 있는 기업만 보기</label>
+                      </div>
+                    </div>
+                    <!-- TODO: js) 클릭시 엑셀 다운로드 팝업열림 -->
+                    <button type="button" class="download-btn popup-btn popup-download-btn">
+                      <img src="../assets/images/icon/icon-dwnload.svg" alt="다운로드" />
+                      엑셀 다운로드
+                    </button>
+                  </div>
+                </div>
+                <div class="search-results-wrap">
+                  <ul class="card-wrap com-card">
+                    <!--  돌아야할 반복요소들 -->
+                    <li class="card-list">
+                      <a href="info.html" class="card">
+                        <p class="name">기업명 <small>일반법인</small></p>
+                        <span class="tel"> 010-2345-6789 </span>
+                        <ul class="info-wrap">
+                          <li class="info">
+                            <span class="info-ttl">사업자 등록번호</span>
+                            <span class="info-dec">123-45-67890</span>
+                          </li>
+                          <li class="info">
+                            <span class="info-ttl">대표이사</span>
+                            <span class="info-dec">홍길동</span>
+                          </li>
+                        </ul>
+                        <ul class="info-wrap">
+                          <li class="info">
+                            <span class="info-ttl">산업명</span>
+                            <span class="info-dec">소프트웨어 개발 공급업</span>
+                          </li>
+                          <li class="info">
+                            <span class="info-ttl">주소</span>
+                            <span class="info-dec">서울 서초구 양재동 231번지</span>
+                          </li>
+                        </ul>
+                      </a>
+                    </li>
+                    <!-- END  돌아야할 반복요소들 -->
+                  </ul>
+                  <div class="pagination">
+                    <button class="prev-page arrow-page">
+                      <img src="../assets/images/btn/btn-prev-b.svg" alt="이전페이지" class="img" />
+                    </button>
+                    <div class="pager-wrap">
+                      <button type="button" class="pager on">1</button>
+                      <button type="button" class="pager">2</button>
+                      <button type="button" class="pager">3</button>
+                      <button type="button" class="pager">4</button>
+                      <button type="button" class="pager">5</button>
+                      <span class="pager skip-icon mb-hide">···</span>
+                      <button type="button" class="pager end mb-hide">100</button>
+                    </div>
+                    <button class="next-page arrow-page">
+                      <img src="../assets/images/btn/btn-nxt-b.svg" alt="다음페이지" class="img" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TODO: mobile: 모바일에서만 나타나는 라인 -->
+          <div class="mb-page-line"></div>
+
+          <!-- page 구성요소 2. [PC만] 우측 배너영역 -->
+          <div class="fix-banner-wrap">
+            <a href="#" class="fix-banner">
+              <!-- TODO: banner: PC용 배너 -->
+              <img src="../assets/images/banner/banner-right.png" alt="배너" class="mb-hide" />
+              <!-- TODO: banner: 모바일용 배너 -->
+              <img src="../assets/images/banner/m-banner-2.png" alt="배너" class="mb-show" />
+            </a>
+          </div>
+
+          <!-- page 구성요소 3. 우측 하단 카카오챗 -->
+          <div class="float-btn-wrap">
+            <a href="#" class="float-btn kakao-chat">
+              <img src="../assets/images/icon/icon-kkoch.svg" alt="카카오 상담하기" />
+            </a>
+            <!-- TODO: mobile: top button -->
+            <a href="#app" class="float-btn go-top">
+              <img src="../assets/images/icon/btn-top.svg" alt="위로가기" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="com-ft">
+        <div class="l-center">
+          <div class="top-blank"></div>
+          <!-- link wrap -->
+          <div class="ft-link-wrap">
+            <!-- text link wrap -->
+            <ul class="text-link-wrap">
+              <li class="text-link-list mb-hide">
+                <a href="findcompany-info.html" class="link">
+                  <span>회사소개</span>
+                </a>
+              </li>
+              <li class="text-link-list mb-hide">
+                <!-- TODO: js) 클릭시 서브메뉴 나타남 -->
+                <button type="button" class="link sub-link-open">
+                  <span>제품</span>
+                </button>
+                <ul class="sub-link-wrap">
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>Analytics</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>Data Inteligence</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>AI Index</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>On-Premises</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>Valuation</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <button type="button" class="sub-link sub-link-close">
+                      <span>닫기</span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="text-link-list mb-hide">
+                <!-- TODO: js) 클릭시 서브메뉴 나타남 -->
+                <button type="button" class="link sub-link-open">
+                  <span>홍보</span>
+                </button>
+                <ul class="sub-link-wrap">
+                  <li class="sub-link-list">
+                    <a href="press-release.html" class="sub-link">
+                      <span>보도자료</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>블로그</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <a href="#" class="sub-link">
+                      <span>공지/이벤트</span>
+                    </a>
+                  </li>
+                  <li class="sub-link-list">
+                    <button type="button" class="sub-link sub-link-close">
+                      <span>닫기</span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="text-link-list mb-hide">
+                <a href="findcompany-employ.html" class="link">
+                  <span>채용</span>
+                </a>
+              </li>
+              <li class="text-link-list mb-hide">
+                <a href="#" class="link">
+                  <span>파인드 컴퍼니 퀵가이드</span>
+                </a>
+              </li>
+              <li class="text-link-list">
+                <!-- TODO: js) 클릭시 팝업 -->
+                <button type="button" class="link popup-btn popup-terms-btn">
+                  <span>서비스 이용약관</span>
+                </button>
+              </li>
+              <li class="text-link-list">
+                <!-- TODO: js) 클릭시 팝업 -->
+                <button type="button" class="link popup-btn popup-prv-btn">
+                  <span>개인정보 보호정책</span>
+                </button>
+              </li>
+            </ul>
+            <!-- E text link wrap -->
+            <!-- sns link wrap -->
+            <div class="sns-link-wrap mb-hide">
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-blog-a.svg" alt="네이버 블로그 바로가기" />
+              </a>
+              <a href="#" class="sns-link facebook">
+                <img src="../assets/images/btn/but-face-a.svg" alt="페이스북 바로가기" />
+              </a>
+            </div>
+          </div>
+          <!-- E link wrap -->
+          <!-- adress wrap -->
+          <div class="ft-adress-wrap">
+            <!-- pc footer address -->
+            <p class="ft-adress mb-hide">
+              (주)비즈부스터 ㅣ 대표자 정원철 ㅣ 개인정보보호책임자 박광현 ㅣ
+              사업자등록번호 854-81-00992 ㅣ 통신판매업신고 2019-서울송파-1776
+            </p>
+            <p class="ft-adress mb-hide">
+              서울특별시 송파구 석촌호수로 278, 304 여흥레이크빌 ㅣ 대표전화
+              02-945-0904(132) ㅣ 문의메일 help@biztop.co.kr
+            </p>
+            <!-- TODO: mobile: footer address -->
+            <p class="ft-adress mb-show">
+              (주)비즈부스터 ㅣ 대표자 정원철 ㅣ 개인정보보호책임자 박광현
+            </p>
+            <p class="ft-adress mb-show">
+              사업자등록번호 854-81-00992
+            </p>
+            <p class="ft-adress mb-show">
+              통신판매업신고 2019-서울송파-1776
+            </p>
+            <p class="ft-adress mb-show">
+              서울특별시 송파구 석촌호수로 278, 304 여흥레이크빌
+            </p>
+            <p class="ft-adress mb-show">
+              대표전화 02-945-0904(132) ㅣ 문의메일 help@biztop.co.kr
+            </p>
+          </div>
+          <!-- E adress wrap -->
+          <p class="ft-copy mb-hide">
+            FINDCOMPANY의 모든 컨텐츠는 저작권법에 의거 보호받고 있습니다.
+          </p>
+        </div>
+      </footer>
+
+      <!-- popup -->
+      <div class="popup-bg"></div>
+      <!-- 서비스 이용약관 -->
+      <div class="popup terms mb-full">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">서비스 이용약관</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기">
+              </button>
+            </div>
+          </div>
+          <div class="txt-cont-wrap">
+            <div class="txt-cont">
+              <p class="desc">
+                제1조 (목적)<br />
+                <br />
+                본 약관은 (주)비즈부스터(이하 ‘BIZTOP’라 합니다)가 운영하는 비즈탑(https://www.BIZTOP.co.kr), 이하 ‘서비스’라 합니다)의 이용과 관련하여 BIZTOP과
+                이용자 간의 권리, 의무, 책임사항 및 가입과 이용에 관한 제반 사항, 기타 필요한 사항을 구체적으로 규정함을 목적으로 합니다.<br />
+                <br />
+                제2조 (정의)<br />
+                <br />
+                이 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.<br />
+                1. ‘서비스’란 개인 및 일반기업, 세무회계사무소가 재무제표 등 기업정보를 활용하여 재무등급 및 재무목표, 코멘트, 매입/매출분석, 예상부가세액 및 세무/회계, 특허를 비롯한 전문적인
+                서비스 등 ‘BIZTOP’이 이용자에게 제공하는 모든 제반 서비스를 말합니다. ‘BIZTOP’이 공개한 API를 이용하여 제3자가 개발 또는 구축한 프로그램이나 서비스를 통하여 이용 고객
+                또는 회원에게 제공되는 경우를 포함합니다.<br />
+                2. ‘이용자’란 본 약관에 따라 ‘회사’와 이용계약을 체결하고 ‘BIZTOP’이 제공하는 ‘서비스’를 이용하는 고객을 말합니다.<br />
+                3. ‘전문가’ (이하 ‘파트너사’이라 합니다)란 본 ‘이용자’ 중 회계사, 세무사, 변리사, 변호사 등 전문자격을 가지고 있으며, ‘회사’의 승인을 통해 활동자격을 얻은 고객을
+                말합니다.<br />
+                4. ‘금융기관 직원’ (이하 ‘금융파트너’이라 합니다)이란 은행 등 금융기관에 근무하는 자로 ‘회사’의 승인을 통해 활동자격을 얻은 고객을 말합니다.<br />
+                5. ‘이용계약’이란 서비스 이용과 관련하여 ‘BIZTOP’와 ‘이용자’간에 체결하는 모든 계약을 말합니다.<br />
+                6. ‘가입비’이라 함은 회원으로서 ‘BIZTOP’ 서비스를 이용하기 위하여 지불하는 금액을 의미합니다.<br />
+                7. ‘이용권’이라 함은 ‘BIZTOP’이 이용자에게 제공하는 재무분석, 코멘트 등 제반 서비스를 이용 시 소모되는 사용권을 의미합니다.<br />
+                8. ‘공지사항’이란 ‘BIZTOP’가 ‘이용자’에게 전산망을 통하여 고지하는 내용을 말합니다.<br />
+                <br />
+                이하 내용은 개발시에 적용
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END 서비스 이용약관 -->
+      <!-- 개인정보 보호정책 -->
+      <div class="popup prv mb-full">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">개인정보 보호정책</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기">
+              </button>
+            </div>
+          </div>
+          <div class="txt-cont-wrap">
+            <div class="txt-cont">
+              <p class="desc">
+                제1조 (목적)<br />
+                <br />
+                본 약관은 (주)비즈부스터(이하 ‘BIZTOP’라 합니다)가 운영하는 비즈탑(https://www.BIZTOP.co.kr), 이하 ‘서비스’라 합니다)의 이용과 관련하여 BIZTOP과
+                이용자 간의 권리, 의무, 책임사항 및 가입과 이용에 관한 제반 사항, 기타 필요한 사항을 구체적으로 규정함을 목적으로 합니다.<br />
+                <br />
+                제2조 (정의)<br />
+                <br />
+                이 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.<br />
+                1. ‘서비스’란 개인 및 일반기업, 세무회계사무소가 재무제표 등 기업정보를 활용하여 재무등급 및 재무목표, 코멘트, 매입/매출분석, 예상부가세액 및 세무/회계, 특허를 비롯한 전문적인
+                서비스 등 ‘BIZTOP’이 이용자에게 제공하는 모든 제반 서비스를 말합니다. ‘BIZTOP’이 공개한 API를 이용하여 제3자가 개발 또는 구축한 프로그램이나 서비스를 통하여 이용 고객
+                또는 회원에게 제공되는 경우를 포함합니다.<br />
+                2. ‘이용자’란 본 약관에 따라 ‘회사’와 이용계약을 체결하고 ‘BIZTOP’이 제공하는 ‘서비스’를 이용하는 고객을 말합니다.<br />
+                3. ‘전문가’ (이하 ‘파트너사’이라 합니다)란 본 ‘이용자’ 중 회계사, 세무사, 변리사, 변호사 등 전문자격을 가지고 있으며, ‘회사’의 승인을 통해 활동자격을 얻은 고객을
+                말합니다.<br />
+                4. ‘금융기관 직원’ (이하 ‘금융파트너’이라 합니다)이란 은행 등 금융기관에 근무하는 자로 ‘회사’의 승인을 통해 활동자격을 얻은 고객을 말합니다.<br />
+                5. ‘이용계약’이란 서비스 이용과 관련하여 ‘BIZTOP’와 ‘이용자’간에 체결하는 모든 계약을 말합니다.<br />
+                6. ‘가입비’이라 함은 회원으로서 ‘BIZTOP’ 서비스를 이용하기 위하여 지불하는 금액을 의미합니다.<br />
+                7. ‘이용권’이라 함은 ‘BIZTOP’이 이용자에게 제공하는 재무분석, 코멘트 등 제반 서비스를 이용 시 소모되는 사용권을 의미합니다.<br />
+                8. ‘공지사항’이란 ‘BIZTOP’가 ‘이용자’에게 전산망을 통하여 고지하는 내용을 말합니다.<br />
+                <br />
+                이하 내용은 개발시에 적용
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END 개인정보 보호정책 -->
+      <!-- 엑셀 다운로드 팝업 -->
+      <div class="popup download">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">엑셀 다운로드</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기">
+              </button>
+            </div>
+          </div>
+          <div class="cont-inner">
+            <div class="txt-wrap">
+              <spn class="ttl">
+                정보입력
+              </spn>
+              <p class="desc">
+                요청하신 정보를 엑셀로 전달해드립니다.
+              </p>
+            </div>
+            <div class="inquire-wrap">
+              <div class="input-wrap">
+                <input type="text" class="inp" placeholder="이름 입력" />
+                <input type="tel" class="inp" placeholder="연락처 입력" />
+                <input type="email" class="inp" placeholder="이메일 주소 입력" />
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary">
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- END 엑셀 다운로드 팝업 -->
+      <!-- TODO: js추가필요) 정보 로딩시 보이는 팝업 -->
+      <!-- 정보조회 팝업 -->
+      <div class="popup search">
+        <div class="popup-inner">
+          <div class="ttl-wrap">
+            <div class="ttl-inner">
+              <span class="ttl">정보조회</span>
+              <button type="button" class="close-btn">
+                <img src="../assets/images/btn/btn-close-ttip.svg" alt="닫기">
+              </button>
+            </div>
+          </div>
+          <div class="cont-inner">
+            <div class="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p class="search-txt">
+              조회하신 기업의 정보를 조회하고 있습니다.<br />
+              잠시만 기다려주시면, 기업정보를 확인할 수 있습니다.
+            </p>
+            <div class="popup-banner-wrap">
+              <a href="#" class="popup-banner-link">
+                <img src="../assets/images/banner/banner-popup.png" alt="팝업 배너">
+              </a>
+            </div>
+            <div class="search-desc">
+              ※ 광고가 끝나는 즉시 조회한 기업의 정보를 확인할 수 있습니다.
+            </div>
+            <button type="button" class="btn btn-primary">
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- END 정보조회 팝업 -->
+    </div>
+  </div>
+  <script>
+    // gnb default
+    if ($(window).width() > 1550) {
+      $('.vertical-gnb-wrap').addClass('is-active');
+      $('.icon-gnb-page').addClass('is-active');
+    }
+  </script>
+</body>
+
+</html>

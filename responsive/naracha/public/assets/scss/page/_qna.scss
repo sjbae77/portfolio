@@ -1,0 +1,123 @@
+/* ==================== QNA ==================== */
+.sec-qna {
+  padding: 37px 0 80px;
+
+  @include media-dv(mb) {
+    padding: 0px 17px 67px;
+  }
+
+  .content-wrap {
+    padding-top: 24px;
+    width: 100%;
+
+    .tit {
+      font-size: rem(28);
+      margin-bottom: 37px;
+
+      @include media-dv(mb) {
+        font-size: rem(24);
+        margin-bottom: 31px;
+      }
+    }
+  }
+
+  .input-group {
+    margin-bottom: 45px;
+
+    @include media-dv(mb) {
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-size: rem(18);
+      font-weight: 500;
+      line-height: 1.2;
+
+      @include media-dv(mb) {
+        font-size: rem(12);
+      }
+    }
+
+    .input {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1.5px solid #26263c;
+      color: #26263c;
+      font-size: rem(22);
+      height: 0;
+      padding: 34px 0;
+
+      @include media-dv(mb) {
+        font-size: rem(15);
+        padding: 24px 0;
+        border-bottom: 1.5px solid #012559;
+      }
+    }
+  }
+}
+
+.sec-qna {
+  .top-input-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-dv(mb) {
+      display: block;
+    }
+
+    .input-group {
+      width: 48%;
+
+      @include media-dv(mb) {
+        width: 100%;
+      }
+    }
+  }
+
+  .bottom-input-wrap {
+    .input-group {
+      @include media-dv(mb) {
+        margin-bottom: 36px;
+      }
+    }
+
+    .input {
+      height: 300px;
+      padding: 10px 0;
+      resize: none;
+      line-height: 1.5;
+
+      @include media-dv(mb) {
+        padding: 14px 0;
+      }
+    }
+
+    .submit {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 24px 0;
+      border: none;
+      border-radius: 10px;
+      background-color: #dfdfdf;
+      cursor: pointer;
+      color: #fff;
+      font-size: rem(28);
+      transition: all 0.2s;
+
+      @include media-dv(mb) {
+        padding: 14px 0;
+        font-size: rem(18);
+      }
+
+      &:hover {
+        background-color: #012559;
+      }
+
+      &:active {
+        background-color: lighten(#012559, 15%);
+      }
+    }
+  }
+}
+/* ==================== End of QNA ==================== */

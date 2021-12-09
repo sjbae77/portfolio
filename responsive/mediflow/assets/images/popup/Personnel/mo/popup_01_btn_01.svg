@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="163" height="29" viewBox="0 0 163 29">
+  <g id="popup_01_btn_01" transform="translate(-45 -3101)">
+    <g id="그룹_2076" data-name="그룹 2076" transform="translate(0 -76)">
+      <text id="인사관리_자세히보기" data-name="인사관리 자세히보기" transform="translate(50 3197)" fill="#fff" font-size="16" font-family="SpoqaHanSansNeo-Medium, Spoqa Han Sans Neo" font-weight="500" letter-spacing="-0.03em"><tspan x="0" y="0">인사관리 자세히보기</tspan></text>
+      <g id="그룹_2075" data-name="그룹 2075" transform="translate(-638 -305.5)">
+        <line id="선_38" data-name="선 38" x2="5.658" y2="5.658" transform="translate(832.5 3491.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <line id="선_39" data-name="선 39" x1="5.658" y2="5.658" transform="translate(832.5 3497.158)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+    <rect id="사각형_949" data-name="사각형 949" width="163" height="29" transform="translate(45 3101)" fill="none"/>
+  </g>
+</svg>

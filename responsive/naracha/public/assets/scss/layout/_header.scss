@@ -1,0 +1,107 @@
+/* =================== header =================== */
+.header-wrap {
+  height: 50px;
+}
+// com-hd 와 com-hd-wrap의 높이가 일치해야
+// 따로 fixed에 대한 높이-여백 지정이 없음
+.com-hd {
+  @include fixed;
+  @include wh(100%, 100px);
+
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: zIndex(header);
+}
+
+.com-hd-wrap {
+  @include flex {
+    @include flex-op(center, space-between);
+  }
+
+  height: 100px;
+}
+
+.com-logo {
+  // size
+  width: 200px;
+}
+
+// gnb style
+.hd-gnb-wrap {
+  @include wh(50px, 50px);
+}
+
+.gnb-btn {
+  @include flex-col {
+    @include flex-op(center, center);
+  }
+  @include wh(100%, 100%);
+  @include input-reset;
+
+  position: relative;
+  cursor: pointer;
+  z-index: zIndex(fixed);
+
+  &.active {
+    .gnb-line {
+      display: none;
+      margin-top: 0;
+
+      &:first-child {
+        display: block;
+        transform: rotate(45deg) translateY(4px);
+      }
+
+      &:last-child {
+        display: block;
+        transform: rotate(-45deg) translateY(-4px);
+      }
+    }
+
+    ~ .gnb-menu-wrap {
+      right: 0;
+    }
+  }
+}
+
+.gnb-line {
+  @include wh(70%, 5px);
+
+  display: block;
+  margin-top: 6px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 0;
+  transition: all 0.3s;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// gnb menu style
+.gnb-menu-wrap {
+  @include fixed($r: -100%);
+  @include wh(500px, 100%);
+
+  padding: 80px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: zIndex(header);
+  transition: all 0.3s ease-in-out;
+
+  @include media(mb) {
+    width: 100%;
+  }
+
+  .gnb-inner {
+    @include wh(90%, 90%);
+
+    margin: 0 auto;
+    background-color: white;
+  }
+}
+
+.gnb-list {
+  .link {
+    color: color(text);
+  }
+}

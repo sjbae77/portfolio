@@ -1,0 +1,1205 @@
+/* ==================== sec-family ==================== */
+/* ==================== common CSS + left aside menu ==================== */
+.sec-family {
+  padding: 37px 0 81px;
+
+  @include media-dv(mb) {
+    padding-top: 0;
+  }
+
+  .l-center {
+    display: flex;
+    position: relative;
+
+    @include media-dv(mb) {
+      display: block;
+    }
+  }
+
+  .l-center.is-active {
+    max-width: 1305px;
+  }
+}
+
+.aside-menu-wrap {
+  width: 20%;
+
+  @include media-dv(mb) {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .tit {
+    font-family: "noto serif";
+    margin-bottom: 13px;
+    font-size: rem(28);
+
+    @include media-dv(mb) {
+      display: none;
+    }
+  }
+
+  .family-menu-group {
+    width: 161px;
+    padding-top: 9.5px;
+    border-top: 5px solid #b2000d;
+
+    @include media-dv(mb) {
+      width: 100%;
+      padding-top: 0;
+      border-top: none;
+      // border-bottom: 1px solid #dfdfdf;
+      text-align: center;
+    }
+
+    .family-menu-list {
+      border-bottom: 1px solid #e8e8e8;
+
+      @include media-dv(mb) {
+        border-bottom: none;
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      .link {
+        position: relative;
+        display: block;
+        padding: 15.5px 0;
+        color: #535353;
+        font-weight: 400;
+        font-size: rem(16);
+
+        @include media-dv(mb) {
+          font-size: rem(14);
+        }
+
+        @include make-after {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: auto;
+          right: 10px;
+          width: 5px;
+          height: 10px;
+          background-image: url("../../images/btn/btn-next-gray.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+
+          @include media-dv(mb) {
+            display: none;
+          }
+        }
+
+        &.active {
+          color: #b2000d;
+
+          @include make-before {
+            position: absolute;
+            top: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            @include wh(42px, 3px);
+            background-color: #b72937;
+            display: none;
+
+            @include media-dv(mb) {
+              display: block;
+            }
+          }
+        }
+
+        &.active::after {
+          background-image: url("../../images/btn/btn-next-red.svg");
+        }
+
+        &.fixed {
+          color: #012559;
+        }
+
+        &.fixed::after {
+          background-image: url("../../images/btn/btn-next-navy.svg");
+        }
+      }
+    }
+  }
+}
+
+.content-wrap {
+  padding-top: 24px;
+  width: 80%;
+
+  @include media-dv(mb) {
+    padding-top: 22.5px;
+    width: 100%;
+  }
+
+  .tit {
+    font-size: rem(28);
+    margin-bottom: 37px;
+
+    @include media-dv(mb) {
+      font-size: rem(24);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+  }
+}
+
+/* ==================== End of common CSS + left aside menu ==================== */
+
+/* ==================== family-group ==================== */
+.family-group-wrap {
+  .family-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include media-dv(mb) {
+      display: block;
+    }
+
+    .family-list {
+      width: 45%;
+      margin-right: 65px;
+      margin-bottom: 46px;
+
+      @include media-dv(mb) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 31px;
+      }
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+
+      .img-wrap {
+        position: relative;
+        margin-bottom: 27px;
+        cursor: pointer;
+        border-radius: 5px;
+        overflow: hidden;
+
+        @include media-dv(mb) {
+          border-radius: 0;
+        }
+        // 210719 CGS: transition 삽입
+        .img {
+          transition: all .2s;
+        }
+
+        &:hover .img {
+          filter: blur(5px);
+        }
+
+        &:hover::before {
+          opacity: 1;
+          // pointer-events: all;
+        }
+
+        &:hover::after {
+          opacity: 1;
+          // pointer-events: all;
+        }
+
+        @include make-before {
+          @include wh(100%, 100%);
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: rgba(1, 37, 89, 0.75);
+          border-radius: 5px;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3s;
+          z-index: 1;
+        }
+
+        @include make-after($c: "자세히보기") {
+          display: inline-block;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          padding-right: 20px;
+          color: #fff;
+          font-weight: 600;
+          background-image: url("../../images/btn/btn-next-white.svg");
+          background-size: auto;
+          background-repeat: no-repeat;
+          background-position: 100% center;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3s;
+          z-index: 1;
+          font-size: rem(22);
+          line-height: 1;
+        }
+
+        .img {
+          display: block;
+          width: 100%;
+          max-height: 300px;
+          object-fit: cover;
+        }
+      }
+
+      .txt-wrap {
+        text-align: center;
+
+        .branch-name {
+          position: relative;
+          font-size: rem(20);
+
+          @include make-before {
+            @include wh(25px, 4px);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #012559;
+            top: -8.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==================== End of family-group ==================== */
+
+/* ==================== family-intro ==================== */
+.branch-intro-wrap {
+  .visual-wrap {
+    position: relative;
+    // padding-top: 75px;
+
+    @include media-dv(mb) {
+      padding-top: 75px;
+    }
+
+    .img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .link {
+      display: block;
+      position: absolute;
+      left: auto;
+      right: 0;
+      top: auto;
+      bottom: 0;
+      padding: 14px 38px 14px 18px;
+      color: #fff;
+      font-size: rem(22);
+      background-color: #012559;
+      background-image: url("../../images/btn/btn-next-white.svg");
+      background-size: auto;
+      background-position: 90% center;
+      background-repeat: no-repeat;
+      border-radius: 5px 0 5px 0;
+      transition: all 0.2s;
+
+      @include media-dv(mb) {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        top: -10px;
+        bottom: auto;
+        font-size: rem(15);
+        border-radius: 0;
+      }
+
+      @include media(320px) {
+        font-size: rem(14);
+      }
+
+      &:hover {
+        background-color: lighten(#012559, 10%);
+      }
+
+      &:active {
+        background-color: lighten(#012559, 15%);
+      }
+    }
+  }
+
+  .greeting-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 137px 0 80px;
+
+    @include media-dv(mb) {
+      display: block;
+      padding: 125.2px 0 80px;
+    }
+
+    .tit-wrap {
+      position: absolute;
+      left: 0;
+      top: auto;
+      bottom: 80px;
+      height: 110%;
+      background-image: url("../../images/img/bg-history.png");
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      padding: 175px 42px 562px;
+
+      @include media-dv(mb) {
+        height: auto;
+        top: 0;
+        bottom: auto;
+        padding: 75px 28px 338px 28px;
+        transform: translateY(-55px);
+      }
+
+      .tit {
+        text-align: center;
+        color: #fff;
+        line-height: 1.4;
+        font-size: rem(42);
+
+        @include media-dv(mb) {
+          font-size: rem(20);
+        }
+      }
+    }
+
+    .img-wrap {
+      position: relative;
+      z-index: 1;
+      width: 40%;
+      margin-right: 17px;
+      margin-left: 40px;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+
+      @include media-dv(mb) {
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+
+      @include make-after {
+        @include wh(100%, 65%);
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.95));
+      }
+
+      .img {
+        display: block;
+        @include wh(100%, 100%);
+        object-fit: cover;
+      }
+
+      .txt {
+        position: absolute;
+        z-index: 1;
+        left: 28px;
+        top: auto;
+        bottom: 32px;
+        color: #fff;
+
+        @include media-dv(mb) {
+          left: 15px;
+          bottom: 19px;
+        }
+
+        .position {
+          font-family: "noto serif";
+          font-size: rem(22);
+          font-weight: 600;
+          margin-right: 10px;
+
+          @include media-dv(mb) {
+            font-size: rem(15);
+          }
+        }
+
+        .name {
+          font-family: "noto serif";
+          font-size: rem(35);
+
+          @include media-dv(mb) {
+            font-size: rem(25);
+          }
+        }
+      }
+    }
+
+    .txt-wrap {
+      padding: 25px 0;
+      width: 55%;
+
+      @include media-dv(mb) {
+        width: 100%;
+        padding: 25px 16px;
+      }
+
+      // FIXME: 모바일 줄바꿈 이슈 API 개행값 변경 필요
+      .dec {
+        font-size: rem(17);
+        font-weight: 400;
+        line-height: 1.8;
+        white-space: pre-line;
+
+        @include media-dv(mb) {
+          font-size: rem(14);
+        }
+      }
+    }
+  }
+}
+
+/* ==================== End of family-intro ==================== */
+
+/* ==================== family-facility ==================== */
+
+/* ==================== Popup ==================== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.popup-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  @include wh(100%, 100%);
+  background-color: rgba(#000, 0.85);
+  z-index: 10;
+}
+
+.facility-detail-popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  text-align: right;
+  padding: 0 70px;
+
+  @include media-dv(mb) {
+    padding: 0 35px;
+  }
+
+  .btn-close {
+    padding-right: 25px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    font-size: rem(20);
+    color: #b8b8b8;
+    background-image: url("../../images/btn/btn-close.svg");
+    background-size: auto;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @include media-dv(mb) {
+      font-size: rem(10);
+      line-height: 1.5;
+      background-size: 15px 15px;
+      padding-right: 20px;
+    }
+  }
+}
+
+.facility-detail-slide {
+  @include wh(746px, 746px);
+  border: 1px solid #fff;
+  border-radius: 5px;
+
+  @include media-dv(mb) {
+    @include wh(300px, 300px);
+  }
+
+  .swiper-slide {
+    width: 100%;
+
+    .img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+.facility-detail-btn-prev {
+  // left: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -410px;
+  top: 51%;
+  @include wh(70px, 70px);
+  background-image: url("../../images/btn/btn-modal-prev.svg");
+  background-size: 23px 23px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 101;
+
+  @include media-dv(mb) {
+    margin-left: -170px;
+    @include wh(30px, 30px);
+    background-size: 15px 15px;
+  }
+}
+
+.facility-detail-btn-next {
+  // right: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 410px;
+  top: 51%;
+  @include wh(70px, 70px);
+  background-image: url("../../images/btn/btn-modal-next.svg");
+  background-size: 23px 23px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 101;
+
+  @include media-dv(mb) {
+    margin-left: 170px;
+    @include wh(30px, 30px);
+    background-size: 15px 15px;
+  }
+}
+
+.facility-detail-pagination {
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 420px;
+  font-size: rem(18);
+  color: #707070;
+
+  @include media-dv(mb) {
+    margin-top: 255px;
+    font-size: rem(15);
+  }
+
+  .swiper-pagination-current {
+    color: #fff;
+  }
+}
+
+.popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+
+  .popup-bg {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+  }
+
+  .facility-detail-popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+  }
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: all;
+
+  .popup-bg {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .facility-detail-popup {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+/* ==================== End of Popup ==================== */
+
+.branch-facility-group {
+  display: flex;
+  // justify-content: center;
+  flex-wrap: wrap;
+
+  @include media-dv(mb) {
+    display: block;
+    padding-bottom: 60px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .branch-facility-list {
+    position: relative;
+    width: 31%;
+    margin-right: 33px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include media-dv(mb) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    @include make-before {
+      @include wh(100%, 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(1, 37, 89, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s;
+    }
+
+    @include make-after($c: "ZOOM") {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding-top: 36px;
+      font-size: rem(16);
+      color: #fff;
+      background-image: url("../../images/icon/zoom.png");
+      background-size: auto;
+      background-position: top center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    .img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* ==================== End of family-facility ==================== */
+
+/* ==================== family-notice ==================== */
+.notice-board-group {
+  display: flex;
+  padding: 18px 32px;
+  border-bottom: 1px solid #e8e8e8;
+  cursor: pointer;
+
+  @include media-dv(mb) {
+    border-bottom: 1px solid #dfdfdf;
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+
+  @include media-dv(mb) {
+    &:nth-child(2) {
+      border-top: 1px solid #dfdfdf;
+    }
+  }
+
+  &:first-child {
+    @include media-dv(mb) {
+      display: none;
+    }
+
+    .notice-board-list {
+      color: #959595;
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  .notice-board-list {
+    font-size: rem(16);
+    color: #000;
+  }
+
+  .date {
+    width: 10%;
+
+    @include media-dv(mb) {
+      width: auto;
+      order: 2;
+      font-size: rem(12);
+      color: #959595;
+      margin-right: 10px;
+    }
+  }
+
+  .title {
+    width: 80%;
+    @include ellipse(1, 1);
+
+    @include media-dv(mb) {
+      width: 100%;
+      order: 1;
+      margin-bottom: 7px;
+      line-height: 1.5;
+    }
+  }
+
+  .name {
+    width: 10%;
+    text-align: right;
+
+    @include media-dv(mb) {
+      width: auto;
+      order: 3;
+      font-size: rem(12);
+      color: #959595;
+      text-align: left;
+    }
+  }
+}
+
+.notice-pagination-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22.5px;
+
+  @include media-dv(mb) {
+    margin-top: 50px;
+  }
+
+  .notice-pagination-list {
+    @include wh(31px, 31px);
+    @include flex-center;
+    font-size: rem(12);
+    color: #9f9f9f;
+    border: 1px solid #d8d8d8;
+    // border-right: none;
+    margin-right: 3px;
+    cursor: pointer;
+
+    @include media-dv(mb) {
+      @include wh(35px, 35px);
+      font-size: rem(14);
+    }
+
+    &.active {
+      background-color: #111151;
+      color: #fff;
+    }
+
+    &:first-child {
+      border: none;
+      background-image: url("../../images/btn/btn-page-prev.svg");
+      background-size: auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+      text-indent: -99999px;
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      border: none;
+      background-image: url("../../images/btn/btn-page-next.svg");
+      background-size: auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+      text-indent: -99999px;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* ==================== End of family-notice ==================== */
+
+/* ==================== family-coach ==================== */
+
+.coach-introduce-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 104.9px;
+
+  @include media-dv(mb) {
+    display: block;
+    margin-bottom: 79px;
+    text-align: center;
+  }
+
+  .all-img-wrap {
+    width: 48%;
+    position: relative;
+    text-align: center;
+
+    @include media-dv(mb) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @include make-before {
+      position: absolute;
+      left: 0;
+      top: auto;
+      bottom: 0;
+      z-index: -1;
+      @include wh(245px, 245px);
+      background-color: #b72937;
+      border-radius: 50%;
+
+      @include media-dv(mb) {
+        @include wh(128px, 128px);
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -65px;
+      }
+    }
+
+    @include make-after {
+      position: absolute;
+      left: auto;
+      right: 20px;
+      top: -31px;
+      @include wh(129px, 129px);
+      background-image: url("../../images/obj/obj02.svg");
+      background-size: auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      @include media-dv(mb) {
+        @include wh(120px, 120px);
+        background-size: cover;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        margin-left: 70px;
+      }
+    }
+
+    .img-wrap {
+      overflow: hidden;
+      @include wh(418px, 418px);
+      border-radius: 50%;
+      display: inline-block;
+
+      @include media-dv(mb) {
+        @include wh(220px, 220px);
+      }
+
+      .img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .txt-wrap {
+    width: 48%;
+
+    @include media-dv(mb) {
+      width: 100%;
+    }
+
+    .tit-wrap {
+      display: inline-block;
+      padding: 15px 0;
+      border-bottom: 3px solid #012559;
+
+      @include media-dv(mb) {
+        padding: 10px 35px;
+      }
+
+      .name {
+        font-size: rem(35);
+        font-family: "noto serif";
+        margin-right: 12px;
+
+        @include media-dv(mb) {
+          font-size: rem(25);
+          margin-right: 3px;
+        }
+      }
+
+      .position {
+        font-family: "noto serif";
+        font-size: rem(22);
+        font-weight: 600;
+        color: #b72937;
+
+        @include media-dv(mb) {
+          font-size: rem(15);
+        }
+      }
+    }
+
+    .record-wrap {
+      padding: 15px 0;
+
+      @include media-dv(mb) {
+        padding: 30px 0;
+      }
+
+      .record {
+        font-size: rem(18);
+        font-weight: 300;
+        line-height: 1.8;
+        white-space: pre-line;
+
+        @include media-dv(mb) {
+          font-size: rem(15);
+        }
+      }
+    }
+  }
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+
+    .all-img-wrap {
+      @include make-before {
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: 0;
+        z-index: -1;
+        @include wh(245px, 245px);
+        background-color: #b72937;
+        border-radius: 50%;
+      }
+
+      @include make-after {
+        position: absolute;
+        left: 20px;
+        top: -31px;
+        @include wh(129px, 129px);
+        background-image: url("../../images/obj/obj02.svg");
+        background-size: auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .txt-wrap {
+      text-align: right;
+
+      @include media-dv(mb) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* ==================== End of family-coach ==================== */
+
+/* ==================== family-schedule ==================== */
+.content-wrap .branch-schedule-tit {
+  margin-bottom: 0;
+}
+
+.branch-schedule-wrap {
+  .time-tit {
+    font-size: rem(23);
+    margin-bottom: 25px;
+    color: #012559;
+
+    @include media-dv(mb) {
+      font-size: rem(18);
+      text-align: center;
+      margin-bottom: 13px;
+    }
+  }
+
+  .timetable-wrap {
+    padding: 40px 0;
+    border-bottom: 1px solid #e8e8e8;
+
+    @include media-dv(mb) {
+      padding: 34px 0;
+    }
+
+    &:last-child {
+      margin-bottom: 40px;
+      border-bottom: none;
+
+      @include media-dv(mb) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .img-wrap {
+    .img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* ==================== End of family-schedule ==================== */
+
+/* ==================== family-contact ==================== */
+
+.branch-contact-wrap {
+  display: flex;
+  height: 490px;
+
+  @include media-dv(mb) {
+    display: block;
+    height: auto;
+  }
+
+  .map-wrap {
+    width: 75%;
+
+    @include media-dv(mb) {
+      width: 100%;
+      min-height: 255px;
+    }
+  }
+
+  .txt-wrap {
+    position: relative;
+    width: 25%;
+    padding: 36.8px 23px;
+    background-color: #012559;
+    background-image: url("../../images/img/bg-symbol.svg");
+    background-size: contain;
+    background-position: -50px 110%;
+    background-repeat: no-repeat;
+
+    @include media-dv(mb) {
+      width: 100%;
+      display: flex;
+      padding: 41px 15px;
+    }
+
+    @include make-after {
+      position: absolute;
+      left: 0;
+      top: auto;
+      bottom: 0;
+      @include wh(100%, 10px);
+      background-color: #b72937;
+    }
+
+    .top-wrap {
+      padding-bottom: 16.5px;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+
+      @include media-dv(mb) {
+        width: 40%;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .img {
+        @include wh(56px, 36px);
+        margin-bottom: 11.2px;
+
+        @include media-dv(mb) {
+          @include wh(28px, 21px);
+          margin-bottom: 5.5px;
+        }
+      }
+
+      .biz-name {
+        font-size: rem(22);
+        color: #fff;
+        margin-bottom: 10px;
+
+        @include media-dv(mb) {
+          font-size: rem(14);
+        }
+      }
+
+      .branch-name {
+        font-size: rem(35);
+        color: #fff;
+
+        @include media-dv(mb) {
+          font-size: rem(20);
+        }
+      }
+    }
+
+    .bottom-wrap {
+      padding-top: 16.5px;
+
+      @include media-dv(mb) {
+        padding-top: 0;
+      }
+
+      .info {
+        position: relative;
+        font-size: rem(18);
+        color: #fff;
+        font-weight: 400;
+        padding-left: 30px;
+        margin-bottom: 14.5px;
+
+        @include media-dv(mb) {
+          font-size: rem(14);
+          margin-bottom: 20.5px;
+          padding-left: 20px;
+        }
+
+        @include make-before {
+          position: absolute;
+          left: 0;
+          top: 2px;
+          @include wh(18px, 18px);
+          background-image: url("../../images/icon/icon-tel.svg");
+          background-size: auto;
+          background-repeat: no-repeat;
+          background-position: center center;
+
+          @include media-dv(mb) {
+            @include wh(16px, 16px);
+            background-size: contain;
+          }
+        }
+      }
+
+      .address {
+        line-height: 1.4;
+        padding-right: 10px;
+
+        @include make-before {
+          background-image: url("../../images/icon/icon-location.svg");
+        }
+      }
+    }
+  }
+}
+
+/* ==================== End of family-contact ==================== */
+
+/* ==================== End of sec-family ==================== */

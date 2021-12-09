@@ -1,0 +1,163 @@
+.com-ft {
+  padding: 0 20px 0 290px;
+  
+  @include media(1550px) {
+    padding-left: 70px;
+  }
+
+  @include mobile {
+    padding: 10px 0 30px;
+    background-color: color(grayf5);
+  }
+
+  .l-center{
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid #ECECF1;
+
+    @include mobile {
+      padding: 0 20px;
+      border-top: 0;
+    }
+  }
+
+  .top-blank{
+    @include wh(100%, 33px);
+
+    @include mobile {
+      height: 20px;
+    }
+  }
+}
+
+.ft-link-wrap {
+  position: relative;
+}
+
+.text-link-wrap {
+  @include flex;
+}
+
+.text-link-list {
+  position: relative;
+  padding: 0 15px;
+
+  @include mobile {
+    padding: 0;
+    padding-right: 15px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  .link {
+    letter-spacing: -0.05em;
+    color: color(text);
+    cursor:pointer;
+
+    @include mobile {
+      font-size: rem(12);
+      font-weight: 500;
+      color: color(gray8f);
+    }
+  }
+
+  .sub-link-open {
+    @include bg-op($p: right center, $s: auto);
+    @include bg-url(icon, "icon_ft_select.svg");
+
+    padding-right: 14px;
+  }
+}
+
+.sub-link-wrap {
+	@include absolute($t: 0, $l: 50%);
+
+  opacity: 0;
+	min-width: 120px;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 5px 10px rgba(195, 195, 206, 0.5);
+	transform: translate(-50%, -100%);
+  transition: all 0.3s;
+  pointer-events: none;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+	.sub-link-list {
+		padding: 2px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+	}
+
+	.sub-link {
+		display: block;
+    width: 100%;
+		padding: 10px 12px;
+		font-size: rem(14);
+		font-weight: 300;
+		color: #64646A;
+    cursor:pointer;
+
+    &:hover, &:focus {
+      color: color(dk-gr);
+    }
+	}
+
+	.sub-link-close {
+		border-radius: 0 0 5px 5px;
+		background-color: color(main);
+		font-size: rem(15);
+		color: white;
+		text-align: center;
+	}
+
+	&:first-child .sub-link {
+		border-radius: 5px 5px 0 0;
+	}
+}
+
+.sns-link-wrap {
+  @include absolute($t: 0, $r: 0);
+
+  .sns-link {
+    margin-left: 15px;
+  }
+}
+
+.ft-adress-wrap {
+  padding-top: 23px;
+
+  @include mobile {
+    padding-top: 14px;
+  }
+
+  .ft-adress {
+    line-height: 1.85;
+    font-size: rem(14);
+    font-weight: 300;
+    color: color(gray8f);
+
+    @include mobile {
+      font-size: rem(12);
+      line-height: 1.8;
+    }
+  }
+}
+
+.ft-copy {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  font-size: rem(13);
+  color: #64646A;
+
+  @include mobile {
+    padding-bottom: 30px;
+  }
+}

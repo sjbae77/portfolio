@@ -1,0 +1,32 @@
+$color-set: (
+  wh-gr: #E9FAF0,
+  border: #6BD998,
+  main: #26BE63,
+  dk-gr: #079766,
+  text: #303038,
+  gray64: #64646A,
+  gray8f: #8F8F98,
+  grayc3: #C3C3CE,
+  grayec: #ECECF1,
+  grayf5: #F5F5F8,
+);
+
+$path-set: (
+  icon: "../images/icon/",
+  img: "../images/img/",
+  logo: "../images/logo/",
+  btn: "../images/btn/",
+  bg: "../images/bg/",
+);
+
+$breakpoints: (
+  mb: (
+    950px: "모바일",
+  ),
+  sm: (
+    360px: "갤럭시 작은버전",
+  ),
+  xsm: (
+    350px: "아이폰 작은버전",
+  ),
+);
