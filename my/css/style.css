@@ -253,14 +253,14 @@ nav {
 
 .text-box .about,
 .skill {
-  padding: 20px 80px 40px;
+  padding: 20px 60px 40px;
 }
 
 .img-wrap,
 .text-box {
   width: 50%;
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 .img-wrap img {
   width: 100%;
