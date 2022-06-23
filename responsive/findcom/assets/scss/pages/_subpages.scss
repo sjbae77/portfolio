@@ -142,7 +142,7 @@
     &.com-box.bk {
       top: 60px;
 
-      .l-center {
+      .inner {
         padding: 0 7px;
       }
     }
@@ -664,7 +664,7 @@
     line-height: 1.6;
   }
 
-  .l-center {
+  .inner {
     max-width: 1000px;
     margin: 0 auto;
 
@@ -753,7 +753,7 @@
 .inquery-section {
   background-color: color(grayf5);
 
-  .l-center {
+  .inner {
     @include mobile {
       padding: 0;
     }

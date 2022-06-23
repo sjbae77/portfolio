@@ -1,7 +1,7 @@
 Vue.component("index-footer", {
   // 컴포넌트 내용
   template: `<footer class="naracha-footer">
-              <div class= "l-center" >
+              <div class= "inner" >
               <div class="img-wrap">
                 <a href="./index.html">
                   <img src="./assets/images/logo/logo-wh.svg" alt="naracha logo" class="logo-img" />

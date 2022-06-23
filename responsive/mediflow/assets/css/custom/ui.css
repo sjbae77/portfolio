@@ -131,7 +131,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #2B5BDF;
+  background-color: #2b5bdf;
   width: 100%;
   transition: all 0.6s ease;
 }
@@ -219,12 +219,12 @@
 }
 
 .nav .nav-list-wrap .nav-list .link::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 9px;
   height: 14px;
   padding-left: 15px;
-  background-image: url('../../images/main/header-arrow.svg');
+  background-image: url("../../images/main/header-arrow.svg");
   background-size: auto;
   background-position: right center;
   background-repeat: no-repeat;
@@ -254,7 +254,7 @@
   background-size: cover;
 }
 
-.visual-section .l-center {
+.visual-section .inner {
   height: 100%;
 }
 
@@ -491,7 +491,7 @@
 .dots-b.mo-hide {
   display: flex;
 }
-.logo-b { 
+.logo-b {
   padding-top: 1.681rem;
   text-align: center;
 }
@@ -516,13 +516,12 @@
   bottom: 0;
   transform: translateX(-50%);
   border-radius: 50% 50% 0 0;
-  background-color: #ECEBEF;
+  background-color: #ecebef;
 }
 
 .short-box-wrap {
   text-align: center;
   margin-right: 21px;
-  
 }
 .short-box-wrap:last-child {
   margin-right: 0;
@@ -530,7 +529,7 @@
 
 .short-box {
   position: relative;
-  padding: 57px 44.5px; 
+  padding: 57px 44.5px;
   background-color: #fff;
   border-radius: 30px;
   display: flex;
@@ -538,16 +537,15 @@
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  box-shadow: 0 60px 38px #D3D3DB;
+  box-shadow: 0 60px 38px #d3d3db;
 }
-
 
 .short-img-wrap {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid #ECEBEF;
+  border-bottom: 1px solid #ecebef;
   padding-bottom: 38.5px;
   padding-left: 18px;
   width: 100%;
@@ -556,7 +554,7 @@
 .short-img-wrap .img-wrap {
   width: 70px;
   height: 70px;
-  background-color: #2B5BDF;
+  background-color: #2b5bdf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -576,7 +574,7 @@
 }
 
 .short-img-wrap .txt .sol-txt {
-  color: #2B5BDF;
+  color: #2b5bdf;
 }
 
 .short-cont-group {
@@ -592,7 +590,7 @@
   border-radius: 22px;
   font-size: 1.938rem;
   margin-bottom: 25px;
-  color: #4D4D4D;
+  color: #4d4d4d;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -602,12 +600,12 @@
 }
 
 .short-cont-list::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 38px;
   height: 38px;
-  background-color: #ECEBEF;
-  background-image: url('../../images/main/icon-check.svg');
+  background-color: #ecebef;
+  background-image: url("../../images/main/icon-check.svg");
   background-size: auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -616,15 +614,15 @@
 
 .short-cont-list .blue-txt {
   font-weight: 600;
-  color: #2B5BDF;
+  color: #2b5bdf;
 }
 
 .short-btn {
   /* margin-top: 5.325em; */
   cursor: pointer;
   padding: 18px 70px;
-  background-color: #2B5BDF;
-  box-shadow: 0 5px 12px #2B5BDF;
+  background-color: #2b5bdf;
+  box-shadow: 0 5px 12px #2b5bdf;
   border-radius: 15px;
   transition: all 0.5s;
 }
@@ -636,7 +634,6 @@
   color: #fff;
   font-weight: 600;
 }
-
 
 /* ==================== start of slide-section ==================== */
 .slide-section {
@@ -678,7 +675,6 @@
   background-color: #2b3ddf;
 }
 
-
 .slide-section .review-slide-wrap {
   transform: translateY(-180px);
   z-index: 0;
@@ -710,7 +706,7 @@
   width: 160px;
   height: 50px;
   margin-bottom: 30px;
-  background-image: url('../../images/main/review_slides_01.png');
+  background-image: url("../../images/main/review_slides_01.png");
   background-size: auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -718,11 +714,11 @@
 }
 
 .review-wrap .logo-wrap2 {
-  background-image: url('../../images/main/review_slides_02.png');
+  background-image: url("../../images/main/review_slides_02.png");
 }
 
 .review-wrap .logo-wrap3 {
-  background-image: url('../../images/main/review_slides_03.png');
+  background-image: url("../../images/main/review_slides_03.png");
 }
 
 .review-wrap .review-tit {
@@ -733,17 +729,17 @@
 }
 
 .review-wrap .review-tit .blue-txt {
-  color: #2B5BDF;
+  color: #2b5bdf;
 }
 
 .review-wrap .review-dec {
   font-size: 1.125rem;
-  color: #8B8B8B;
+  color: #8b8b8b;
   line-height: 1.6;
 }
 
 .review-wrap .review-dec .block-txt {
-  background: #7091E9;
+  background: #7091e9;
   color: #fff;
 }
 
@@ -757,14 +753,14 @@
 .review-wrap .bottom-info-wrap .type {
   display: inline-block;
   padding: 8px 15px;
-  background-color: #2B5BDF;
+  background-color: #2b5bdf;
   color: #fff;
   border-radius: 18px;
   margin-right: 6px;
 }
 
 .review-wrap .bottom-info-wrap .size {
-  color: #00144E;
+  color: #00144e;
   font-weight: 600;
 }
 /* End of 슬라이드 통이미지에서 퍼블리싱 변경 적용으로 추가 */
@@ -1016,7 +1012,6 @@
     color: rgba(30, 30, 30, 1);
   }
 
-
   /* 슬라이드 통이미지에서 퍼블리싱 변경 적용으로 추가 */
   .review-wrap {
     height: 570px;
@@ -1037,9 +1032,6 @@
   /* End of 슬라이드 통이미지에서 퍼블리싱 변경 적용으로 추가 */
 }
 
-
-
-
 @media all and (max-width: 750px) {
   .logo .link {
     width: 202px;
@@ -1059,8 +1051,6 @@
     font-size: 1.15rem;
   }
 }
-
-
 
 /* ======================== 모바일 기점 ======================= */
 
@@ -1111,7 +1101,7 @@
 
   .contact-wrap .hos-input {
     padding: 11px 15px;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #e8e8e8;
     border-radius: 5px;
     font-size: 1.4rem;
   }
@@ -1132,13 +1122,13 @@
 
   /* ----- END 스크롤 제어 ----- */
 
-  .medi-hd .l-center {
+  .medi-hd .inner {
     padding-left: 28px;
     padding-right: 28px;
     padding-top: 13px;
     padding-bottom: 13px;
   }
-  .l-center {
+  .inner {
     width: auto;
   }
 
@@ -1207,7 +1197,7 @@
   .nav .nav-list-wrap .nav-list.mo-nav-list:last-child {
     margin-right: 0;
   }
-  
+
   .nav .nav-list-wrap .nav-list .link {
     color: #191919;
     font-size: 1.2rem;
@@ -1222,13 +1212,12 @@
     width: 4px;
     height: 8px;
     padding-left: 10px;
-    background-image: url('../../images/main/mo/header-arrow.svg');
+    background-image: url("../../images/main/mo/header-arrow.svg");
   }
 
   .nav .nav-list-wrap .nav-list.mo-nav-list .link::after {
-    display: none;    
+    display: none;
   }
-
 
   .mo-nav {
     width: 50px;
@@ -1257,7 +1246,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .visual-section .l-center {
+  .visual-section .inner {
     height: 100%;
   }
   .visual-tit {
@@ -1539,7 +1528,7 @@
     padding: 85px 0 80px;
     position: relative;
   }
-  
+
   /* FIXME: 오브젝트 수정 필요 */
   .shortcut-wrap .bg-obj {
     border: 1px solid #fff;
@@ -1550,58 +1539,57 @@
     top: 20px;
     bottom: auto;
     transform: translateX(-50%);
-    background-color: #ECEBEF;
+    background-color: #ecebef;
     /* display: none; */
   }
-  
+
   .short-box-wrap {
-    margin-right: 0; 
+    margin-right: 0;
   }
-  
+
   .short-box {
     position: relative;
-    padding: 22px 23px; 
+    padding: 22px 23px;
     border-radius: 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    box-shadow: 0 15px 15px #D3D3DB;
+    box-shadow: 0 15px 15px #d3d3db;
     margin-bottom: 24px;
   }
-  
+
   .short-img-wrap {
     padding-bottom: 20.5px;
     padding-left: 0;
     /* justify-content: center; */
   }
-  
+
   .short-img-wrap .img-wrap {
     width: 57px;
     height: 57px;
     margin-right: 14px;
   }
-  
+
   .short-img {
     width: 36.5px;
     height: 36.5px;
   }
-  
+
   .short-img-wrap .txt {
     font-size: 2.1rem;
+  }
 
-  }
-  
   .short-img-wrap .txt .sol-txt {
-    color: #2B5BDF;
+    color: #2b5bdf;
   }
-  
+
   .short-cont-group {
     padding: 20.5px 8px 32px;
     width: 100%;
   }
-  
+
   .short-cont-list {
     /* width: 246px; */
     width: auto;
@@ -1609,36 +1597,35 @@
     line-height: 30px;
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #4D4D4D;
+    color: #4d4d4d;
   }
-  
+
   .short-cont-list::before {
     width: 22px;
     height: 22px;
     background-size: 11px;
     margin-right: 10px;
   }
-  
+
   .short-cont-list .blue-txt {
     font-weight: 600;
-    color: #2B5BDF;
+    color: #2b5bdf;
   }
-  
+
   .short-btn {
     /* margin-top: 5.325em; */
     width: 100%;
     cursor: pointer;
     padding: 19px 40px;
-    background-color: #2B5BDF;
-    box-shadow: 0 5px 12px #2B5BDF;
+    background-color: #2b5bdf;
+    box-shadow: 0 5px 12px #2b5bdf;
     border-radius: 20px;
-    transition: all 0.5s; 
+    transition: all 0.5s;
   }
-  
+
   .popup-tit {
     font-size: 2rem;
   }
-
 
   /* ==================== start of slide-section ====================  */
   .slide-section {
@@ -1702,7 +1689,6 @@
   .slide-section .review-pagination .swiper-pagination-current {
     margin-right: 3px;
   }
-
 
   /* 슬라이드 통이미지에서 퍼블리싱 변경 적용으로 추가 */
   .review-wrap {

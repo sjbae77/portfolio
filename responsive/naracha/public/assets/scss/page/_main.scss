@@ -1,5 +1,5 @@
 /* =================== 공통 영역 =================== */
-.l-center {
+.inner {
   width: 90%;
   max-width: 1230px;
   margin: 0 auto;
@@ -42,7 +42,7 @@
 }
 
 /* header */
-.header .l-center {
+.header .inner {
   position: relative;
 
   @include media(600px) {
@@ -63,7 +63,7 @@
   }
 }
 
-.header .l-center .login-menu {
+.header .inner .login-menu {
   @include media(600px) {
     display: none;
   }
@@ -234,7 +234,7 @@
   top: 0;
   left: 0;
 
-  .l-center {
+  .inner {
     position: relative;
   }
 }
@@ -691,7 +691,7 @@
     }
   }
 
-  .l-center {
+  .inner {
     display: flex;
     justify-content: center;
 
@@ -822,7 +822,7 @@
 .sec-history {
   position: relative;
 
-  .l-center {
+  .inner {
     display: flex;
     justify-content: space-between;
 
@@ -1075,7 +1075,7 @@
     }
   }
 
-  .l-center {
+  .inner {
     display: flex;
 
     @include media-dv(mb) {

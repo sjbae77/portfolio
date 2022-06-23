@@ -1,324 +1,305 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>SUJEONG_PORTFOLIO</title>
-    <meta
-      name="viewport"
-      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
-    />
 
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <title>SUJEONG_PORTFOLIO</title>
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
-    <!-- JavaScript Libraries -->
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="slick/slick.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
-  <body>
-    <div id="wrap">
-      <header class="header">
-        <div class="l-center">
-          <h1 class="logo">
-            <a class="link" href="#sec1">배수정 포트폴리오</a>
-          </h1>
-          <nav class="nav">
-            <ul class="gnb-wrap">
-              <li class="gnb-list">
-                <a class="link smoothscroll" href="#sec1">HOME</a>
-              </li>
-              <li class="gnb-list">
-                <a class="link smoothscroll" href="#sec2">ABOUT</a>
-              </li>
-              <li class="gnb-list">
-                <a class="link smoothscroll" href="#sec3">PROJECT</a>
-              </li>
-              <li class="gnb-list">
-                <a class="link smoothscroll" href="#sec4">CONTACT</a>
-              </li>
-            </ul>
-          </nav>
+  <!-- JavaScript Libraries -->
+  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="js/anime.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+
+<body>
+  <div id="wrap">
+    <!-- <header class="header">
+      <div class="inner">
+        <h1 class="logo">
+          <a class="link" href="#sec1">배수정 포트폴리오</a>
+        </h1>
+        <nav class="nav">
+          <ul class="gnb-wrap">
+            <li class="gnb-list">
+              <a class="link smoothscroll" href="#sec1">HOME</a>
+            </li>
+            <li class="gnb-list">
+              <a class="link smoothscroll" href="#sec2">ABOUT</a>
+            </li>
+            <li class="gnb-list">
+              <a class="link smoothscroll" href="#sec3">PROJECT</a>
+            </li>
+            <li class="gnb-list">
+              <a class="link smoothscroll" href="#sec4">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+    <nav>
+      <ul>
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+    <div id="contents">
+
+      <section id="sec1">
+        <div class="inner">
+          <div class="sec1-txt-wrap">
+            <span class="ttl">배수정 포트폴리오</span>
+            <div class="console-container">
+              <span id="text"></span>
+              <div class="console-underscore" id="console">&#95;</div>
+            </div>
+          </div>
+          <div class="scroll-down">
+            <a class="smoothscroll" href="#sec2"><span></span>Scroll</a>
+          </div>
         </div>
-      </header>
-      <div id="contents">
+      </section>
 
-        <section id="sec1">
-          <div class="l-center">
-            <div class="sec1-txt-wrap">
-              <span class="ttl">배수정 포트폴리오</span>
-              <div class="console-container">
-                <span id="text"></span>
-                <div class="console-underscore" id="console">&#95;</div>
-              </div>
-            </div>
-            <div class="scroll-down">
-              <a class="smoothscroll" href="#sec2"><span></span>Scroll</a>
-            </div>
+      <section id="sec2">
+        <div class="inner">
+          <div class="img-wrap">
+            <img src="img/img_main.jpg" alt="" />
           </div>
-        </section>
-
-        <section id="sec2">
-          <div class="l-center">
-            <div class="img-wrap">
-              <img src="img/img_main.jpg" alt="" />
-            </div>
-            <div class="text-box">
-              <div class="about">
-                <div class="sec2-title">
-                  <h2>#ABOUT ME</h2>
-                </div>
-                <p class="text">
-                  안녕하세요. 열정적인 퍼블리셔 배수정입니다.<br />
-                  현재에 안주하지않고, 더욱더 발전하려 노력하고 있습니다.
-                  사용자의 입장을 고려하며 사용하기 편리한 사이트를 만드는것,
-                  트렌디한 감각을 담아내는 것이 저의 목표입니다.
-                </p>
+          <div class="text-box">
+            <div class="about">
+              <div class="sec2-title">
+                <h2>#ABOUT ME</h2>
               </div>
-              <div class="skill">
-                <div class="sec2-title">
-                  <h2>#SKILL</h2>
-                </div>
-                <div id="SkillBox">
-                  <div class="SkillBar">
-                    <div id="Skill-HTML">
-                      <span class="Skill-Area">HTML</span>
-                      <span class="PercentText">95%</span>
-                    </div>
-                  </div>
-
-                  <div class="SkillBar">
-                    <div id="Skill-CSS">
-                      <span class="Skill-Area">CSS</span>
-                      <span class="PercentText">90%</span>
-                    </div>
-                  </div>
-
-                  <div class="SkillBar">
-                    <div id="Skill-js">
-                      <span class="Skill-Area">Javascript/jQuery</span>
-                      <span class="PercentText">80%</span>
-                    </div>
-                  </div>
-
-                  <div class="SkillBar">
-                    <div id="Skill-photoshop">
-                      <span class="Skill-Area">photoshop</span>
-                      <span class="PercentText">85%</span>
-                    </div>
+              <p class="text">
+                안녕하세요. 열정적인 퍼블리셔 배수정입니다.<br />
+                현재에 안주하지않고, 더욱더 발전하려 노력하고 있습니다.
+                사용자의 입장을 고려하며 사용하기 편리한 사이트를 만드는것,
+                트렌디한 감각을 담아내는 것이 저의 목표입니다.
+              </p>
+            </div>
+            <div class="skill">
+              <div class="sec2-title">
+                <h2>#SKILL</h2>
+              </div>
+              <div id="SkillBox">
+                <div class="SkillBar">
+                  <div id="Skill-HTML">
+                    <span class="Skill-Area">HTML</span>
+                    <span class="PercentText">95%</span>
                   </div>
                 </div>
-                <div class="skill-list-wrap">
-                  <div class="skill-list">
-                    <img src="img/icon_git.svg" alt="git">
+
+                <div class="SkillBar">
+                  <div id="Skill-CSS">
+                    <span class="Skill-Area">CSS</span>
+                    <span class="PercentText">90%</span>
                   </div>
-                  <div class="skill-list">
-                    <img src="img/icon_sass.svg" alt="sass">
+                </div>
+
+                <div class="SkillBar">
+                  <div id="Skill-js">
+                    <span class="Skill-Area">Javascript/jQuery</span>
+                    <span class="PercentText">80%</span>
                   </div>
-                  <div class="skill-list">
-                    <img src="img/icon_vue.svg" alt="vue.js">
+                </div>
+
+                <div class="SkillBar">
+                  <div id="Skill-photoshop">
+                    <span class="Skill-Area">photoshop</span>
+                    <span class="PercentText">85%</span>
                   </div>
-                  <div class="skill-list">
-                    <img src="img/icon_xd.svg" alt="adobe xd">
-                  </div>
+                </div>
+              </div>
+              <div class="skill-list-wrap">
+                <div class="skill-list">
+                  <img src="img/icon_git.svg" alt="git">
+                </div>
+                <div class="skill-list">
+                  <img src="img/icon_sass.svg" alt="sass">
+                </div>
+                <div class="skill-list">
+                  <img src="img/icon_vue.svg" alt="vue.js">
+                </div>
+                <div class="skill-list">
+                  <img src="img/icon_xd.svg" alt="adobe xd">
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="sec3">
-          <div class="l-center sec3">
-            <div class="sec3-title">
-              <h2>#PROJECT</h2>
+      <section id="sec3">
+        <div class="inner sec3">
+          <div class="sec3-title">
+            <h2>#PROJECT</h2>
+          </div>
+          <div class="slide">
+            <div class="site-wrap">
+              <div class="site-img">
+                <img src="img/site_web-responsive.png" alt="Web-Responsive" />
+              </div>
+              <div class="site-box">
+                <span class="site-title">Web Responsive</span>
+                <div class="txt-wrap">
+                  <div class="site-txt1">
+                    <p class="review">#review</p>
+                    <p>웹표준을 준수하며 대체 텍스트로 웹접근성을 고려하며,</p>
+                    <p>
+                      디바이스 종류에 따라 유연하게 화면을 변경할 수 있는 반응형
+                      사이트입니다.
+                    </p>
+                    <p class="underline">퍼블리싱 기여도: 100%</p>
+                  </div>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
+                    <p>slick slider.js, box-shadow,</p>
+                    <p>mouse effect, lightgallery 플러그인</p>
+                  </div>
+                </div>
+                <a class="cta outline fade" href="http://doya31.dothome.co.kr/responsive/html5/index.html"
+                  target="_blank"><span>View more</span></a>
+              </div>
             </div>
-            <div class="slide">
-              <div class="site-wrap">
-                <div class="site-img">
-                  <img src="img/site_web-responsive.png" alt="Web-Responsive" />
-                </div>
-                <div class="site-box">
-                  <span class="site-title">Web Responsive</span>
-                  <div class="txt-wrap">
-                    <div class="site-txt1">
-                      <p class="review">#review</p>
-                      <p>웹표준을 준수하며 대체 텍스트로 웹접근성을 고려하며,</p>
-                      <p>
-                        디바이스 종류에 따라 유연하게 화면을 변경할 수 있는 반응형
-                        사이트입니다.
-                      </p>
-                      <p class="underline">퍼블리싱 기여도: 100%</p>
-                    </div>
-                    <div class="site-txt2">
-                      <p class="site-skill">#skill</p>
-                      <p>slick slider.js, box-shadow,</p>
-                      <p>mouse effect, lightgallery 플러그인</p>
-                    </div>
-                  </div>
-                  <a
-                    class="cta outline fade"
-                    href="http://doya61.dothome.co.kr/responsive/html5/index.html"
-                    target="_blank"
-                    ><span>View more</span></a
-                  >
-                </div>
+            <div class="site-wrap">
+              <div class="site-img">
+                <img src="img/site_megabox.png" alt="Megabox-Site" />
               </div>
-              <div class="site-wrap">
-                <div class="site-img">
-                  <img src="img/site_megabox.png" alt="Megabox-Site" />
-                </div>
-                <div class="site-box">
-                  <span class="site-title">Megabox Site</span>
-                  <div class="txt-wrap">
-                    <div class="site-txt1">
-                      <p class="review">#review</p>
-                      <p>이미지 슬라이더, 탭메뉴, 모달 등 다양한 스크립트를</p>
-                      <p>활용하여 제작한 반응형 웹사이트입니다.</p>
-                      <p class="underline">퍼블리싱 기여도: 100%</p>
-                    </div>
-                    <div class="site-txt2">
-                      <p class="site-skill">#skill</p>
-                      <p>Swiper 플러그인을 사용한 배너</p>
-                    </div>
+              <div class="site-box">
+                <span class="site-title">Megabox Site</span>
+                <div class="txt-wrap">
+                  <div class="site-txt1">
+                    <p class="review">#review</p>
+                    <p>이미지 슬라이더, 탭메뉴, 모달 등 다양한 스크립트를</p>
+                    <p>활용하여 제작한 반응형 웹사이트입니다.</p>
+                    <p class="underline">퍼블리싱 기여도: 100%</p>
                   </div>
-                  <a
-                    class="cta outline fade"
-                    href="http://doya61.dothome.co.kr/responsive/mega/index.html"
-                    target="_blank"
-                    ><span>View more</span></a
-                  >
-                </div>
-              </div>
-              <div class="site-wrap app">
-                <div class="site-img">
-                  <img src="img/app_todo.png" alt="Todo-App" />
-                </div>
-                <div class="site-box">
-                  <span class="site-title">Todo-App</span>
-                  <div class="txt-wrap">
-                    <div class="site-txt1">
-                      <p class="review">#review</p>
-                      <p>Vue.js를 공부하기 위해 제작한 할일관리 앱 입니다.</p>
-                      <p>할일 추가, 조회, 삭제기능이 구현되어 있습니다.</p>
-                    </div>
-                    <div class="site-txt2">
-                      <p class="site-skill">#skill</p>
-                      <p>vue.js, webpack, font-awesome</p>
-                    </div>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
+                    <p>Swiper 플러그인을 사용한 배너</p>
                   </div>
-                  <a
-                    class="cta outline fade"
-                    href="http://doya61.dothome.co.kr/todo/dist/index.html"
-                    target="_blank"
-                    ><span>View more</span></a
-                  >
                 </div>
+                <a class="cta outline fade" href="http://doya31.dothome.co.kr/responsive/mega/index.html"
+                  target="_blank"><span>View more</span></a>
               </div>
-              <div class="site-wrap">
-                <div class="site-img">
-                  <img src="img/site_mediflow.png" alt="메디플로우">
-                </div>
-                <div class="site-box">
-                  <span class="site-title">Mediflow</span>
-                  <div class="txt-wrap">
-                    <div class="site-txt1">
-                      <p class="review">#review</p>
-                      <p>
-                        pc,모바일 반응형 작업을 진행하였으며, pc는 min-width를 주어
-                        브라우저 크기가 특정 px보다 작아지면, 가로스크롤이 생기게끔 처리되었습니다.
-                        <br />
-                        유효성 검사를 하여, 입력이 완료되었을경우 데이터가 넘어가도록 처리되었습니다.
-                      </p>
-                      <p class="underline">퍼블리싱 기여도: 40%</p>
-                    </div>
-                    <div class="site-txt2">
-                      <p class="site-skill">#skill</p>
-                      <p>swiper slide, validate.js, popup, tab menu</p>
-                    </div>
+            </div>
+            <div class="site-wrap app">
+              <div class="site-img">
+                <img src="img/app_todo.png" alt="Todo-App" />
+              </div>
+              <div class="site-box">
+                <span class="site-title">Todo-App</span>
+                <div class="txt-wrap">
+                  <div class="site-txt1">
+                    <p class="review">#review</p>
+                    <p>Vue.js를 공부하기 위해 제작한 할일관리 앱 입니다.</p>
+                    <p>할일 추가, 조회, 삭제기능이 구현되어 있습니다.</p>
                   </div>
-                  <!-- FIXME: 링크 수정 -->
-                  <a
-                    class="cta outline fade"
-                    href="http://doya61.dothome.co.kr/responsive/mediflow/index.html"
-                    target="_blank"
-                    ><span>View more</span></a
-                  >
-                </div>
-              </div>
-              <div class="site-wrap">
-                <div class="site-img">
-                  <img src="img/site_naracha.png" alt="나라차태권도">
-                </div>
-                <div class="site-box">
-                  <span class="site-title">나라차 태권도</span>
-                  <div class="txt-wrap">
-                    <div class="site-txt1">
-                      <p class="review">#review</p>
-                      <p>
-                        pc,모바일 반응형 작업을 진행하였으며, pc는 min-width를 주어
-                        브라우저 크기가 특정 px보다 작아지면, 가로스크롤이 생기게끔 처리되었습니다.
-                        <br />
-                        aos.js를 이용하여 애니메이션 효과를 주었습니다.
-                      </p>
-                      <p class="underline">퍼블리싱 기여도: 50%</p>
-                    </div>
-                    <div class="site-txt2">
-                      <p class="site-skill">#skill</p>
-                      <p>swiper.js, aos.js, vue.js, axios.js</p>
-                    </div>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
+                    <p>vue.js, webpack, font-awesome</p>
                   </div>
-                  <a
-                    class="cta outline fade"
-                    href="http://doya61.dothome.co.kr/responsive/naracha/public/index.html"
-                    target="_blank"
-                    ><span>View more</span></a
-                  >
                 </div>
+                <a class="cta outline fade" href="http://doya31.dothome.co.kr/todo/dist/index.html"
+                  target="_blank"><span>View more</span></a>
               </div>
-              <div class="site-wrap">
-                <div class="site-img">
-                  <img src="img/site_find.png" alt="파인드 컴퍼니">
-                </div>
-                <div class="site-box">
-                  <span class="site-title">파인드 컴퍼니</span>
-                  <div class="txt-wrap">
-                    <div class="site-txt1">
-                      <p class="review">#review</p>
-                      <p>
-                        pc,태블릿,모바일 반응형 작업을 진행하였습니다.<br />
-                        메인페이지와 서브페이지의 메뉴 나타나는 부분이 다르게 구성되어 있으며,<br />
-                        서브페이지에서 메뉴는 2가지의 형식으로 토글됩니다. <br />
-                        지역선택 select 옵션을 js로 구현하였습니다.
-                      </p>
-                      <p class="underline">퍼블리싱 기여도: 80%</p>
-                    </div>
-                    <div class="site-txt2">
-                      <p class="site-skill">#skill</p>
-                      <p>swiper.js, scroll event, menu toggle, popup</p>
-                    </div>
+            </div>
+            <div class="site-wrap">
+              <div class="site-img">
+                <img src="img/site_mediflow.png" alt="메디플로우">
+              </div>
+              <div class="site-box">
+                <span class="site-title">Mediflow</span>
+                <div class="txt-wrap">
+                  <div class="site-txt1">
+                    <p class="review">#review</p>
+                    <p>
+                      pc,모바일 반응형 작업을 진행하였으며, pc는 min-width를 주어
+                      브라우저 크기가 특정 px보다 작아지면, 가로스크롤이 생기게끔 처리되었습니다.
+                      <br />
+                      유효성 검사를 하여, 입력이 완료되었을경우 데이터가 넘어가도록 처리되었습니다.
+                    </p>
+                    <p class="underline">퍼블리싱 기여도: 40%</p>
                   </div>
-                  <!-- FIXME: 링크 수정 -->
-                  <a
-                    class="cta outline fade"
-                    href="http://doya61.dothome.co.kr/responsive/findcom/index.html"
-                    target="_blank"
-                    ><span>View more</span></a
-                  >
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
+                    <p>swiper slide, validate.js, popup, tab menu</p>
+                  </div>
                 </div>
+                <a class="cta outline fade" href="http://doya31.dothome.co.kr/responsive/mediflow/index.html"
+                  target="_blank"><span>View more</span></a>
               </div>
-              <!-- <div class="site-wrap app">
+            </div>
+            <div class="site-wrap">
+              <div class="site-img">
+                <img src="img/site_naracha.png" alt="나라차태권도">
+              </div>
+              <div class="site-box">
+                <span class="site-title">나라차 태권도</span>
+                <div class="txt-wrap">
+                  <div class="site-txt1">
+                    <p class="review">#review</p>
+                    <p>
+                      pc,모바일 반응형 작업을 진행하였으며, pc는 min-width를 주어
+                      브라우저 크기가 특정 px보다 작아지면, 가로스크롤이 생기게끔 처리되었습니다.
+                      <br />
+                      aos.js를 이용하여 애니메이션 효과를 주었습니다.
+                    </p>
+                    <p class="underline">퍼블리싱 기여도: 50%</p>
+                  </div>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
+                    <p>swiper.js, aos.js, vue.js, axios.js</p>
+                  </div>
+                </div>
+                <a class="cta outline fade" href="http://doya31.dothome.co.kr/responsive/naracha/public/index.html"
+                  target="_blank"><span>View more</span></a>
+              </div>
+            </div>
+            <div class="site-wrap">
+              <div class="site-img">
+                <img src="img/site_find.png" alt="파인드 컴퍼니">
+              </div>
+              <div class="site-box">
+                <span class="site-title">파인드 컴퍼니</span>
+                <div class="txt-wrap">
+                  <div class="site-txt1">
+                    <p class="review">#review</p>
+                    <p>
+                      pc,태블릿,모바일 반응형 작업을 진행하였습니다.<br />
+                      메인페이지와 서브페이지의 메뉴 나타나는 부분이 다르게 구성되어 있으며,<br />
+                      서브페이지에서 메뉴는 2가지의 형식으로 토글됩니다. <br />
+                      지역선택 select 옵션을 js로 구현하였습니다.
+                    </p>
+                    <p class="underline">퍼블리싱 기여도: 80%</p>
+                  </div>
+                  <div class="site-txt2">
+                    <p class="site-skill">#skill</p>
+                    <p>swiper.js, scroll event, menu toggle, popup</p>
+                  </div>
+                </div>
+                <a class="cta outline fade" href="http://doya31.dothome.co.kr/responsive/findcom/index.html"
+                  target="_blank"><span>View more</span></a>
+              </div>
+            </div>
+            <!-- <div class="site-wrap app">
                 <div class="site-img">
                   <img src="img/app_ok.png" alt="예약OK">
                 </div>
@@ -335,93 +316,71 @@
                       <p>사용 스킬 ~~ </p>
                     </div>
                   </div>
-                  FIXME: 링크 수정
                   <a
                     class="cta outline fade"
-                    href="http://doya61.dothome.co.kr/responsive/mega/index.html"
+                    href="http://doya31.dothome.co.kr/responsive/mega/index.html"
                     target="_blank"
                     ><span>View more</span></a
                   >
                 </div>
               </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section id="sec4">
+        <div class="inner">
+          <div class="sec4-container">
+            <div class="sec4-title">
+              <h2>저와 컨택 해주시겠습니까?</h2>
+            </div>
+            <div class="sec4-cont">
+              <ul class="icon-cont-wrap">
+                <li class="list">
+                  <span class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="50px" height="50px">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z" />
+                    </svg>
+                  </span>
+                  <div class="cont-text">
+                    010-7933-1330
+                  </div>
+                </li>
+                <li class="list">
+                  <span class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="50px" height="50px">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                  </span>
+                  <div class="cont-text">
+                    tnwjd_@naver.com
+                  </div>
+                </li>
+                <li class="list">
+                  <span class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="50px" height="50px">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                  </span>
+                  <div class="cont-text">
+                    경기도 안산시 상록구
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="sec4">
-          <div class="l-center">
-            <div class="sec4-container">
-              <div class="sec4-title">
-                <h2>저와 컨택 해주시겠습니까?</h2>
-              </div>
-              <div class="sec4-cont">
-                <ul class="icon-cont-wrap">
-                  <li class="list">
-                    <span class="circle">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        width="50px"
-                        height="50px"
-                      >
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path
-                          d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"
-                        />
-                      </svg>
-                    </span>
-                    <div class="cont-text">
-                      010-7933-1330
-                    </div>
-                  </li>
-                  <li class="list">
-                    <span class="circle">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        width="50px"
-                        height="50px"
-                      >
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path
-                          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                        />
-                      </svg>
-                    </span>
-                    <div class="cont-text">
-                      tnwjd_@naver.com
-                    </div>
-                  </li>
-                  <li class="list">
-                    <span class="circle">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        width="50px"
-                        height="50px"
-                      >
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path
-                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                        />
-                      </svg>
-                    </span>
-                    <div class="cont-text">
-                      경기도 안산시 상록구
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
     </div>
+  </div>
 
-    <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

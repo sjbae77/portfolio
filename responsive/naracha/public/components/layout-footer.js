@@ -1,7 +1,7 @@
-Vue.component('layout-footer', {
+Vue.component("layout-footer", {
   // 컴포넌트 내용
   template: `<footer class="naracha-footer">
-              <div class= "l-center" >
+              <div class= "inner" >
               <div class="img-wrap">
                 <a href="../index.html">
                   <img src="../assets/images/logo/logo-wh.svg" alt="나라차 로고" class="logo-img" />
@@ -23,9 +23,9 @@ Vue.component('layout-footer', {
                 </p>
               </div>
             </div>
-          </footer>`
-})
+          </footer>`,
+});
 
 new Vue({
-  el: '#app'
-})
+  el: "#app",
+});

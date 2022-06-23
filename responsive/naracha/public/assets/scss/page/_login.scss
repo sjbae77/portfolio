@@ -40,7 +40,7 @@
   }
 }
 
-.sec-login .l-center {
+.sec-login .inner {
   width: 90%;
 }
 
@@ -286,7 +286,7 @@ input[type="checkbox"] {
   }
 }
 
-.sec-sign-up .l-center {
+.sec-sign-up .inner {
 
   @include media(600px) {
     width: 90%;
@@ -305,7 +305,7 @@ input[type="checkbox"] {
   height: 1px;
   background-color: #DFDFDF;
 
-  &.l-center {
+  &.inner {
     max-width: 700px;
   }
 
@@ -321,7 +321,7 @@ input[type="checkbox"] {
   }
 }
 
-.sec-find-wrap .l-center {
+.sec-find-wrap .inner {
   @include media(600px) {
     width: 90%;
   }
@@ -419,7 +419,7 @@ input[type="checkbox"] {
 .sec-mypage {
   padding: 50px 0;
 
-  .l-center {
+  .inner {
 
     @include media(600px) {
       width: 90%;
